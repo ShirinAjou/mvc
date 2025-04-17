@@ -1,0 +1,82 @@
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(136, 161, 136);
+    height: 100%;
+    padding: 0;
+    margin: 0 auto;
+}
+
+nav {
+    background-color: rgba(255, 228, 196, 0.8);
+    padding: 5px;
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 18px;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+footer {
+    text-align: center;
+    font-weight: bold;
+}
+
+.body-div {
+    display: flex;
+    flex-direction: column;
+    padding: 0 10em;
+    margin: 0 5em;
+}
+
+.report-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 0 10em;
+    margin: 0 5em;
+}
+
+.aside-report ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.aside-report ul li a {
+    text-decoration: none;
+}
+
+.sections-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.special-body {
+    background: linear-gradient(135deg, red, orange, yellow, green, blue, indigo, violet);
+    height: auto;
+    padding: 0 10em;
+    margin: 0 5em;
+}
