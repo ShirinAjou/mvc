@@ -25,5 +25,4 @@ class LuckyController
             '<html><body>Hi to you!</body></html>'
         );
     }
-
 }

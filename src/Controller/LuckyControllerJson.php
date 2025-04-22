@@ -38,7 +38,7 @@ class LuckyControllerJson
             $quote = "Den enda sanna matningen av programmerarens produktivitet ar antal svordomar per timme.";
         }
 
-        $currentdate = date("F, j, Y");
+        $currentdate = date("F j Y");
         $currenttime = date("H:i:s");
 
         $data = [
