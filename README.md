@@ -1,4 +1,4 @@
-![web image](img/webb.png)
+![web image](public/img/webb.png)
 
 # Introduction
 
