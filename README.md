@@ -6,7 +6,10 @@ Detta projekt är en del av MVC-kursen inom Webbprogrammering på Blekinge Tekni
 
 # Klona repository
 
-För att köra programmer lokalt på din dator behöver du klona repot och det gör du genom att köra kommandot: git clone https://github.com/ShirinAjou/mvc
+För att köra programmer lokalt på din dator behöver du klona repot och det gör du genom att köra kommandot:
+```
+git clone https://github.com/ShirinAjou/mvc
+```
 
 # Kom igång
 
