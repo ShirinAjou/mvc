@@ -100,11 +100,11 @@ class Game
      */
     public function returnGame(SessionInterface $session): array
     {
-        $data = $this->sessionGame($session);
-        $playerHand = $data['playerHand'];
-        $bankHand = $data['bankHand'];
-        $playerScore = $data['playerScore'];
-        $bankScore = $data['bankScore'];
+        $result = $this->sessionGame($session);
+        $playerHand = $result['playerHand'];
+        $bankHand = $result['bankHand'];
+        $playerScore = $result['playerScore'];
+        $bankScore = $result['bankScore'];
 
         $playerStatus = $playerScore > 21 ? 'lose' : 'playing';
         $gameOver = $playerScore > 21;
@@ -135,11 +135,11 @@ class Game
      */
     public function jsonGame(SessionInterface $session): array
     {
-        $data = $this->sessionGame($session);
-        $playerHand = $data['playerHand'];
-        $bankHand = $data['bankHand'];
-        $playerScore = $data['playerScore'];
-        $bankScore = $data['bankScore'];
+        $result = $this->sessionGame($session);
+        $playerHand = $result['playerHand'];
+        $bankHand = $result['bankHand'];
+        $playerScore = $result['playerScore'];
+        $bankScore = $result['bankScore'];
 
         $playerCards = [];
         foreach ($playerHand as $card) {
@@ -192,18 +192,18 @@ class Game
      */
     public function gameData(SessionInterface $session): array
     {
-        $data = $this->sessionGame($session);
+        $result = $this->sessionGame($session);
 
-        $playerScore = $data['playerScore'];
-        $bankScore = $data['bankScore'];
+        $playerScore = $result['playerScore'];
+        $bankScore = $result['bankScore'];
 
         $result = $this->winner($playerScore, $bankScore);
 
         return [
             'playerScore' => $playerScore,
             'bankScore' => $bankScore,
-            'playerHand' => $data['playerHand'],
-            'bankHand' => $data['bankHand'],
+            'playerHand' => $result['playerHand'],
+            'bankHand' => $result['bankHand'],
             'result' => $result,
         ];
     }
