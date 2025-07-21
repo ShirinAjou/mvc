@@ -52,6 +52,7 @@
                 <li>Vilka är dina reflektioner så här långt med att jobb i Symfony med applikationskod enligt MVC?</li>
                 <li>Vilken är din TIL för detta kmom?</li>
             </ul>
+
             <p>Inom objektorientering innebär arv att en klass ärver från en annan klass. 
             Klassen som ärver ärver även egenskaperna från klassen. 
             Basklassen kallas även superklass och den ärvande klassen kallas subklass. 
@@ -59,10 +60,19 @@
             Trait är lik arv men är en annan typ av konstruktion.
             Trait består av metoder och medlemsvariabler som används för att utöka funktionaliteten av en klass.
             Ett interface är ett kontrakt som definierar vilka metoder en klass måste erbjuda, utan att innehålla någon konkret implementation.</p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
+
+            <p>Jag valde att ha fyra klasser, Card, Cardhand, DeckOfCards och CardGraphic.
+            Jag använder mig av både kompision och arv. CardGraphic utökar Card-klassen. CardHand har en instans av DeckOfCards.
+            Card hanterar ett kort, DeckOfCards haterar hela kortleken, CardGraphic hanterar det visuella och CardHand är spelarens hand.
+            Jag tycker att denna uppdelning gör koden tydlig och strukturerad, varje klass har sin särskilda uppgift.
+            Genom att separera ansvar i olika klasser blir det lättare att följa och underhålla varje del för sig.
+            Det är också möjligt att utöka funktionaliteten i framtiden, till exempel genom att lägga/återanvända till kortspelsregler och funktionaliteter.</p>
+
+            <p>Symfony är kul än så länge, struktureringen MVC är något vi hållit på med i andra kurser så det är något man känner igen.
+            Det gör att det blir enklare att jobba med det eftersom det är bekant. 
+            Strukturen gör det dessutom enkelt att förstå och orientera sig i bland alla mappar och filer.</p>
+
+            <p>TIL för detta kmom är kompisition och arv, hur dessa fungerar.</p>
 
         </section>
 
