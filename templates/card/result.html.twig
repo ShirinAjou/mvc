@@ -1,0 +1,26 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Session{% endblock %}
+
+{% block main %}
+    <div class="body-div">
+
+        <h1>Result</h1>
+        <h2>{{ result }}</h2>
+
+        <p>Player Score: {{ playerScore }}</p>
+         {% for card in playerHand %}
+            <p>{{ card }}</p>
+        {% endfor %}
+
+        <p>Bank Score: {{ bankScore }}</p>
+        {% for card in bankHand %}
+            <p>{{ card }}</p>
+        {% endfor %}
+
+        <form action="{{ path('play') }}" method="post">
+            <button name="restartCard" value="1" type="submit">Restart</button>
+        </form>
+ 
+    </div>
+{% endblock %}

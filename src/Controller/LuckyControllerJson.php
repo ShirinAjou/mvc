@@ -12,7 +12,12 @@ class LuckyControllerJson
     public function jsonNumber(): Response
     {
         $data = [
-            'quote' => '/api/quote'
+            'quote' => '/api/quote',
+            'show deck' => '/api/deck',
+            'shuffle deck' => '/api/deck/shuffle',
+            'draw card' => '/api/deck/draw',
+            'draw card {number}' => '/api/deck/draw/{number}',
+            'show current score' => '/api/game'
         ];
 
         $response = new JsonResponse($data);
@@ -25,16 +30,15 @@ class LuckyControllerJson
     #[Route("/api/quote")]
     public function jsonQuote(): Response
     {
-        $number = random_int(0, 4); 
+        $number = random_int(0, 4);
+
         if ($number === 1) {
             $quote = "Vad vi vet är inte vad vi lart, utan vad vi har kvar när vi glomt allt vi larde.";
         }
-
-        elseif ($number === 2) {
+        if ($number === 2) {
             $quote = "Det ar inte en bugg, det ar en feature!";
         }
-
-        else {
+        if (!isset($quote)) {
             $quote = "Den enda sanna matningen av programmerarens produktivitet ar antal svordomar per timme.";
         }
 

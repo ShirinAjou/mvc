@@ -1,0 +1,15 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Session{% endblock %}
+
+{% block main %}
+    <div class="body-div">
+        <h1>Draw card</h1>
+        <p>Cards left: {{ cardsLeft }}</p>
+        {% if drawnCards is not empty %}
+            {% for card in drawnCards %}
+                {{ card }}
+            {% endfor %}
+        {% endif %}
+    </div>
+{% endblock %}

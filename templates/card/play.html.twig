@@ -1,0 +1,41 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Session{% endblock %}
+
+{% block main %}
+    <div class="body-div">
+    
+        <h1>Draw card</h1>
+        <h2>Drawn card:</h2>
+
+        {% for card in player.hand %}
+            <p>{{ card }}</p>
+        {% endfor %}
+
+        {% if gameOver %}
+            {% if player.status == 'lose' %}
+                <p>You lost, your score is {{ player.score }}</p>
+            {% else %}
+                <p>You won, your score is {{ player.score }}</p>
+            {% endif %}
+        {% else %}
+            <p>Score: {{ player.score }}</p>
+        {% endif %}
+
+        {% if not gameOver %}
+            <form action="{{ path('draw_game') }}" method="post">
+                <button name="drawCard" value="1" type="submit">Draw card</button>
+            </form>
+
+            <form action="{{ path('stop_game') }}" method="post">
+                <button name="stopCard" value="1" type="submit">Stop</button>
+            </form>
+        {% endif %}
+        {% if gameOver %}
+            <form action="{{ path('play') }}" method="post">
+                <button name="restartCard" value="1" type="submit">Restart</button>
+            </form>
+        {% endif %}
+
+    </div>
+{% endblock %}

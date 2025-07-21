@@ -1,0 +1,16 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Session{% endblock %}
+
+{% block main %}
+    <div class="body-div">
+        <h1>Draw card</h1>
+        <p>Drawn card: {{ card }}</p>
+        <p>Cards left: {{ cardsLeft }}</p>
+        <form action="{{ path('draw') }}" method="post">
+            {% if cardsLeft > 0 %}
+                <button name="drawCard" value="1" type="submit">Draw card</button>
+            {% endif %}
+        </form>
+    </div>
+{% endblock %}

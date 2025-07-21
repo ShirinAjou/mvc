@@ -16,7 +16,7 @@ git clone https://github.com/ShirinAjou/mvc
 Därefter behöver du PHP, Symfony och Composer.
 
 1.  Skapa ett Symfony-projekt:
-```
+```+
 composer create-project symfony/skeleton:"7.2.*" app
 cd app
 ```

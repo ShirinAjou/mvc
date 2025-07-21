@@ -1,0 +1,12 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Session{% endblock %}
+
+{% block main %}
+    <div class="body-div">
+        <h1>Session</h1>
+        {% for key, value in sessionData %}
+            <p>{{ key }}: {{ value }}</p>
+        {% endfor %}
+    </div>
+{% endblock %}

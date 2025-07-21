@@ -1,0 +1,13 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Session{% endblock %}
+
+{% block main %}
+    <div class="body-div">
+        <h1>Card game</h1>
+        <a href="{{ path('deck') }}">Deck</a>
+        <a href="{{ path('shuffle') }}">Shuffle</a>
+        <a href="{{ path('draw') }}">Draw one card</a>
+        <a href="{{ path('draw_number', {number: 1}) }}">Draw cards</a>
+    </div>
+{% endblock %}

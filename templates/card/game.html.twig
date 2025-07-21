@@ -1,0 +1,13 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Session{% endblock %}
+
+{% block main %}
+    <div class="body-div">
+        <h1>Game</h1>
+        <h2>Spela 21!</h2>
+        <p>Spelet spelas av en spelare och banken. Målet är att flera kort ska försöka uppnå det sammanlagda värdet 21.</p>
+        <a href="{{ path('play')}}">Börja spela</a>
+        <a href="{{ path('doc')}}">Dokumentation</a>
+    </div>
+{% endblock %}

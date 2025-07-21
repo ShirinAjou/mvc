@@ -1,0 +1,12 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Session{% endblock %}
+
+{% block main %}
+    <div class="body-div">
+        <h1>Shuffle cards</h1>
+        {% for card in cards %}
+            <p>{{ card }}</p>
+        {% endfor %}
+    </div>
+{% endblock %}
