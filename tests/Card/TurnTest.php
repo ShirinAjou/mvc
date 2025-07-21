@@ -5,34 +5,57 @@ namespace App\Tests\Card;
 use PHPUnit\Framework\TestCase;
 use App\Card\Turn;
 use App\Card\DeckOfCards;
-use App\Card\Card;
 use App\Card\CardHand;
+use App\Card\CardGraphic; // ✅ glömd import från förra försöket
 
-/**
- * Test cases for class Turn.
- */
 class TurnTest extends TestCase
 {
-    /**
-     * 
-     */
-    public function testplayerTurn()
-    {
-        $score = 0;
-        $list = [];
+    // public function testPlayerTurnReturnsExpectedScore()
+    // {
+    //     $deck = new DeckOfCards();
 
-        $hand = new CardHand();
+    //     // Töm originalkortleken
+    //     while ($deck->countCards() > 0) {
+    //         $deck->drawReturn();
+    //     }
+
+    //     // Lägg till ett enda testkort: 10 i hjärter (suit 2)
+    //     $testCard = new CardGraphic(10, 2);
+    //     $deck->cards = [$testCard]; // OK eftersom cards är public
+
+    //     $turn = new Turn();
+    //     $result = $turn->playerTurn($deck);
+
+    //     $this->assertEquals(10, $result['score']);
+    //     $this->assertCount(1, $result['hand']);
+    //     $this->assertArrayNotHasKey('status', $result); // ska inte ha "lose"
+    // }
+
+    public function testPlayerTurn()
+    {
         $deck = new DeckOfCards();
+
+        while ($deck->countCards() > 0) {
+            $deck->drawReturn();
+        }
+
+        $card = $this->createMock(CardGraphic::class);
+        $card->method('getValue')->willReturn(22);
+        $card->method('getSuit')->willReturn(1);
+
+        $deck->cards = [$card];
+
         $turn = new Turn();
-        $card = $hand->drawCard($deck);
-        $card = $playerHand->drawCard($deck);
         $result = $turn->playerTurn($deck);
 
-        while ($score <= 21) {
-            $card = $cardHand->drawCard($deck);
-            $list[] = $card;
-            $score += $card->getValue();
-        }
         $this->assertEquals('lose', $result['status']);
+    }
+
+    public function testBankTurn()
+    {
+        $deck = new DeckOfCards();
+        
+        $card = $this->createMock(Card::class);
+        $card->method('getValue')->willReturn(5);
     }
 }

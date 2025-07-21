@@ -9,5 +9,11 @@
         <a href="{{ path('shuffle') }}">Shuffle</a>
         <a href="{{ path('draw') }}">Draw one card</a>
         <a href="{{ path('draw_number', {number: 1}) }}">Draw cards</a>
+
+        <p>Jag valde att ha fyra klasser, Card, Cardhand, DeckOfCards och CardGraphic. 
+        Jag använder mig av både kompision och arv. CardGraphic utökar Card-klassen. 
+        CardHand har en instans av DeckOfCards. 
+        Card hanterar ett kort, DeckOfCards haterar hela kortleken, CardGraphic hanterar det visuella och CardHand är spelarens hand.</p>
+        <img src="../img/uml.png" alt="uml">
     </div>
 {% endblock %}

@@ -15,7 +15,7 @@ class DeckOfCardsTest extends TestCase
     /**
      * 
      */
-    public function testgetCards()
+    public function testGetCards()
     {
         $deck = new DeckOfCards();
         $this->assertCount(52, $deck->getCards());
@@ -24,7 +24,7 @@ class DeckOfCardsTest extends TestCase
     /**
      * 
      */
-    public function testsortCards()
+    public function testSortCards()
     {
         $deckToSort = new DeckOfCards();
         $expectedDeck = new DeckOfCards();
@@ -34,7 +34,7 @@ class DeckOfCardsTest extends TestCase
     /**
      * 
      */
-    public function testshuffleCards()
+    public function testShuffleCards()
     {
         $deckToShuffle = new DeckOfCards();
         $shuffledDeck = new DeckOfCards();
@@ -44,7 +44,7 @@ class DeckOfCardsTest extends TestCase
     /**
      * 
      */
-    public function testcountCards()
+    public function testCountCards()
     {
         $deck = new DeckOfCards();
         $this->assertEquals(52, $deck->countCards());
@@ -54,7 +54,7 @@ class DeckOfCardsTest extends TestCase
      * 
      */
  
-    public function testdrawReturn()
+    public function testDrawReturn()
     {
         $deck = new DeckOfCards();
         while (!empty($deck->getCards())) {
@@ -68,7 +68,7 @@ class DeckOfCardsTest extends TestCase
      * 
      */
  
-    public function testgetCardsForJson()
+    public function testGetCardsForJson()
     {
         $deck = new DeckOfCards();
         $expectedArray = [

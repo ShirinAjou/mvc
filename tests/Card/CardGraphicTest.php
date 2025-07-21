@@ -22,7 +22,7 @@ class CardGraphicTest extends TestCase
     /**
      * 
      */
-    public function testgetSuitAsWord()
+    public function testGetSuitAsWord()
     {
         $graphic = new CardGraphic(7, 2);
         $this->assertEquals("hearts", $graphic->getSuitAsWord());

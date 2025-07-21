@@ -15,7 +15,7 @@ class DrawTest extends TestCase
     /**
      * 
      */
-    public function testplayerDraw()
+    public function testPlayerDraw()
     {
         $session = $this->createMock(SessionInterface::class);
 
@@ -33,7 +33,7 @@ class DrawTest extends TestCase
         $this->assertTrue(true);
     }
 
-    public function testplayerCount()
+    public function testPlayerCount()
     {
         $session = $this->createMock(SessionInterface::class);
 
@@ -58,40 +58,4 @@ class DrawTest extends TestCase
 
         $this->assertCount(2, $session->get('playerHand'));
     }
-
-    /**
-     * 
-     */
-    // public function testPlayerDrawContains() {
-    //     $session = $this->createMock(SessionInterface::class);
-    //     $session->method('get')->willReturnMap([
-    //         ['playerHand', ['card1', 'card2']],
-    //     ]);
-
-    //     $draw = new Draw();
-    //     $drawncard = $draw->playerDraw($session, 'card3');
-
-    //     $this->assertContains('card3', $drawncard);
-
-    // }
-
-    // public function testBankDrawWithNullCard() 
-    // {
-    //     $session = $this->createMock(SessionInterface::class);
-    //     $session->expects($this->any())->method('get')->with('bankHand')->willReturn([]);
-    //     $card = null;
-    //     $draw = new Draw();
-    //     $session->expects($this->any())->method('get')->with('deck')->willReturn([]);
-    //     $draw->bankDraw($session, $card);
-    //     $this->assertEquals([], $session->get('bankHand'));
-    // }
-
-// assertEquals: Du kan använda denna för att kontrollera att spelarens poäng har uppdaterats korrekt efter en tur.
-
-// assertContains: Du kan använda denna för att kontrollera att ett specifikt kort finns i spelarens hand efter en tur.
-
-// assertCount: Du kan använda denna för att kontrollera antalet kort i spelarens hand eller i kortleken efter en tur.
-
-// assertTrue/assertFalse: Du kan använda dessa för att kontrollera om ett visst villkor är uppfyllt, till exempel om spelaren har vunnit eller förlorat efter en tur.
-
 }
