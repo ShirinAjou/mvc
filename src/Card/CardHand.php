@@ -7,12 +7,16 @@ use App\Card\DeckOfCards;
 
 class CardHand
 {
+    public array $hand;
+
     public function __construct()
     {
     }
 
     public function drawCard(DeckOfCards $deck): CardGraphic
     {
-        return $deck->drawReturn();
+        $card = $deck->drawReturn();
+        $this->hand[] = $card;
+        return $card;
     }
 }

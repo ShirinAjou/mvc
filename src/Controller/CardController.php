@@ -70,8 +70,8 @@ class CardController extends AbstractController
         $deck = $session->get('deck');
 
         if (!$deck instanceof DeckOfCards) {
-        $deck = new DeckOfCards();
-        $session->set('deck', $deck);
+            $deck = new DeckOfCards();
+            $session->set('deck', $deck);
         }
 
         $card = null;

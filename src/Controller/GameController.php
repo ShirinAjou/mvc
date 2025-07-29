@@ -27,7 +27,7 @@ class GameController extends AbstractController
     }
 
     #[Route("/game", name: "start_game")]
-    public function start(SessionInterface $session): Response
+    public function start(): Response
     {
         return $this->render('card/game.html.twig');
     }
@@ -49,16 +49,23 @@ class GameController extends AbstractController
     }
 
     #[Route("/game/draw", name: "draw_game", methods: ["POST"])]
-    public function drawGame(Request $request, SessionInterface $session): Response
+    public function drawGame(SessionInterface $session): Response
     {
         $deck = $session->get('deck');
         if (!$deck instanceof DeckOfCards || $deck->countCards() <= 0) {
             $deck = new DeckOfCards();
             $deck->shuffleCards();
-            $session->set('deck', $deck);
         }
+
+        $playerHand = $session->get('playerHand', []);
+        $playerScore = $session->get('playerScore', 0);
+
         $draw = new Draw();
-        $draw->playerDraw($session);
+        $result = $draw->playerDraw($playerHand, $deck);
+
+        $session->set('deck', $result['deck']);
+        $session->set('playerHand', $result['hand']);
+        $session->set('playerScore', $playerScore + (int) $result['score']);
 
         return $this->redirectToRoute('play');
     }
@@ -70,10 +77,17 @@ class GameController extends AbstractController
         if (!$deck instanceof DeckOfCards || $deck->countCards() <= 0) {
             $deck = new DeckOfCards();
             $deck->shuffleCards();
-            $session->set('deck', $deck);
         }
+
+        $bankHand = $session->get('bankHand', []);
+        $bankScore = $session->get('bankScore', 0);
+
         $draw = new Draw();
-        $draw->bankDraw($session);
+        $result = $draw->bankDraw($bankHand, $deck);
+
+        $session->set('deck', $result['deck']);
+        $session->set('bankHand', $result['hand']);
+        $session->set('bankScore', $bankScore + $result['score']);
 
         $game = new Game();
         $data = $game->gameData($session);

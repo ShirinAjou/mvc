@@ -1,0 +1,11 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Add book{% endblock %}
+
+{% block main %}
+    <div class="body-div">
+        <h1>Library</h1>
+        <a href="{{ path('book_create') }}">Add book</a>
+        <a href="{{ path('book_show_all') }}">Show books</a>
+    </div>
+{% endblock %}

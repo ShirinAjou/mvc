@@ -17,7 +17,9 @@ class LuckyControllerJson
             'shuffle deck' => '/api/deck/shuffle',
             'draw card' => '/api/deck/draw',
             'draw card {number}' => '/api/deck/draw/{number}',
-            'show current score' => '/api/game'
+            'show current score' => '/api/game',
+            'show books' => '/api/library/books',
+            'show book {isbn}' => '/api/library/book/{isbn}'
         ];
 
         $response = new JsonResponse($data);

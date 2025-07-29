@@ -12,49 +12,33 @@ use App\Card\DeckOfCards;
  */
 class DeckOfCardsTest extends TestCase
 {
-    /**
-     * 
-     */
-    public function testGetCards()
+    public function testGetCards(): void
     {
         $deck = new DeckOfCards();
         $this->assertCount(52, $deck->getCards());
     }
 
-    /**
-     * 
-     */
-    public function testSortCards()
+    public function testSortCards(): void
     {
         $deckToSort = new DeckOfCards();
         $expectedDeck = new DeckOfCards();
         $this->assertEquals($expectedDeck->getCards(), $deckToSort->sortCards());
     }
 
-    /**
-     * 
-     */
-    public function testShuffleCards()
+    public function testShuffleCards(): void
     {
         $deckToShuffle = new DeckOfCards();
         $shuffledDeck = new DeckOfCards();
         $this->assertNotEquals($deckToShuffle->shuffleCards(), $shuffledDeck->shuffleCards());
     }
 
-    /**
-     * 
-     */
-    public function testCountCards()
+    public function testCountCards(): void
     {
         $deck = new DeckOfCards();
         $this->assertEquals(52, $deck->countCards());
     }
 
-    /**
-     * 
-     */
- 
-    public function testDrawReturn()
+    public function testDrawReturn(): void
     {
         $deck = new DeckOfCards();
         while (!empty($deck->getCards())) {
@@ -64,18 +48,14 @@ class DeckOfCardsTest extends TestCase
         $deck->drawReturn();
     }
 
-    /**
-     * 
-     */
- 
-    public function testGetCardsForJson()
+    public function testGetCardsForJson(): void
     {
         $deck = new DeckOfCards();
         $expectedArray = [
             ['value' => 'A', 'suit' => 'spades'],
             ['value' => '2', 'suit' => 'spades'],
         ];
-        
+
         $deck->getCardsForJson();
         $this->assertEquals($expectedArray, array_slice($deck->getCardsForJson(), 0, 2));
     }

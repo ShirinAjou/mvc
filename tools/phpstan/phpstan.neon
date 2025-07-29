@@ -1,5 +1,5 @@
 parameters:
-    level: 9
+    level: 4
     paths:
         - ../../config
         - ../../src

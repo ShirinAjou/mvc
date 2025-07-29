@@ -13,23 +13,21 @@ class Game
     {
     }
 
-    public function playGame(DeckOfCards $deck, SessionInterface $session): bool
+    public function playGame(DeckOfCards $deck, SessionInterface $session, Turn $turn, bool $drawCard, bool $stop): bool
     {
         $gameOver = false;
 
-        if (isset($_POST['drawCard'])) {
-            $turn = new Turn();
+        if ($drawCard) {
             $turn->playerTurn($deck);
         }
 
-        if (isset($_POST['stop'])) {
-            $turn = new Turn();
+        if ($stop) {
             $turn->bankTurn($deck);
         }
 
         $gameOver = true;
         $this->resetGame($session);
-        
+
         return $gameOver;
     }
 
@@ -46,7 +44,7 @@ class Game
         if ($bankScore >= $playerScore) {
             return "Bank wins";
         }
-        return "Palyer wins";
+        return "Player wins";
     }
 
     public function resetGame(SessionInterface $session): void
@@ -57,14 +55,6 @@ class Game
         $session->set('bankScore', 0);
     }
 
-    /**
-     * @return array{
-     *     bankHand: array<CardGraphic>,
-     *     playerHand: array<CardGraphic>,
-     *     playerScore: int,
-     *     bankScore: int
-     * }
-     */
     public function sessionGame(SessionInterface $session): array
     {
         $bankHand = $session->get('bankHand', []);
@@ -86,18 +76,6 @@ class Game
         ];
     }
 
-    /**
-     * @return array{
-     *     player: array{
-     *         hand: array<CardGraphic>,
-     *         score: int,
-     *         status: string
-     *     },
-     *     bankScore: int,
-     *     bankHand: array<CardGraphic>,
-     *     gameOver: bool
-     * }
-     */
     public function returnGame(SessionInterface $session): array
     {
         $result = $this->sessionGame($session);
@@ -121,18 +99,6 @@ class Game
         ];
     }
 
-    /**
-     * @return array{
-     *     player: array{
-     *         hand: list<array{value: string, suit: string}>,
-     *         score: int
-     *     },
-     *     bank: array{
-     *         hand: list<array{value: string, suit: string}>,
-     *         score: int
-     *     }
-     * }
-     */
     public function jsonGame(SessionInterface $session): array
     {
         $result = $this->sessionGame($session);
@@ -181,30 +147,41 @@ class Game
         ];
     }
 
-    /**
-     * @return array{
-     *     playerScore: int,
-     *     bankScore: int,
-     *     playerHand: array<CardGraphic>,
-     *     bankHand: array<CardGraphic>,
-     *     result: string
-     * }
-     */
+    // public function gameData(SessionInterface $session): array
+    // {
+    //     $result = $this->sessionGame($session);
+
+    //     $playerScore = $result['playerScore'];
+    //     $bankScore = $result['bankScore'];
+
+    //     $result = $this->winner($playerScore, $bankScore);
+
+    //     return [
+    //         'playerScore' => $playerScore,
+    //         'bankScore' => $bankScore,
+    //         'playerHand' => $result['playerHand'],
+    //         'bankHand' => $result['bankHand'],
+    //         'result' => $result,
+    //     ];
+    // }
+
     public function gameData(SessionInterface $session): array
     {
-        $result = $this->sessionGame($session);
+        $sessionData = $this->sessionGame($session);
 
-        $playerScore = $result['playerScore'];
-        $bankScore = $result['bankScore'];
+        $playerScore = $sessionData['playerScore'];
+        $bankScore = $sessionData['bankScore'];
+        $playerHand = $sessionData['playerHand'];
+        $bankHand = $sessionData['bankHand'];
 
-        $result = $this->winner($playerScore, $bankScore);
+        $resultText = $this->winner($playerScore, $bankScore);
 
         return [
             'playerScore' => $playerScore,
             'bankScore' => $bankScore,
-            'playerHand' => $result['playerHand'],
-            'bankHand' => $result['bankHand'],
-            'result' => $result,
+            'playerHand' => $playerHand,
+            'bankHand' => $bankHand,
+            'result' => $resultText,
         ];
     }
 }

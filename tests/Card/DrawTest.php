@@ -5,57 +5,38 @@ namespace App\Tests\Card;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use App\Card\Draw;
+use App\Card\Game;
 use App\Card\DeckOfCards;
+use App\Card\Turn;
+use App\Card\CardGraphic;
 
 /**
  * Test cases for class Draw.
  */
 class DrawTest extends TestCase
 {
-    /**
-     * 
-     */
-    public function testPlayerDraw()
+    public function testPlayerDraw(): void
     {
-        $session = $this->createMock(SessionInterface::class);
-
-        $session->expects($this->exactly(3))
-            ->method('set')
-            ->withConsecutive(
-                ['deck', $this->anything()],
-                ['playerHand', $this->anything()],
-                ['playerScore', $this->anything()]
-            );
-
+        $deck = new DeckOfCards();
+        $drawncard = $deck->getCards();
+        $topCard = $drawncard[0];
+        $playerHand = [];
         $draw = new Draw();
-        $draw->playerDraw($session);
+        $result = $draw->playerDraw($playerHand, $deck);
 
-        $this->assertTrue(true);
+        $this->assertContains($topCard, $result['hand']);
     }
 
-    public function testPlayerCount()
+    public function testBankDraw(): void
     {
-        $session = $this->createMock(SessionInterface::class);
-
-        $session->expects($this->exactly(3))
-            ->method('set')
-            ->withConsecutive(
-                ['deck', $this->anything()],
-                ['playerHand', $this->anything()],
-                ['playerScore', $this->anything()]
-            );
-
-        $session->method('get')
-            ->willReturnCallback(function ($key) {
-                $value = [
-                    'playerHand' => ['card1', 'card2'],
-                ][$key] ?? null;
-                return $value;
-            });
+        $deck = new DeckOfCards();
+        $card = new CardGraphic(2, 1);
+        $bankHand = [];
+        $bankHand[] = $card;
 
         $draw = new Draw();
-        $draw->playerDraw($session);
+        $result = $draw->bankDraw($bankHand, $deck);
 
-        $this->assertCount(2, $session->get('playerHand'));
+        $this->assertGreaterThanOrEqual(17, $result['score']);
     }
 }

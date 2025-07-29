@@ -10,30 +10,22 @@ use App\Card\Card;
  */
 class CardTest extends TestCase
 {
-    /**
-     * 
-     */
-    public function testGetValue()
+    public function testGetValue(): void
     {
         $card = new Card(2, 3);
         $this->assertEquals(2, $card->getValue());
     }
 
-    /**
-     * 
-     */
-    public function testGetSuit()
+    public function testGetSuit(): void
     {
         $card = new Card(3, 4);
         $this->assertEquals(4, $card->getSuit());
     }
 
-    /**
-     * 
-     */
-    public function testToString()
+    public function testToString(): void
     {
         $card = new Card(1, 2);
-        $this->assertIsString((string)$card);
+        $cardString = "A" . "\u{2665}";
+        $this->assertEquals($cardString, (string)$card);
     }
 }

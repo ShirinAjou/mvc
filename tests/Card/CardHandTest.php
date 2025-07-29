@@ -12,10 +12,7 @@ use App\Card\DeckOfCards;
  */
 class CardHandTest extends TestCase
 {
-    /**
-     * 
-     */
-    public function testDrawCard()
+    public function testDrawCard(): void
     {
         $deck = new DeckOfCards();
         $hand = new CardHand();

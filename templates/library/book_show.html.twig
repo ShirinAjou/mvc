@@ -1,0 +1,34 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Add book{% endblock %}
+
+{% block main %}
+    <div class="body-div">
+        <h1>Book details</h1>
+        <table class="book-table">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>ISBN</th>
+                    <th>Author</th>
+                    <th>Image</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{ book.getTitle() }}</td>
+                    <td>{{ book.getIsbn() }}</td>
+                    <td>{{ book.getAuthor() }}</td>
+                    <td><img src="{{ book.getImage() }}" alt="Book image" class="book-img"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <form action="{{ path('book_delete_by_id', {'id': book.getId()}) }}" method="post">
+            <button type="submit">Delete</button>
+        </form>
+        <form action="{{ path('book_update', {'id': book.getId()}) }}" method="post">
+            <button type="submit">Update</button>
+        </form>
+    </div>
+{% endblock %}

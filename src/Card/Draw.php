@@ -11,54 +11,25 @@ class Draw
     {
     }
 
-    public function playerDraw(SessionInterface $session, $card = null)
+    public function playerDraw(array $playerHand, DeckOfCards $deck): array
     {
-        if ($card !== null) {
-            $playerHand = $session->get('playerHand');
-            $playerHand[] = $card;
-            $session->set('playerHand', $playerHand);
-        }
+        $result = (new Turn())->playerTurn($deck);
 
-        $deck = $session->get('deck');
-        $deck = $deck instanceof DeckOfCards ? $deck : new DeckOfCards();
-        $turn = new Turn();
-        $result = $turn->playerTurn($deck);
-        $playerHand = $session->get('playerHand', []);
-        if (!is_array($playerHand)) {
-            $playerHand = (array) $playerHand;
-        }
-        $playerHand = array_merge($playerHand, $result['hand']);
-        $playerScore = $session->get('playerScore', 0) + $result['score'];
-    
-        $session->set('deck', $deck);
-        $session->set('playerHand', $playerHand);
-        $session->set('playerScore', $playerScore);
-
-        return $playerHand;
+        return [
+            'hand' => array_merge($playerHand, $result['hand']),
+            'score' => $result['score'],
+            'deck' => $deck
+        ];
     }
 
-    public function bankDraw(SessionInterface $session, $card = null): void
+    public function bankDraw(array $bankHand, DeckOfCards $deck): array
     {
-        if ($card !== null) {
-            $bankHand = $session->get('bankHand');
-            $bankHand[] = $card;
-            $session->set('bankHand', $bankHand);
-        }
+        $result = (new Turn())->bankTurn($deck);
 
-        $deck = $session->get('deck');
-        $deck = $deck instanceof DeckOfCards ? $deck : new DeckOfCards();
-        $turn = new Turn();
-        $result = $turn->bankTurn($deck);
-
-        $bankHand = $session->get('bankHand', []);
-        if (!is_array($bankHand)) {
-            $bankHand = (array) $bankHand;
-        }
-        $bankHand = array_merge($bankHand, $result['hand']);
-        $bankScore = $session->get('bankScore', 0) + $result['score'];
-
-        $session->set('deck', $deck);
-        $session->set('bankHand', $bankHand);
-        $session->set('bankScore', $bankScore);
+        return [
+            'hand' => array_merge($bankHand, $result['hand']),
+            'score' => $result['score'],
+            'deck' => $deck
+        ];
     }
 }

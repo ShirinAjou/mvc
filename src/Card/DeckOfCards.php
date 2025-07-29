@@ -4,12 +4,18 @@ namespace App\Card;
 
 use App\Card\CardGraphic;
 
+/**
+ * Class representing a deck of cards.
+ */
 class DeckOfCards
 {
-    /** @var CardGraphic[] */
+
     public array $cards;
     protected int $value;
 
+    /**
+     * Constructs a new deck of cards. The deck is initialized with 52 cards, each represented by a CardGraphic object.
+     */
     public function __construct()
     {
         $this->cards = array();
@@ -22,13 +28,21 @@ class DeckOfCards
         }
     }
 
-    /** @return CardGraphic[] */
+    /**
+     * Returns the array of cards in the deck.
+     *
+     * @return array The array of cards.
+     */
     public function getCards(): array
     {
         return $this->cards;
     }
 
-    /** @return CardGraphic[] */
+    /**
+     * Sorts the cards in the deck by suit and value.
+     *
+     * @return array The sorted array of cards.
+     */
     public function sortCards(): array
     {
         usort($this->cards, function ($card1, $card2) {
@@ -43,7 +57,11 @@ class DeckOfCards
         return $this->cards;
     }
 
-    /** @return CardGraphic[] */
+    /**
+     * Shuffles the cards in the deck.
+     *
+     * @return array The shuffled array of cards.
+     */
     public function shuffleCards(): array
     {
         shuffle($this->cards);
@@ -51,11 +69,22 @@ class DeckOfCards
         return $this->cards;
     }
 
+    /**
+     * Counts the number of cards in the deck.
+     *
+     * @return int The number of cards in the deck.
+     */
     public function countCards(): int
     {
         return count($this->cards);
     }
 
+    /**
+     * Draws a card from the deck and returns it.
+     *
+     * @return CardGraphic The drawn card.
+     * @throws \RuntimeException If the deck is empty.
+     */
     public function drawReturn(): CardGraphic
     {
         if (empty($this->cards)) {
@@ -65,7 +94,11 @@ class DeckOfCards
         return array_shift($this->cards);
     }
 
-    /** @return array<array<string, string>> */
+    /**
+     * Converts the cards in the deck to JSON format.
+     *
+     * @return array An array of cards with their values and suits as strings.
+     */
     public function getCardsForJson(): array
     {
         $suits = [
@@ -101,5 +134,15 @@ class DeckOfCards
         }
 
         return $getArray;
+    }
+
+    /**
+     * Adds a card to the deck.
+     *
+     * @param CardGraphic $card The card to add.
+     */
+    public function addCard(CardGraphic $card): void
+    {
+        $this->cards[] = $card;
     }
 }

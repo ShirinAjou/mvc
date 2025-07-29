@@ -99,6 +99,7 @@ h1 {
     background-color: #cce5ff;
     border-color: #b8daff;
 }
+
 .flash-notice:before {
     content: "ⓘ";
 }
@@ -109,6 +110,17 @@ h1 {
     background-color: #fff3cd;
     border-color: #ffeeba;
 }
+
 .flash-warning:before {
     content: "⚠";
+}
+
+.book-table th,
+.book-table td {
+    text-align: left;
+    padding: 5px 0;
+}
+
+.book-img {
+    height: 15em;
 }

@@ -12,25 +12,6 @@ use App\Card\CardHand;
 
 class CardControllerJson
 {
-    // #[Route("/api")]
-    // public function jsonNumber(): Response
-    // {
-    //     $data = [
-    //         'quote' => '/api/quote',
-    //         'show deck' => '/api/deck',
-    //         'shuffle deck' => '/api/deck/shuffle',
-    //         'draw card' => '/api/deck/draw',
-    //         'draw card {number}' => '/api/deck/draw/{number}',
-    //         'show current score' => '/api/game'
-    //     ];
-
-    //     $response = new JsonResponse($data);
-    //     $response->setEncodingOptions(
-    //         $response->getEncodingOptions() | JSON_PRETTY_PRINT
-    //     );
-    //     return $response;
-    // }
-
     #[Route("/api/deck", name: "card_json")]
     public function deckJson(): Response
     {
@@ -70,7 +51,6 @@ class CardControllerJson
             $session->set('deck', $deck);
         }
 
-        $cardHand = new CardHand();
         $card = $deck->drawReturn();
         $suitName = $card->getSuitAsWord();
         $data = [

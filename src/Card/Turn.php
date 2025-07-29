@@ -4,8 +4,10 @@ namespace App\Card;
 
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use App\Card\DeckOfCards;
-use App\Card\Turn;
 
+/**
+ * Represents a turn in the card game.
+ */
 class Turn
 {
     public function __construct()
@@ -13,14 +15,15 @@ class Turn
     }
 
     /**
-     * @return array{
-     *     hand: array<Card>,
-     *     score: int,
-     *     status?: string
-     * }
+     * Simulates a player's turn in the card game. The player draws a card from the deck and updates their score.
+     * If the player's score exceeds 21, they lose the game.
+     *
+     * @param DeckOfCards $deck The deck of cards from which the player draws.
+     * @return array An array containing the player's hand, score, and status after their turn.
      */
     public function playerTurn(DeckOfCards $deck): array
     {
+        $status = 'playing';
         $playerHand = [];
         $playerScore = 0;
 
@@ -41,15 +44,16 @@ class Turn
 
         return [
             'hand' => $playerHand,
-            'score' => $playerScore
+            'score' => $playerScore,
+            'status' => $status
         ];
     }
 
     /**
-     * @return array{
-     *     hand: array<Card>,
-     *     score: int
-     * }
+     * Simulates the bank's turn in the card game. Draws card until reaching 17 points.
+     *
+     * @param DeckOfCards $deck The deck of cards to draw from.
+     * @return array An array containing the bank's hand and score.
      */
     public function bankTurn(DeckOfCards $deck): array
     {
