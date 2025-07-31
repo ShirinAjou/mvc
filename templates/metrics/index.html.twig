@@ -1,0 +1,46 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Add book{% endblock %}
+
+{% block main %}
+    <div class="body-div">
+        <h1>Metrics</h1>
+        <h2>Introduktion</h2>
+
+        <h3>Codestyle</h3>
+
+        <h3>Coverage</h3>
+        <p>Covereage innebär hur mycket av koden som är testat med hjälp av enhetstester, vid ungefär 70% coverage kan man räkna det som god täckning.
+        Mitt nuvarande värde för coverage är 31% vilket är rätt lågt. Det beror på att den även räknar med controllers, entity och repository.
+        Dessa har jag inte testat och kommer med största sannolikhet inte heller att testa.</p>
+        
+        <h3>Complexity</h3>
+        <p>Complexity mäter hur komplext koden är, det gör man genom att mäta antalet beslutspunkter.
+        Har man ett lågt värde är det tecken på att den inte har många beslutspunkter och är alltså enkel kod.</p>
+
+        <h3>Cohesion</h3>
+        <p>Cohesion innebär hur tätt kopplade metoderna inom en klass är. En chohesive klass fokuserar på en sak och inte på flera. 
+        LCOM, Lack of Cohesive MEthods mäter värdet och får man 1 är det ett gott tecken på att ens klass fokuserar på en uppgift men får man 4 som vissa av mina klasser fått innebär det att en klass fokuserar på 4 olika uppgifter och det är inget vidare.
+        Min kod har LCOM värden på 0-4, större delen av min kod har 1-4 vilket tyder på att den gör flera saker samtidigt.</p>
+        
+        <h3>Coupling</h3>
+        <p>Coupling kollar på kopplingar/beroenden klassserna emellan.
+        Är de löst kopplade är det ett gott tecken eftersom det är lättare att arbeta då dessa enkelt går att testa och debugga.
+        Efferent coupling mäter hur många andra klasser den här klassen är beroende av.
+        Afferent coupling mäter hur många andra klasser som är beroende av den här klassen.
+        Instability index mäter Efferent coupling i relation till totala coupling.
+        Flera av mina klasser har ett Afferent coupling värde på 1-2 förutom DeckOfCards som sticker ut med en 7:a. 
+        Det betyder att många andra klasser är beroende av den
+        Efferent coupling värdet är lite högre 1-8 för flera controllers.
+        Instability värden som mäter 0-1 där controllers har högst värde.
+        Det är märkbart att det är främst controller som har hög coupling och instabilitet.</p>
+
+        <h3>CRAP</h3>
+        <p>CRAP, Change Risk Analyzer and Predictor (Change Risk Anti Pattern). CRAP mäte rhur svår koden är att testa och underhålla. Ju högre CARP-värde desto sämre.</p>
+        
+        <h2>Phpmetrics</h2>
+        <h2>Scrutinizer</h2>
+        <h2>Förbättringar</h2>
+        <h2>Diskussion</h2>
+    </div>
+{% endblock %}

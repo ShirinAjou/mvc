@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="" tests="26" assertions="33" errors="0" warnings="0" failures="0" skipped="0" time="0.112785">
+    <testsuite name="Project Test Suite" tests="26" assertions="33" errors="0" warnings="0" failures="0" skipped="0" time="0.112785">
+      <testsuite name="App\Tests\Card\CardGraphicTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/CardGraphicTest.php" tests="3" assertions="3" errors="0" warnings="0" failures="0" skipped="0" time="0.008922">
+        <testcase name="testGetValue" class="App\Tests\Card\CardGraphicTest" classname="App.Tests.Card.CardGraphicTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/CardGraphicTest.php" line="13" assertions="1" time="0.007387"/>
+        <testcase name="testGetSuitAsWord" class="App\Tests\Card\CardGraphicTest" classname="App.Tests.Card.CardGraphicTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/CardGraphicTest.php" line="19" assertions="1" time="0.000885"/>
+        <testcase name="testToString" class="App\Tests\Card\CardGraphicTest" classname="App.Tests.Card.CardGraphicTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/CardGraphicTest.php" line="25" assertions="1" time="0.000649"/>
+      </testsuite>
+      <testsuite name="App\Tests\Card\CardHandTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/CardHandTest.php" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="0.005894">
+        <testcase name="testDrawCard" class="App\Tests\Card\CardHandTest" classname="App.Tests.Card.CardHandTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/CardHandTest.php" line="15" assertions="1" time="0.005894"/>
+      </testsuite>
+      <testsuite name="App\Tests\Card\CardTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/CardTest.php" tests="3" assertions="3" errors="0" warnings="0" failures="0" skipped="0" time="0.004344">
+        <testcase name="testGetValue" class="App\Tests\Card\CardTest" classname="App.Tests.Card.CardTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/CardTest.php" line="13" assertions="1" time="0.003287"/>
+        <testcase name="testGetSuit" class="App\Tests\Card\CardTest" classname="App.Tests.Card.CardTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/CardTest.php" line="19" assertions="1" time="0.000653"/>
+        <testcase name="testToString" class="App\Tests\Card\CardTest" classname="App.Tests.Card.CardTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/CardTest.php" line="25" assertions="1" time="0.000404"/>
+      </testsuite>
+      <testsuite name="App\Tests\Card\DeckOfCardsTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/DeckOfCardsTest.php" tests="6" assertions="6" errors="0" warnings="0" failures="0" skipped="0" time="0.029431">
+        <testcase name="testGetCards" class="App\Tests\Card\DeckOfCardsTest" classname="App.Tests.Card.DeckOfCardsTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/DeckOfCardsTest.php" line="15" assertions="1" time="0.001495"/>
+        <testcase name="testSortCards" class="App\Tests\Card\DeckOfCardsTest" classname="App.Tests.Card.DeckOfCardsTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/DeckOfCardsTest.php" line="21" assertions="1" time="0.011255"/>
+        <testcase name="testShuffleCards" class="App\Tests\Card\DeckOfCardsTest" classname="App.Tests.Card.DeckOfCardsTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/DeckOfCardsTest.php" line="28" assertions="1" time="0.013345"/>
+        <testcase name="testCountCards" class="App\Tests\Card\DeckOfCardsTest" classname="App.Tests.Card.DeckOfCardsTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/DeckOfCardsTest.php" line="35" assertions="1" time="0.000545"/>
+        <testcase name="testDrawReturn" class="App\Tests\Card\DeckOfCardsTest" classname="App.Tests.Card.DeckOfCardsTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/DeckOfCardsTest.php" line="41" assertions="1" time="0.001854"/>
+        <testcase name="testGetCardsForJson" class="App\Tests\Card\DeckOfCardsTest" classname="App.Tests.Card.DeckOfCardsTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/DeckOfCardsTest.php" line="51" assertions="1" time="0.000937"/>
+      </testsuite>
+      <testsuite name="App\Tests\Card\DrawTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/DrawTest.php" tests="2" assertions="3" errors="0" warnings="0" failures="0" skipped="0" time="0.008355">
+        <testcase name="testPlayerDraw" class="App\Tests\Card\DrawTest" classname="App.Tests.Card.DrawTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/DrawTest.php" line="18" assertions="1" time="0.006041"/>
+        <testcase name="testBankDraw" class="App\Tests\Card\DrawTest" classname="App.Tests.Card.DrawTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/DrawTest.php" line="30" assertions="2" time="0.002314"/>
+      </testsuite>
+      <testsuite name="App\Tests\Card\GameTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/GameTest.php" tests="9" assertions="14" errors="0" warnings="0" failures="0" skipped="0" time="0.053917">
+        <testcase name="testPlayGame" class="App\Tests\Card\GameTest" classname="App.Tests.Card.GameTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/GameTest.php" line="19" assertions="1" time="0.027071"/>
+        <testcase name="testPlayGameWithDrawCard" class="App\Tests\Card\GameTest" classname="App.Tests.Card.GameTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/GameTest.php" line="66" assertions="1" time="0.011902"/>
+        <testcase name="testPlayGameWithStop" class="App\Tests\Card\GameTest" classname="App.Tests.Card.GameTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/GameTest.php" line="78" assertions="1" time="0.001412"/>
+        <testcase name="testWinner" class="App\Tests\Card\GameTest" classname="App.Tests.Card.GameTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/GameTest.php" line="90" assertions="4" time="0.000614"/>
+        <testcase name="testSessionGame" class="App\Tests\Card\GameTest" classname="App.Tests.Card.GameTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/GameTest.php" line="100" assertions="2" time="0.003662"/>
+        <testcase name="testReturnGame" class="App\Tests\Card\GameTest" classname="App.Tests.Card.GameTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/GameTest.php" line="117" assertions="1" time="0.000942"/>
+        <testcase name="testJsonGame" class="App\Tests\Card\GameTest" classname="App.Tests.Card.GameTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/GameTest.php" line="134" assertions="1" time="0.004910"/>
+        <testcase name="testJsonBankHand" class="App\Tests\Card\GameTest" classname="App.Tests.Card.GameTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/GameTest.php" line="155" assertions="1" time="0.001087"/>
+        <testcase name="testGameData" class="App\Tests\Card\GameTest" classname="App.Tests.Card.GameTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/GameTest.php" line="176" assertions="2" time="0.002316"/>
+      </testsuite>
+      <testsuite name="App\Tests\Card\TurnTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/TurnTest.php" tests="2" assertions="3" errors="0" warnings="0" failures="0" skipped="0" time="0.001923">
+        <testcase name="testPlayerTurn" class="App\Tests\Card\TurnTest" classname="App.Tests.Card.TurnTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/TurnTest.php" line="17" assertions="1" time="0.000994"/>
+        <testcase name="testBankTurn" class="App\Tests\Card\TurnTest" classname="App.Tests.Card.TurnTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/TurnTest.php" line="30" assertions="2" time="0.000929"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testsuites>
