@@ -1,5 +1,9 @@
 ![web image](public/img/webb.png)
 
+[![Quality Score](https://scrutinizer-ci.com/g/ShirinAjou/mvc/badges/quality-score.png?b=main)](https://scrutinizer-ci.com/g/ShirinAjou/mvc?branch=main)
+[![Coverage](https://scrutinizer-ci.com/g/ShirinAjou/mvc/badges/coverage.png?b=main)](https://scrutinizer-ci.com/g/ShirinAjou/mvc?branch=main)
+[![Build Status](https://scrutinizer-ci.com/g/ShirinAjou/mvc/badges/build.png?b=main)](https://scrutinizer-ci.com/g/ShirinAjou/mvc?branch=main)
+
 # Introduktion
 
 Detta projekt är en del av MVC-kursen inom Webbprogrammering på Blekinge Tekniska Högskola.
