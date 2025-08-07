@@ -5,42 +5,89 @@
 {% block main %}
     <div class="body-div">
         <h1>Metrics</h1>
-        <h2>Introduktion</h2>
+        <div class="metrics-div">
+            <h2>Introduktion</h2>
 
-        <h3>Codestyle</h3>
+            <h3>Codestyle</h3>
+            <p>Innebär hur koden ska skrivas och struktureras för att skapa enhetlig och lättläst kod.
+            Man kollar bland annat på indentering, vaiabelnamn och hur man placerar måsvingarna.</p>
 
-        <h3>Coverage</h3>
-        <p>Covereage innebär hur mycket av koden som är testat med hjälp av enhetstester, vid ungefär 70% coverage kan man räkna det som god täckning.
-        Mitt nuvarande värde för coverage är 31% vilket är rätt lågt. Det beror på att den även räknar med controllers, entity och repository.
-        Dessa har jag inte testat och kommer med största sannolikhet inte heller att testa.</p>
-        
-        <h3>Complexity</h3>
-        <p>Complexity mäter hur komplext koden är, det gör man genom att mäta antalet beslutspunkter.
-        Har man ett lågt värde är det tecken på att den inte har många beslutspunkter och är alltså enkel kod.</p>
+            <h3>Coverage</h3>
+            <p>Covereage innebär hur mycket av koden som är testat med hjälp av enhetstester, vid ungefär 70% coverage kan man räkna det som god täckning.
+            Mitt nuvarande värde för coverage är 31% vilket är rätt lågt. Det beror på att den även räknar med controllers, entity och repository.
+            Dessa har jag inte testat och kommer med största sannolikhet inte heller att testa.</p>
+            
+            <h3>Complexity</h3>
+            <p>Complexity mäter hur komplext koden är, det gör man genom att mäta antalet beslutspunkter.
+            Har man ett lågt värde är det tecken på att den inte har många beslutspunkter och är alltså enkel kod.</p>
 
-        <h3>Cohesion</h3>
-        <p>Cohesion innebär hur tätt kopplade metoderna inom en klass är. En chohesive klass fokuserar på en sak och inte på flera. 
-        LCOM, Lack of Cohesive MEthods mäter värdet och får man 1 är det ett gott tecken på att ens klass fokuserar på en uppgift men får man 4 som vissa av mina klasser fått innebär det att en klass fokuserar på 4 olika uppgifter och det är inget vidare.
-        Min kod har LCOM värden på 0-4, större delen av min kod har 1-4 vilket tyder på att den gör flera saker samtidigt.</p>
-        
-        <h3>Coupling</h3>
-        <p>Coupling kollar på kopplingar/beroenden klassserna emellan.
-        Är de löst kopplade är det ett gott tecken eftersom det är lättare att arbeta då dessa enkelt går att testa och debugga.
-        Efferent coupling mäter hur många andra klasser den här klassen är beroende av.
-        Afferent coupling mäter hur många andra klasser som är beroende av den här klassen.
-        Instability index mäter Efferent coupling i relation till totala coupling.
-        Flera av mina klasser har ett Afferent coupling värde på 1-2 förutom DeckOfCards som sticker ut med en 7:a. 
-        Det betyder att många andra klasser är beroende av den
-        Efferent coupling värdet är lite högre 1-8 för flera controllers.
-        Instability värden som mäter 0-1 där controllers har högst värde.
-        Det är märkbart att det är främst controller som har hög coupling och instabilitet.</p>
+            <h3>Cohesion</h3>
+            <p>Cohesion innebär hur tätt kopplade metoderna inom en klass är. En chohesive klass fokuserar på en sak och inte på flera. 
+            LCOM, Lack of Cohesive MEthods mäter värdet och får man 1 är det ett gott tecken på att ens klass fokuserar på en uppgift men får man 4 som vissa av mina klasser fått innebär det att en klass fokuserar på 4 olika uppgifter och det är inget vidare.
+            Min kod har LCOM värden på 0-4, större delen av min kod har 1-4 vilket tyder på att den gör flera saker samtidigt.</p>
+            
+            <h3>Coupling</h3>
+            <p>Coupling kollar på kopplingar/beroenden klassserna emellan.
+            Är de löst kopplade är det ett gott tecken eftersom det är lättare att arbeta då dessa enkelt går att testa och debugga.
+            Efferent coupling mäter hur många andra klasser den här klassen är beroende av.
+            Afferent coupling mäter hur många andra klasser som är beroende av den här klassen.
+            Instability index mäter Efferent coupling i relation till totala coupling.
+            Flera av mina klasser har ett Afferent coupling värde på 1-2 förutom DeckOfCards som sticker ut med en 7:a. 
+            Det betyder att många andra klasser är beroende av den
+            Efferent coupling värdet är lite högre 1-8 för flera controllers.
+            Instability värden som mäter 0-1 där controllers har högst värde.
+            Det är märkbart att det är främst controller som har hög coupling och instabilitet.</p>
 
-        <h3>CRAP</h3>
-        <p>CRAP, Change Risk Analyzer and Predictor (Change Risk Anti Pattern). CRAP mäte rhur svår koden är att testa och underhålla. Ju högre CARP-värde desto sämre.</p>
-        
-        <h2>Phpmetrics</h2>
-        <h2>Scrutinizer</h2>
-        <h2>Förbättringar</h2>
-        <h2>Diskussion</h2>
+            <h3>CRAP</h3>
+            <p>CRAP, Change Risk Analyzer and Predictor (Change Risk Anti Pattern). 
+            CRAP mäter hur svår koden är att testa och underhålla. 
+            Ju högre CARP-värde desto sämre. I min kod är det främst routerna som har högt CARP-värden, up emot 20.</p>
+        </div>
+        <div class="metrics-div">
+            <h2>Phpmetrics</h2>
+            <p>De flaskhalsar och svaga punkter jag funnit i min kod är bland annat 5 violations.
+            Bland annat bryter min Game klass mot Single responsibility principle och har hög Lack of cohesion of methods.
+            Vidare finns två Probably bugged warning samt två Stable Abstractions Principle warning.
+            Utöver det ser Maintainability indexet inte så bra ut det är en hel det röda cirklar och när jag slår till utan kommentarer så blir det mesta rött så det är något att se över.
+            En tydlig svaghet är Game klassen som har höga indikerar på att den är för komplex och svårbegriplig, har för många metoder.
+            Metoder som dessutom utför olika saker och inte en tydlig riktning.</p>
+        </div>
+        <img src="../img/metrics.png" alt="metrics">
+        <div class="metrics-div">
+            <h2>Scrutinizer</h2>
+            <p>De svagheter jag funnit är bland annat coverage-värdet som ligget på 31%.
+            Återigen ser det inte bra ut för metoderna i controllerna.
+            CardController::drawNumber() har hög komplexitet och CRAP-värde vilket innebär att testbarheten är låg och att metoden är svår att underhålla.
+            Ytterligare en svag het är att det är för stora metoder i controllerna.
+            Flera metoder har storlek mellan 15–23 rader, vilket är mycket för en metod i en controller.
+            </p>
+
+            <a href="https://scrutinizer-ci.com/g/ShirinAjou/mvc?branch=main" target="_blank" rel="noopener noreferrer">
+                <img src="https://scrutinizer-ci.com/g/ShirinAjou/mvc/badges/quality-score.png?b=main" alt="Scrutinizer Code Intelligence Badge">
+            </a>
+            <a href="https://scrutinizer-ci.com/g/ShirinAjou/mvc?branch=main" target="_blank" rel="noopener noreferrer">
+                <img src="https://scrutinizer-ci.com/g/ShirinAjou/mvc/badges/coverage.png?b=main">
+            </a>
+            <a href="https://scrutinizer-ci.com/g/ShirinAjou/mvc?branch=main" target="_blank" rel="noopener noreferrer">
+                <img src="https://scrutinizer-ci.com/g/ShirinAjou/mvc/badges/build.png?b=main" alt="Scrutinizer Code Intelligence Badge">
+            </a>
+        </div>
+        <div class="metrics-div">
+            <h2>Förbättringar</h2>
+            <p>De förbättringar jag kommer implementera är att jag kommer att bryta upp Game-klassen till mindre klasser med enskilda uppgifter.
+            Det kommer jag att göra eftersom att min Game klass bryter mot Single responsibility principle och har hög Lack of cohesion of methods.
+            Genom att brytta upp klassen hoppas jag på att förbättre mätvärderna samt kvaliten på koden.
+
+            Vidare kommer jag att lägga till kommentarer för att förbättra mitt Maintainability indexet.
+            De röda cirklarna kommer förhopningsvid antingen bli gula eller grön.
+
+            Den tredje förbättringen jag kommer genomföra är issues i scrutinizer och det är för att det är tydliga beskrivningar på vad problemet är.
+            Det kommer att leda till högre kodkvalite.
+            </p>
+        </div>
+        <div class="metrics-div">
+            <h2>Diskussion</h2>
+            <p></p>
+        </div>
     </div>
 {% endblock %}

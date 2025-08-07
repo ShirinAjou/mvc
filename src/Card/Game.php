@@ -15,7 +15,7 @@ class Game
 
     public function playGame(DeckOfCards $deck, SessionInterface $session, Turn $turn, bool $drawCard, bool $stop): bool
     {
-        $gameOver = false;
+        // $gameOver = false;
 
         if ($drawCard) {
             $turn->playerTurn($deck);
@@ -62,11 +62,11 @@ class Game
         $playerScore = $session->get('playerScore', 0);
         $bankScore = $session->get('bankScore', 0);
 
-        /** @var array<CardGraphic> $bankHand */
-        $bankHand = is_array($bankHand) ? $bankHand : [];
+        // /** @var array<CardGraphic> $bankHand */
+        // $bankHand = is_array($bankHand) ? $bankHand : [];
 
-        /** @var array<CardGraphic> $playerHand */
-        $playerHand = is_array($playerHand) ? $playerHand : [];
+        // /** @var array<CardGraphic> $playerHand */
+        // $playerHand = is_array($playerHand) ? $playerHand : [];
 
         return [
             'bankHand' => $bankHand,
