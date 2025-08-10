@@ -14,6 +14,9 @@ use App\Card\CardHand;
 use App\Card\Game;
 use App\Card\Draw;
 
+/**
+ * Controller for card-related routes.
+ */
 class CardController extends AbstractController
 {
     private RequestStack $requestStack;
@@ -23,12 +26,22 @@ class CardController extends AbstractController
         $this->requestStack = $requestStack;
     }
 
+    /**
+     * Display the home page for the card application.
+     * 
+     * @return Response The response.
+     */
     #[Route("/card", name: "card")]
     public function home(): Response
     {
         return $this->render('card/card.html.twig');
     }
 
+    /**
+     * Display the deck of cards.
+     * 
+     * @return Response The response.
+     */
     #[Route("/card/deck", name: "deck")]
     public function deck(): Response
     {
@@ -37,6 +50,12 @@ class CardController extends AbstractController
         return $this->render('card/deck.html.twig', ['cards' => $cards]);
     }
 
+    /**
+     * Shuffle the deck of cards.
+     * 
+     * @param SessionInterface $session The session interface.
+     * @return Response The response.
+     */
     #[Route("/card/deck/shuffle", name: "shuffle")]
     public function shuffle(SessionInterface $session): Response
     {
@@ -46,6 +65,12 @@ class CardController extends AbstractController
         return $this->render('card/shuffle.html.twig', ['cards' => $cards]);
     }
 
+    /**
+     * Display the form to draw a card from the deck.
+     *  
+     * @param SessionInterface $session The session interface.
+     * @return Response The response.
+     */
     #[Route("/card/deck/draw", name: "draw_form", methods: ["GET"])]
     public function drawForm(SessionInterface $session): Response
     {
@@ -64,6 +89,14 @@ class CardController extends AbstractController
         ]);
     }
 
+    /**
+     * Draw a card from the deck.
+     * 
+     * @param Request $request The request object.
+     * @param SessionInterface $session The session interface.
+     * 
+     * @return Response The response.
+     */
     #[Route("/card/deck/draw", name: "draw", methods: ["POST"])]
     public function draw(Request $request, SessionInterface $session): Response
     {
@@ -91,6 +124,14 @@ class CardController extends AbstractController
         ]);
     }
 
+    /**
+     * Draw a specified number of cards from the deck.
+     * 
+     * @param int $number The number of cards to draw.
+     * @param SessionInterface $session The session interface.
+     * 
+     * @return Response The response.
+     */
     #[Route("/card/deck/draw/{number<\d+>}", name: "draw_number")]
     public function drawNumber(int $number, SessionInterface $session): Response
     {
@@ -121,6 +162,11 @@ class CardController extends AbstractController
         ]);
     }
 
+    /**
+     * Display the form to shuffle the deck of cards.
+     * 
+     * @return Response The response.
+     */
     #[Route("/card/shuffle/form", name: "form_shuffle", methods: ["GET"])]
     public function shuffleForm(): Response
     {

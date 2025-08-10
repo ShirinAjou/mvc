@@ -2,8 +2,16 @@
 
 namespace App\Card;
 
+/**
+ * Represents a card with a graphical representation.
+ */
 class CardGraphic extends Card
 {
+    /**
+     * Returns the card as a string with rank and suit symbols.
+     *
+     * @return string The card as a string.
+     */
     public function getCard(): string
     {
         $suitSymbols = [1 => "\u{2660}", 2 => "\u{2665}", 3 => "\u{2663}", 4 => "\u{2666}"];
@@ -15,11 +23,21 @@ class CardGraphic extends Card
         return $rankSymbols[$rank] . $suitSymbols[$suit];
     }
 
+    /**
+     * Returns the card as a string.
+     *
+     * @return string The card as a string.
+     */
     public function __toString(): string
     {
         return $this->getCard();
     }
 
+    /**
+     * Returns the suit of the card as a word.
+     *
+     * @return string The suit of the card as a word.
+     */
     public function getSuitAsWord(): string
     {
         $suits = [
@@ -31,5 +49,4 @@ class CardGraphic extends Card
 
         return $suits[$this->getSuit()];
     }
-
 }

@@ -11,6 +11,7 @@ use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use App\Card\DeckOfCards;
 use App\Card\Game;
 use App\Card\Draw;
+use App\Card\SessionGameMethods;
 
 class GameController extends AbstractController
 {
@@ -36,14 +37,16 @@ class GameController extends AbstractController
     public function play(SessionInterface $session, Request $request): Response
     {
         if ($request->request->get('restartCard')) {
-            $game = new Game();
-            $game->resetGame($session);
+            $sessionMethods = new SessionGameMethods();
+            // $game = new Game($session);
+            $sessionMethods->resetGame($session);
             return $this->redirectToRoute('play');
         }
 
-        $game = new Game();
-        $game->sessionGame($session);
-        $returnGame = $game->returnGame($session);
+        $sessionMethods = new SessionGameMethods();
+        // $game = new Game($session);
+        $sessionMethods->sessionGame($session);
+        $returnGame = $sessionMethods->returnGame($session);
 
         return $this->render('card/play.html.twig', $returnGame);
     }
@@ -89,8 +92,8 @@ class GameController extends AbstractController
         $session->set('bankHand', $result['hand']);
         $session->set('bankScore', $bankScore + $result['score']);
 
-        $game = new Game();
-        $data = $game->gameData($session);
+        $sessionMethods = new SessionGameMethods($session);
+        $data = $sessionMethods->gameData($session);
 
         return $this->render('card/result.html.twig', $data);
     }
