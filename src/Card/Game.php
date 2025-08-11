@@ -9,10 +9,12 @@ use App\Card\Turn;
 class Game
 {
     private $session;
+    private $sessionGameMethods;
 
-    public function __construct(SessionInterface $session)
+    public function __construct(SessionInterface $session, SessionGameMethods $sessionGameMethods)
     {
         $this->session = $session;
+        $this->sessionGameMethods = $sessionGameMethods;
     }
 
     public function playGame(DeckOfCards $deck, SessionInterface $session, Turn $turn, bool $drawCard, bool $stop): bool
@@ -25,10 +27,9 @@ class Game
             $turn->bankTurn($deck);
         }
 
-        $gameOver = true;
-        $this->resetGame($session);
+        $this->sessionGameMethods->resetGame($session);
 
-        return $gameOver;
+        return true;
     }
 
     public function winner(int $playerScore, int $bankScore): string

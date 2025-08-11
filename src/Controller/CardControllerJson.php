@@ -9,6 +9,7 @@ use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use App\Card\DeckOfCards;
 use App\Card\CardGraphic;
 use App\Card\CardHand;
+use App\Card\JsonCardFormat;
 
 class CardControllerJson
 {
@@ -17,7 +18,10 @@ class CardControllerJson
     {
         $deck = new DeckOfCards();
         $deck->sortCards();
-        $cards = $deck->getCardsForJson();
+        $cardsArray = $deck->getCards();
+
+        $jsonFormat = new JsonCardFormat($cardsArray);
+        $cards = $jsonFormat->getCardsForJson($deck);
 
         $response = new JsonResponse($cards);
         $response->setEncodingOptions(
@@ -31,8 +35,11 @@ class CardControllerJson
     {
         $deck = new DeckOfCards();
         $deck->shuffleCards();
+        $cardsArray = $deck->getCards();
         $session->set('deck', $deck);
-        $data = ['deck' => $deck->getCardsForJson()];
+
+        $jsonFormat = new JsonCardFormat($cardsArray);
+        $data = ['deck' => $jsonFormat->getCardsForJson($deck)];
 
         $response = new JsonResponse($data);
         $response->setEncodingOptions(
