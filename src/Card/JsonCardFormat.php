@@ -6,6 +6,8 @@ use App\Card\CardGraphic;
 
 class JsonCardFormat
 {
+    private array $cards;
+
     public function __construct(array $cards)
     {
         $this->cards = $cards;

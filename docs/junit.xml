@@ -1,114 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="" tests="26" assertions="18" errors="10" warnings="0" failures="0" skipped="0" time="0.096683">
-    <testsuite name="Project Test Suite" tests="26" assertions="18" errors="10" warnings="0" failures="0" skipped="0" time="0.096683">
-      <testsuite name="App\Tests\Card\CardGraphicTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/CardGraphicTest.php" tests="3" assertions="3" errors="0" warnings="0" failures="0" skipped="0" time="0.012912">
-        <testcase name="testGetValue" class="App\Tests\Card\CardGraphicTest" classname="App.Tests.Card.CardGraphicTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/CardGraphicTest.php" line="13" assertions="1" time="0.011850"/>
-        <testcase name="testGetSuitAsWord" class="App\Tests\Card\CardGraphicTest" classname="App.Tests.Card.CardGraphicTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/CardGraphicTest.php" line="19" assertions="1" time="0.000520"/>
-        <testcase name="testToString" class="App\Tests\Card\CardGraphicTest" classname="App.Tests.Card.CardGraphicTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/CardGraphicTest.php" line="25" assertions="1" time="0.000542"/>
+  <testsuite name="" tests="26" assertions="33" errors="0" warnings="0" failures="0" skipped="0" time="0.107293">
+    <testsuite name="Project Test Suite" tests="26" assertions="33" errors="0" warnings="0" failures="0" skipped="0" time="0.107293">
+      <testsuite name="App\Tests\Card\CardGraphicTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/CardGraphicTest.php" tests="3" assertions="3" errors="0" warnings="0" failures="0" skipped="0" time="0.014437">
+        <testcase name="testGetValue" class="App\Tests\Card\CardGraphicTest" classname="App.Tests.Card.CardGraphicTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/CardGraphicTest.php" line="13" assertions="1" time="0.012990"/>
+        <testcase name="testGetSuitAsWord" class="App\Tests\Card\CardGraphicTest" classname="App.Tests.Card.CardGraphicTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/CardGraphicTest.php" line="19" assertions="1" time="0.000434"/>
+        <testcase name="testToString" class="App\Tests\Card\CardGraphicTest" classname="App.Tests.Card.CardGraphicTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/CardGraphicTest.php" line="25" assertions="1" time="0.001013"/>
       </testsuite>
-      <testsuite name="App\Tests\Card\CardHandTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/CardHandTest.php" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="0.002557">
-        <testcase name="testDrawCard" class="App\Tests\Card\CardHandTest" classname="App.Tests.Card.CardHandTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/CardHandTest.php" line="15" assertions="1" time="0.002557"/>
+      <testsuite name="App\Tests\Card\CardHandTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/CardHandTest.php" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="0.006131">
+        <testcase name="testDrawCard" class="App\Tests\Card\CardHandTest" classname="App.Tests.Card.CardHandTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/CardHandTest.php" line="15" assertions="1" time="0.006131"/>
       </testsuite>
-      <testsuite name="App\Tests\Card\CardTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/CardTest.php" tests="3" assertions="3" errors="0" warnings="0" failures="0" skipped="0" time="0.001763">
-        <testcase name="testGetValue" class="App\Tests\Card\CardTest" classname="App.Tests.Card.CardTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/CardTest.php" line="13" assertions="1" time="0.000817"/>
-        <testcase name="testGetSuit" class="App\Tests\Card\CardTest" classname="App.Tests.Card.CardTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/CardTest.php" line="19" assertions="1" time="0.000465"/>
-        <testcase name="testToString" class="App\Tests\Card\CardTest" classname="App.Tests.Card.CardTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/CardTest.php" line="25" assertions="1" time="0.000481"/>
+      <testsuite name="App\Tests\Card\CardTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/CardTest.php" tests="3" assertions="3" errors="0" warnings="0" failures="0" skipped="0" time="0.003488">
+        <testcase name="testGetValue" class="App\Tests\Card\CardTest" classname="App.Tests.Card.CardTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/CardTest.php" line="13" assertions="1" time="0.001183"/>
+        <testcase name="testGetSuit" class="App\Tests\Card\CardTest" classname="App.Tests.Card.CardTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/CardTest.php" line="19" assertions="1" time="0.001836"/>
+        <testcase name="testToString" class="App\Tests\Card\CardTest" classname="App.Tests.Card.CardTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/CardTest.php" line="25" assertions="1" time="0.000470"/>
       </testsuite>
-      <testsuite name="App\Tests\Card\DeckOfCardsTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/DeckOfCardsTest.php" tests="6" assertions="5" errors="1" warnings="0" failures="0" skipped="0" time="0.028817">
-        <testcase name="testGetCards" class="App\Tests\Card\DeckOfCardsTest" classname="App.Tests.Card.DeckOfCardsTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/DeckOfCardsTest.php" line="15" assertions="1" time="0.001315"/>
-        <testcase name="testSortCards" class="App\Tests\Card\DeckOfCardsTest" classname="App.Tests.Card.DeckOfCardsTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/DeckOfCardsTest.php" line="21" assertions="1" time="0.010283"/>
-        <testcase name="testShuffleCards" class="App\Tests\Card\DeckOfCardsTest" classname="App.Tests.Card.DeckOfCardsTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/DeckOfCardsTest.php" line="28" assertions="1" time="0.013625"/>
-        <testcase name="testCountCards" class="App\Tests\Card\DeckOfCardsTest" classname="App.Tests.Card.DeckOfCardsTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/DeckOfCardsTest.php" line="35" assertions="1" time="0.000569"/>
-        <testcase name="testDrawReturn" class="App\Tests\Card\DeckOfCardsTest" classname="App.Tests.Card.DeckOfCardsTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/DeckOfCardsTest.php" line="41" assertions="1" time="0.001838"/>
-        <testcase name="testGetCardsForJson" class="App\Tests\Card\DeckOfCardsTest" classname="App.Tests.Card.DeckOfCardsTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/DeckOfCardsTest.php" line="51" assertions="0" time="0.001187">
-          <error type="Error">App\Tests\Card\DeckOfCardsTest::testGetCardsForJson
-Error: Call to undefined method App\Card\DeckOfCards::getCardsForJson()
-
-/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/DeckOfCardsTest.php:59
-/home/shiajo/dbwebb-kurser/mvc/me/report/vendor/phpunit/phpunit/phpunit:107</error>
-        </testcase>
+      <testsuite name="App\Tests\Card\DeckOfCardsTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/DeckOfCardsTest.php" tests="5" assertions="5" errors="0" warnings="0" failures="0" skipped="0" time="0.025405">
+        <testcase name="testGetCards" class="App\Tests\Card\DeckOfCardsTest" classname="App.Tests.Card.DeckOfCardsTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/DeckOfCardsTest.php" line="15" assertions="1" time="0.002256"/>
+        <testcase name="testSortCards" class="App\Tests\Card\DeckOfCardsTest" classname="App.Tests.Card.DeckOfCardsTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/DeckOfCardsTest.php" line="21" assertions="1" time="0.012859"/>
+        <testcase name="testShuffleCards" class="App\Tests\Card\DeckOfCardsTest" classname="App.Tests.Card.DeckOfCardsTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/DeckOfCardsTest.php" line="28" assertions="1" time="0.008625"/>
+        <testcase name="testCountCards" class="App\Tests\Card\DeckOfCardsTest" classname="App.Tests.Card.DeckOfCardsTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/DeckOfCardsTest.php" line="35" assertions="1" time="0.000529"/>
+        <testcase name="testDrawReturn" class="App\Tests\Card\DeckOfCardsTest" classname="App.Tests.Card.DeckOfCardsTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/DeckOfCardsTest.php" line="41" assertions="1" time="0.001136"/>
       </testsuite>
-      <testsuite name="App\Tests\Card\DrawTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/DrawTest.php" tests="2" assertions="3" errors="0" warnings="0" failures="0" skipped="0" time="0.005530">
-        <testcase name="testPlayerDraw" class="App\Tests\Card\DrawTest" classname="App.Tests.Card.DrawTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/DrawTest.php" line="18" assertions="1" time="0.002541"/>
-        <testcase name="testBankDraw" class="App\Tests\Card\DrawTest" classname="App.Tests.Card.DrawTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/DrawTest.php" line="30" assertions="2" time="0.002989"/>
+      <testsuite name="App\Tests\Card\DrawTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/DrawTest.php" tests="2" assertions="3" errors="0" warnings="0" failures="0" skipped="0" time="0.007259">
+        <testcase name="testPlayerDraw" class="App\Tests\Card\DrawTest" classname="App.Tests.Card.DrawTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/DrawTest.php" line="18" assertions="1" time="0.004439"/>
+        <testcase name="testBankDraw" class="App\Tests\Card\DrawTest" classname="App.Tests.Card.DrawTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/DrawTest.php" line="30" assertions="2" time="0.002820"/>
       </testsuite>
-      <testsuite name="App\Tests\Card\GameTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/GameTest.php" tests="9" assertions="0" errors="9" warnings="0" failures="0" skipped="0" time="0.040830">
-        <testcase name="testPlayGame" class="App\Tests\Card\GameTest" classname="App.Tests.Card.GameTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/GameTest.php" line="19" assertions="0" time="0.023886">
-          <error type="ArgumentCountError">App\Tests\Card\GameTest::testPlayGame
-ArgumentCountError: Too few arguments to function App\Card\Game::__construct(), 0 passed in /home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/GameTest.php on line 24 and exactly 2 expected
-
-/home/shiajo/dbwebb-kurser/mvc/me/report/src/Card/Game.php:14
-/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/GameTest.php:24
-/home/shiajo/dbwebb-kurser/mvc/me/report/vendor/phpunit/phpunit/phpunit:107</error>
-        </testcase>
-        <testcase name="testPlayGameWithDrawCard" class="App\Tests\Card\GameTest" classname="App.Tests.Card.GameTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/GameTest.php" line="66" assertions="0" time="0.000931">
-          <error type="ArgumentCountError">App\Tests\Card\GameTest::testPlayGameWithDrawCard
-ArgumentCountError: Too few arguments to function App\Card\Game::__construct(), 0 passed in /home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/GameTest.php on line 72 and exactly 2 expected
-
-/home/shiajo/dbwebb-kurser/mvc/me/report/src/Card/Game.php:14
-/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/GameTest.php:72
-/home/shiajo/dbwebb-kurser/mvc/me/report/vendor/phpunit/phpunit/phpunit:107</error>
-        </testcase>
-        <testcase name="testPlayGameWithStop" class="App\Tests\Card\GameTest" classname="App.Tests.Card.GameTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/GameTest.php" line="78" assertions="0" time="0.001042">
-          <error type="ArgumentCountError">App\Tests\Card\GameTest::testPlayGameWithStop
-ArgumentCountError: Too few arguments to function App\Card\Game::__construct(), 0 passed in /home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/GameTest.php on line 84 and exactly 2 expected
-
-/home/shiajo/dbwebb-kurser/mvc/me/report/src/Card/Game.php:14
-/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/GameTest.php:84
-/home/shiajo/dbwebb-kurser/mvc/me/report/vendor/phpunit/phpunit/phpunit:107</error>
-        </testcase>
-        <testcase name="testWinner" class="App\Tests\Card\GameTest" classname="App.Tests.Card.GameTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/GameTest.php" line="90" assertions="0" time="0.000581">
-          <error type="ArgumentCountError">App\Tests\Card\GameTest::testWinner
-ArgumentCountError: Too few arguments to function App\Card\Game::__construct(), 0 passed in /home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/GameTest.php on line 92 and exactly 2 expected
-
-/home/shiajo/dbwebb-kurser/mvc/me/report/src/Card/Game.php:14
-/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/GameTest.php:92
-/home/shiajo/dbwebb-kurser/mvc/me/report/vendor/phpunit/phpunit/phpunit:107</error>
-        </testcase>
-        <testcase name="testSessionGame" class="App\Tests\Card\GameTest" classname="App.Tests.Card.GameTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/GameTest.php" line="100" assertions="0" time="0.008502">
-          <error type="ArgumentCountError">App\Tests\Card\GameTest::testSessionGame
-ArgumentCountError: Too few arguments to function App\Card\Game::__construct(), 0 passed in /home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/GameTest.php on line 110 and exactly 2 expected
-
-/home/shiajo/dbwebb-kurser/mvc/me/report/src/Card/Game.php:14
-/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/GameTest.php:110
-/home/shiajo/dbwebb-kurser/mvc/me/report/vendor/phpunit/phpunit/phpunit:107</error>
-        </testcase>
-        <testcase name="testReturnGame" class="App\Tests\Card\GameTest" classname="App.Tests.Card.GameTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/GameTest.php" line="117" assertions="0" time="0.000834">
-          <error type="ArgumentCountError">App\Tests\Card\GameTest::testReturnGame
-ArgumentCountError: Too few arguments to function App\Card\Game::__construct(), 0 passed in /home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/GameTest.php on line 128 and exactly 2 expected
-
-/home/shiajo/dbwebb-kurser/mvc/me/report/src/Card/Game.php:14
-/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/GameTest.php:128
-/home/shiajo/dbwebb-kurser/mvc/me/report/vendor/phpunit/phpunit/phpunit:107</error>
-        </testcase>
-        <testcase name="testJsonGame" class="App\Tests\Card\GameTest" classname="App.Tests.Card.GameTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/GameTest.php" line="134" assertions="0" time="0.002545">
-          <error type="ArgumentCountError">App\Tests\Card\GameTest::testJsonGame
-ArgumentCountError: Too few arguments to function App\Card\Game::__construct(), 0 passed in /home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/GameTest.php on line 148 and exactly 2 expected
-
-/home/shiajo/dbwebb-kurser/mvc/me/report/src/Card/Game.php:14
-/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/GameTest.php:148
-/home/shiajo/dbwebb-kurser/mvc/me/report/vendor/phpunit/phpunit/phpunit:107</error>
-        </testcase>
-        <testcase name="testJsonBankHand" class="App\Tests\Card\GameTest" classname="App.Tests.Card.GameTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/GameTest.php" line="155" assertions="0" time="0.001020">
-          <error type="ArgumentCountError">App\Tests\Card\GameTest::testJsonBankHand
-ArgumentCountError: Too few arguments to function App\Card\Game::__construct(), 0 passed in /home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/GameTest.php on line 169 and exactly 2 expected
-
-/home/shiajo/dbwebb-kurser/mvc/me/report/src/Card/Game.php:14
-/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/GameTest.php:169
-/home/shiajo/dbwebb-kurser/mvc/me/report/vendor/phpunit/phpunit/phpunit:107</error>
-        </testcase>
-        <testcase name="testGameData" class="App\Tests\Card\GameTest" classname="App.Tests.Card.GameTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/GameTest.php" line="176" assertions="0" time="0.001487">
-          <error type="PHPUnit\Framework\MockObject\CannotUseOnlyMethodsException">App\Tests\Card\GameTest::testGameData
-PHPUnit\Framework\MockObject\CannotUseOnlyMethodsException: Trying to configure method "sessionGame" with onlyMethods(), but it does not exist in class "App\Card\Game". Use addMethods() for methods that do not exist in the class
-
-/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/GameTest.php:180
-/home/shiajo/dbwebb-kurser/mvc/me/report/vendor/phpunit/phpunit/phpunit:107</error>
-        </testcase>
+      <testsuite name="App\Tests\Card\GameTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/GameTest.php" tests="4" assertions="7" errors="0" warnings="0" failures="0" skipped="0" time="0.036645">
+        <testcase name="testPlayGame" class="App\Tests\Card\GameTest" classname="App.Tests.Card.GameTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/GameTest.php" line="20" assertions="1" time="0.028231"/>
+        <testcase name="testPlayGameWithDrawCard" class="App\Tests\Card\GameTest" classname="App.Tests.Card.GameTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/GameTest.php" line="32" assertions="1" time="0.006791"/>
+        <testcase name="testPlayGameWithStop" class="App\Tests\Card\GameTest" classname="App.Tests.Card.GameTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/GameTest.php" line="45" assertions="1" time="0.000938"/>
+        <testcase name="testWinner" class="App\Tests\Card\GameTest" classname="App.Tests.Card.GameTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/GameTest.php" line="58" assertions="4" time="0.000685"/>
       </testsuite>
-      <testsuite name="App\Tests\Card\TurnTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/TurnTest.php" tests="2" assertions="3" errors="0" warnings="0" failures="0" skipped="0" time="0.004274">
-        <testcase name="testPlayerTurn" class="App\Tests\Card\TurnTest" classname="App.Tests.Card.TurnTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/TurnTest.php" line="17" assertions="1" time="0.002843"/>
-        <testcase name="testBankTurn" class="App\Tests\Card\TurnTest" classname="App.Tests.Card.TurnTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/TurnTest.php" line="30" assertions="2" time="0.001431"/>
+      <testsuite name="App\Tests\Card\JsonCardFormatTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/JsonCardFormatTest.php" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="0.001041">
+        <testcase name="testGetCardsForJson" class="App\Tests\Card\JsonCardFormatTest" classname="App.Tests.Card.JsonCardFormatTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/JsonCardFormatTest.php" line="14" assertions="1" time="0.001041"/>
+      </testsuite>
+      <testsuite name="App\Tests\Card\JsonGameFormatTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/JsonGameFormatTest.php" tests="2" assertions="2" errors="0" warnings="0" failures="0" skipped="0" time="0.006645">
+        <testcase name="testJsonGame" class="App\Tests\Card\JsonGameFormatTest" classname="App.Tests.Card.JsonGameFormatTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/JsonGameFormatTest.php" line="16" assertions="1" time="0.005601"/>
+        <testcase name="testJsonBankHand" class="App\Tests\Card\JsonGameFormatTest" classname="App.Tests.Card.JsonGameFormatTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/JsonGameFormatTest.php" line="37" assertions="1" time="0.001043"/>
+      </testsuite>
+      <testsuite name="App\Tests\Card\SessionGameMethodsTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/SessionGameMethodsTest.php" tests="3" assertions="5" errors="0" warnings="0" failures="0" skipped="0" time="0.004337">
+        <testcase name="testSessionGame" class="App\Tests\Card\SessionGameMethodsTest" classname="App.Tests.Card.SessionGameMethodsTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/SessionGameMethodsTest.php" line="16" assertions="2" time="0.000701"/>
+        <testcase name="testReturnGame" class="App\Tests\Card\SessionGameMethodsTest" classname="App.Tests.Card.SessionGameMethodsTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/SessionGameMethodsTest.php" line="33" assertions="1" time="0.000768"/>
+        <testcase name="testGameData" class="App\Tests\Card\SessionGameMethodsTest" classname="App.Tests.Card.SessionGameMethodsTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/SessionGameMethodsTest.php" line="50" assertions="2" time="0.002868"/>
+      </testsuite>
+      <testsuite name="App\Tests\Card\TurnTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/TurnTest.php" tests="2" assertions="3" errors="0" warnings="0" failures="0" skipped="0" time="0.001906">
+        <testcase name="testPlayerTurn" class="App\Tests\Card\TurnTest" classname="App.Tests.Card.TurnTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/TurnTest.php" line="17" assertions="1" time="0.000859"/>
+        <testcase name="testBankTurn" class="App\Tests\Card\TurnTest" classname="App.Tests.Card.TurnTest" file="/home/shiajo/dbwebb-kurser/mvc/me/report/tests/Card/TurnTest.php" line="30" assertions="2" time="0.001046"/>
       </testsuite>
     </testsuite>
   </testsuite>
