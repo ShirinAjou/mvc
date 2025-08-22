@@ -13,7 +13,6 @@ class JsonCardFormatTest extends TestCase
 {
     public function testGetCardsForJson(): void
     {
-
         $card1 = new Card(1, 1);
         $card2 = new Card(2, 1);
 

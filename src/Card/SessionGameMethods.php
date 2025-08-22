@@ -35,7 +35,6 @@ class SessionGameMethods
         $playerHand = $sessionData['playerHand'];
         $bankHand = $sessionData['bankHand'];
 
-        // $methods = new SessionGameMethods();
         $game = new Game($session);
         $resultText = $game->winner($playerScore, $bankScore);
 

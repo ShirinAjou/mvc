@@ -45,16 +45,4 @@ class DeckOfCardsTest extends TestCase
         $this->expectException(\RuntimeException::class);
         $deck->drawReturn();
     }
-
-    // public function testGetCardsForJson(): void
-    // {
-    //     $deck = new DeckOfCards();
-    //     $expectedArray = [
-    //         ['value' => 'A', 'suit' => 'spades'],
-    //         ['value' => '2', 'suit' => 'spades'],
-    //     ];
-
-    //     $deck->getCardsForJson();
-    //     $this->assertEquals($expectedArray, array_slice($deck->getCardsForJson(), 0, 2));
-    // }
 }
