@@ -8,19 +8,19 @@ namespace App\Card;
 class CardGraphic extends Card
 {
     /**
-     * Returns the card as a string with rank and suit symbols.
+     * Returns the card as a string with value and suit symbols.
      *
      * @return string The card as a string.
      */
     public function getCard(): string
     {
         $suitSymbols = [1 => "\u{2660}", 2 => "\u{2665}", 3 => "\u{2663}", 4 => "\u{2666}"];
-        $rankSymbols = [1 => "A", 2 => "2", 3 => "3", 4 => "4", 5 => "5", 6 => "6", 7 => "7", 8 => "8", 9 => "9", 10 => "10", 11 => "J", 12 => "Q", 13 => "K"];
+        $valueSymbols = [1 => "A", 2 => "2", 3 => "3", 4 => "4", 5 => "5", 6 => "6", 7 => "7", 8 => "8", 9 => "9", 10 => "10", 11 => "J", 12 => "Q", 13 => "K"];
 
-        $rank = parent::getValue();
+        $value = parent::getValue();
         $suit = parent::getSuit();
 
-        return $rankSymbols[$rank] . $suitSymbols[$suit];
+        return $valueSymbols[$value] . $suitSymbols[$suit];
     }
 
     /**
