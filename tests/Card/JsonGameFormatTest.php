@@ -4,7 +4,6 @@ namespace App\Tests\Card;
 
 use PHPUnit\Framework\TestCase;
 use App\Card\CardGraphic;
-use App\Card\Game;
 use App\Card\JsonGameFormat;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 
@@ -27,7 +26,7 @@ class JsonGameFormatTest extends TestCase
             ['bankScore', 0, 12],
         ]);
 
-        $game = new JsonGameFormat($sessionMock);
+        $game = new JsonGameFormat();
         $result = $game->jsonGame($sessionMock);
 
         $expectedPlayerHand = [['value' => 'K', 'suit' => 'Spades']];
@@ -48,7 +47,7 @@ class JsonGameFormatTest extends TestCase
             ['bankScore', 0, 17],
         ]);
 
-        $game = new JsonGameFormat($sessionMock);
+        $game = new JsonGameFormat();
         $result = $game->jsonGame($sessionMock);
 
         $expectedBankHand = [['value' => 'J', 'suit' => 'Diamonds']];

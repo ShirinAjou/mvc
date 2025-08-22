@@ -131,3 +131,15 @@ h1 {
     padding: 2em;
     margin: 2em 0;
 }
+
+.columns-div {
+    display: flex;
+}
+
+.left-content {
+    flex: 1;
+}
+
+.right-content {
+    flex: 3;
+}

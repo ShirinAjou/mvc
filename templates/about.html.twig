@@ -2,19 +2,25 @@
 
 {% block title %}About{% endblock %}
 
-{% block body %}
+{% block main %}
     <div class="body-div">
         <h1>About</h1>
-        <a href="https://github.com/dbwebb-se/mvc">Länk till kursens Git-repo</a>
-        <a href="https://github.com/ShirinAjou/mvc">Länk mitt Git-repo</a>
+        <div class="columns-div">
+            <aside class="left-content">
+                <a href="https://github.com/dbwebb-se/mvc">Länk till kursens Git-repo</a><br>
+                <a href="https://github.com/ShirinAjou/mvc">Länk mitt Git-repo</a>
+            </aside>
 
-        <p>I kursen MVC lär man sig programmera webbapplikationer på ett objektorienterat sätt med fokus på det arkitekturella designmönstret MVC. 
-        Inom ramen för kursen ingår ramverket Symfony som är ett av de mer kända ramverken inom PHP.</p>
+            <section class="right-content">
+                <p>I kursen MVC lär man sig programmera webbapplikationer på ett objektorienterat sätt med fokus på det arkitekturella designmönstret MVC. 
+                Inom ramen för kursen ingår ramverket Symfony som är ett av de mer kända ramverken inom PHP.</p>
 
-        <p>I kursen bygger man en webbplats med en kontroller (C:et i MVC) och det lägger grunden för kursens sidor. 
-        Vidare används vyer för att rendera webbsidorna (V:et i MVC) och man får skapa en sida som genererats med JSON. 
-        Det blir ett embryo till att se hur man kan bygga en webbtjänst med ett så kallat RESTful API.</p>
+                <p>I kursen bygger man en webbplats med en kontroller (C:et i MVC) och det lägger grunden för kursens sidor. 
+                Vidare används vyer för att rendera webbsidorna (V:et i MVC) och man får skapa en sida som genererats med JSON. 
+                Det blir ett embryo till att se hur man kan bygga en webbtjänst med ett så kallat RESTful API.</p>
 
-        <p>Syftet är att lära sig det som skriv ovan</p>
+                <p>Syftet är att lära sig det som nämns ovan</p>
+            </section>
+        </div>
     </div>
 {% endblock %}

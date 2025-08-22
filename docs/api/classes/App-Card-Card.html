@@ -134,7 +134,7 @@
 
     </aside>
 
-            <p class="phpdocumentor-summary">Represents a playing card with a rank and suit.</p>
+            <p class="phpdocumentor-summary">Represents a playing card with a value and suit.</p>
 
 
 
@@ -165,13 +165,13 @@
 </h4>
 <dl class="phpdocumentor-table-of-contents">
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a class="" href="classes/App-Card-Card.html#property_rank">$rank</a>
+    <a class="" href="classes/App-Card-Card.html#property_suit">$suit</a>
     <span>
                         &nbsp;: int            </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a class="" href="classes/App-Card-Card.html#property_suit">$suit</a>
+    <a class="" href="classes/App-Card-Card.html#property_value">$value</a>
     <span>
                         &nbsp;: int            </span>
 </dt>
@@ -189,14 +189,14 @@
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
-<dd>Constructs a card with a given rank and suit.</dd>
+<dd>Creates a card with a given value and suit.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/App-Card-Card.html#method___toString">__toString()</a>
     <span>
                                 &nbsp;: string    </span>
 </dt>
-<dd>Returns the card as a string using graphical representation.</dd>
+<dd>Returns the card as a string.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/App-Card-Card.html#method_getSuit">getSuit()</a>
@@ -210,7 +210,7 @@
     <span>
                                 &nbsp;: int    </span>
 </dt>
-<dd>Returns the rank of the card.</dd>
+<dd>Returns the value of the card.</dd>
 
     </dl>
 
@@ -225,44 +225,6 @@
             <a href="classes/App-Card-Card.html#properties" class="headerlink"><i class="fas fa-link"></i></a>
 
         </h3>
-                    <article
-        class="
-            phpdocumentor-element
-            -property
-            -private
-                                                                    "
->
-    <h4 class="phpdocumentor-element__name" id="property_rank">
-        $rank
-        <a href="classes/App-Card-Card.html#property_rank" class="headerlink"><i class="fas fa-link"></i></a>
-
-        <span class="phpdocumentor-element__modifiers">
-                                            </span>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Card/Card.php"><a href="files/src-card-card.html"><abbr title="src/Card/Card.php">Card.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">12</span>
-
-    </aside>
-
-    
-    
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-        <span class="phpdocumentor-signature__visibility">private</span>
-            <span class="phpdocumentor-signature__type">int</span>
-    <span class="phpdocumentor-signature__name">$rank</span>
-    </code>
-
-    
-    
-    
-
-    
-
-    
-
-</article>
                     <article
         class="
             phpdocumentor-element
@@ -301,6 +263,44 @@
     
 
 </article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -private
+                                                                    "
+>
+    <h4 class="phpdocumentor-element__name" id="property_value">
+        $value
+        <a href="classes/App-Card-Card.html#property_value" class="headerlink"><i class="fas fa-link"></i></a>
+
+        <span class="phpdocumentor-element__modifiers">
+                                            </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Card/Card.php"><a href="files/src-card-card.html"><abbr title="src/Card/Card.php">Card.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">12</span>
+
+    </aside>
+
+    
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+        <span class="phpdocumentor-signature__visibility">private</span>
+            <span class="phpdocumentor-signature__type">int</span>
+    <span class="phpdocumentor-signature__name">$value</span>
+    </code>
+
+    
+    
+    
+
+    
+
+    
+
+</article>
             </section>
 
             <section class="phpdocumentor-methods">
@@ -327,11 +327,11 @@
 
     </aside>
 
-        <p class="phpdocumentor-summary">Constructs a card with a given rank and suit.</p>
+        <p class="phpdocumentor-summary">Creates a card with a given value and suit.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$rank</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$suit</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$value</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$suit</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -340,11 +340,11 @@
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$rank</span>
+                <span class="phpdocumentor-signature__argument__name">$value</span>
                 : <span class="phpdocumentor-signature__argument__return-type">int</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>The rank of the card.</p>
+                    <section class="phpdocumentor-description"><p>The value of the card.</p>
 </section>
 
             </dd>
@@ -383,7 +383,7 @@
 
     </aside>
 
-        <p class="phpdocumentor-summary">Returns the card as a string using graphical representation.</p>
+        <p class="phpdocumentor-summary">Returns the card as a string.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -469,7 +469,7 @@
 
     </aside>
 
-        <p class="phpdocumentor-summary">Returns the rank of the card.</p>
+        <p class="phpdocumentor-summary">Returns the value of the card.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -488,7 +488,7 @@
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
         <span class="phpdocumentor-signature__response_type">int</span>
                     &mdash;
-                <section class="phpdocumentor-description"><p>The rank of the card.</p>
+                <section class="phpdocumentor-description"><p>The value of the card.</p>
 </section>
 
             </section>
@@ -607,8 +607,8 @@
                             <li class="phpdocumentor-on-this-page-section__title">Properties</li>
                 <li>
                     <ul class="phpdocumentor-list -clean">
-                                                    <li class=""><a href="classes/App-Card-Card.html#property_rank">$rank</a></li>
                                                     <li class=""><a href="classes/App-Card-Card.html#property_suit">$suit</a></li>
+                                                    <li class=""><a href="classes/App-Card-Card.html#property_value">$value</a></li>
                                             </ul>
                 </li>
             

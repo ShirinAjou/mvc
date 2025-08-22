@@ -7,8 +7,6 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use App\Card\DeckOfCards;
-use App\Card\CardGraphic;
-use App\Card\CardHand;
 use App\Card\JsonCardFormat;
 
 class CardControllerJson
@@ -21,7 +19,7 @@ class CardControllerJson
         $cardsArray = $deck->getCards();
 
         $jsonFormat = new JsonCardFormat($cardsArray);
-        $cards = $jsonFormat->getCardsForJson($deck);
+        $cards = $jsonFormat->getCardsForJson();
 
         $response = new JsonResponse($cards);
         $response->setEncodingOptions(
@@ -39,7 +37,7 @@ class CardControllerJson
         $session->set('deck', $deck);
 
         $jsonFormat = new JsonCardFormat($cardsArray);
-        $data = ['deck' => $jsonFormat->getCardsForJson($deck)];
+        $data = ['deck' => $jsonFormat->getCardsForJson()];
 
         $response = new JsonResponse($data);
         $response->setEncodingOptions(

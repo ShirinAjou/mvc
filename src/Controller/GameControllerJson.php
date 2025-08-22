@@ -13,7 +13,7 @@ class GameControllerJson
     #[Route("/api/game")]
     public function apiGame(SessionInterface $session): Response
     {
-        $game = new JsonGameFormat($session);
+        $game = new JsonGameFormat();
         $data = $game->jsonGame($session);
 
         $response = new JsonResponse($data);

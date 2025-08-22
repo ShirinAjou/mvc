@@ -28,7 +28,7 @@ class CardController extends AbstractController
 
     /**
      * Display the home page for the card application.
-     * 
+     *
      * @return Response The response.
      */
     #[Route("/card", name: "card")]
@@ -39,7 +39,7 @@ class CardController extends AbstractController
 
     /**
      * Display the deck of cards.
-     * 
+     *
      * @return Response The response.
      */
     #[Route("/card/deck", name: "deck")]
@@ -52,7 +52,7 @@ class CardController extends AbstractController
 
     /**
      * Shuffle the deck of cards.
-     * 
+     *
      * @param SessionInterface $session The session interface.
      * @return Response The response.
      */
@@ -67,7 +67,7 @@ class CardController extends AbstractController
 
     /**
      * Display the form to draw a card from the deck.
-     *  
+     *
      * @param SessionInterface $session The session interface.
      * @return Response The response.
      */
@@ -91,10 +91,10 @@ class CardController extends AbstractController
 
     /**
      * Draw a card from the deck.
-     * 
+     *
      * @param Request $request The request object.
      * @param SessionInterface $session The session interface.
-     * 
+     *
      * @return Response The response.
      */
     #[Route("/card/deck/draw", name: "draw", methods: ["POST"])]
@@ -126,10 +126,10 @@ class CardController extends AbstractController
 
     /**
      * Draw a specified number of cards from the deck.
-     * 
+     *
      * @param int $number The number of cards to draw.
      * @param SessionInterface $session The session interface.
-     * 
+     *
      * @return Response The response.
      */
     #[Route("/card/deck/draw/{number<\d+>}", name: "draw_number")]
@@ -164,7 +164,7 @@ class CardController extends AbstractController
 
     /**
      * Display the form to shuffle the deck of cards.
-     * 
+     *
      * @return Response The response.
      */
     #[Route("/card/shuffle/form", name: "form_shuffle", methods: ["GET"])]

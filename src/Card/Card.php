@@ -5,34 +5,34 @@ namespace App\Card;
 use App\Card\CardGraphic;
 
 /**
- * Represents a playing card with a rank and suit.
+ * Represents a playing card with a value and suit.
  */
 class Card
 {
-    private int $rank;
+    private int $value;
     private int $suit;
 
 
     /**
-     * Constructs a card with a given rank and suit.
+     * Creates a card with a given value and suit.
      *
-     * @param int $rank The rank of the card.
+     * @param int $value The value of the card.
      * @param int $suit The suit of the card.
      */
-    public function __construct(int $rank, int $suit)
+    public function __construct(int $value, int $suit)
     {
-        $this->rank = $rank;
+        $this->value = $value;
         $this->suit = $suit;
     }
 
     /**
-     * Returns the rank of the card.
+     * Returns the value of the card.
      *
-     * @return int The rank of the card.
+     * @return int The value of the card.
      */
     public function getValue(): int
     {
-        return $this->rank;
+        return $this->value;
     }
 
     /**
@@ -46,13 +46,13 @@ class Card
     }
 
     /**
-     * Returns the card as a string using graphical representation.
+     * Returns the card as a string.
      *
      * @return string The card as a string.
      */
     public function __toString(): string
     {
-        $graphic = new CardGraphic($this->rank, $this->suit);
+        $graphic = new CardGraphic($this->value, $this->suit);
         return $graphic->getCard();
     }
 }

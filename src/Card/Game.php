@@ -9,15 +9,13 @@ use App\Card\Turn;
 class Game
 {
     private $session;
-    private $sessionGameMethods;
 
-    public function __construct(SessionInterface $session, SessionGameMethods $sessionGameMethods)
+    public function __construct(SessionInterface $session)
     {
         $this->session = $session;
-        $this->sessionGameMethods = $sessionGameMethods;
     }
 
-    public function playGame(DeckOfCards $deck, SessionInterface $session, Turn $turn, bool $drawCard, bool $stop): bool
+    public function playGame(DeckOfCards $deck, Turn $turn, bool $drawCard, bool $stop): bool
     {
         if ($drawCard) {
             $turn->playerTurn($deck);
@@ -27,10 +25,10 @@ class Game
             $turn->bankTurn($deck);
         }
 
-        $session->set('playerHand', []);
-        $session->set('playerScore', 0);
-        $session->set('bankHand', []);
-        $session->set('bankScore', 0);
+        $this->session->set('playerHand', []);
+        $this->session->set('playerScore', 0);
+        $this->session->set('bankHand', []);
+        $this->session->set('bankScore', 0);
 
         return true;
     }

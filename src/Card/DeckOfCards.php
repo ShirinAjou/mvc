@@ -9,7 +9,6 @@ use App\Card\CardGraphic;
  */
 class DeckOfCards
 {
-
     public array $cards;
     protected int $value;
 

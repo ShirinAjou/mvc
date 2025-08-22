@@ -3,8 +3,6 @@
 namespace App\Tests\Card;
 
 use PHPUnit\Framework\TestCase;
-use App\Card\CardHand;
-use App\Card\CardGraphic;
 use App\Card\DeckOfCards;
 
 /**

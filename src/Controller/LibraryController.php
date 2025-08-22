@@ -73,7 +73,7 @@ final class LibraryController extends AbstractController
     }
 
     #[Route('/library/delete/{id}', name: 'book_delete_by_id')]
-    public function deleteBookById(ManagerRegistry $doctrine, int $id): Response 
+    public function deleteBookById(ManagerRegistry $doctrine, int $id): Response
     {
         $entityManager = $doctrine->getManager();
         $book = $entityManager->getRepository(Book::class)->find($id);
@@ -115,7 +115,7 @@ final class LibraryController extends AbstractController
             $book->setIsbn((string) $isbn);
             $book->setAuthor((string) $author);
             $book->setImage((string) $image);
-              $entityManager->flush();
+            $entityManager->flush();
 
             return $this->redirectToRoute('book_show_all');
         }

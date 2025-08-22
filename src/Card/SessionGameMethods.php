@@ -11,14 +11,6 @@ class SessionGameMethods
     {
     }
 
-    // public function resetGame(SessionInterface $session): void
-    // {
-    //     $session->set('playerHand', []);
-    //     $session->set('playerScore', 0);
-    //     $session->set('bankHand', []);
-    //     $session->set('bankScore', 0);
-    // }
-
     public function sessionGame(SessionInterface $session): array
     {
         $bankHand = $session->get('bankHand', []);
@@ -43,8 +35,8 @@ class SessionGameMethods
         $playerHand = $sessionData['playerHand'];
         $bankHand = $sessionData['bankHand'];
 
-        $methods = new SessionGameMethods();
-        $game = new Game($session, $methods);
+        // $methods = new SessionGameMethods();
+        $game = new Game($session);
         $resultText = $game->winner($playerScore, $bankScore);
 
         return [
@@ -55,7 +47,7 @@ class SessionGameMethods
             'result' => $resultText,
         ];
     }
-    
+
     public function returnGame(SessionInterface $session): array
     {
         $result = $this->sessionGame($session);

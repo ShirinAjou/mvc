@@ -7,16 +7,13 @@ use App\Card\SessionGameMethods;
 
 class JsonGameFormat
 {
-    private $session;
-
-    public function __construct(SessionInterface $session)
+    public function __construct()
     {
-        $this->session = $session;
     }
 
     public function jsonGame(SessionInterface $session): array
     {
-        $game = new SessionGameMethods($session);
+        $game = new SessionGameMethods();
         $result = $game->sessionGame($session);
 
         $playerHand = $result['playerHand'];

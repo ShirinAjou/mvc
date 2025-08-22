@@ -5,9 +5,7 @@ namespace App\Tests\Card;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use App\Card\Draw;
-use App\Card\Game;
 use App\Card\DeckOfCards;
-use App\Card\Turn;
 use App\Card\CardGraphic;
 
 /**

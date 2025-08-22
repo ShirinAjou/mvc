@@ -3,17 +3,17 @@ Search.appendIndex(
                 {
             "fqsen": "\\App\\Card\\Card",
             "name": "Card",
-            "summary": "Represents\u0020a\u0020playing\u0020card\u0020with\u0020a\u0020rank\u0020and\u0020suit.",
+            "summary": "Represents\u0020a\u0020playing\u0020card\u0020with\u0020a\u0020value\u0020and\u0020suit.",
             "url": "classes/App-Card-Card.html"
         },                {
             "fqsen": "\\App\\Card\\Card\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
-            "summary": "Constructs\u0020a\u0020card\u0020with\u0020a\u0020given\u0020rank\u0020and\u0020suit.",
+            "summary": "Creates\u0020a\u0020card\u0020with\u0020a\u0020given\u0020value\u0020and\u0020suit.",
             "url": "classes/App-Card-Card.html#method___construct"
         },                {
             "fqsen": "\\App\\Card\\Card\u003A\u003AgetValue\u0028\u0029",
             "name": "getValue",
-            "summary": "Returns\u0020the\u0020rank\u0020of\u0020the\u0020card.",
+            "summary": "Returns\u0020the\u0020value\u0020of\u0020the\u0020card.",
             "url": "classes/App-Card-Card.html#method_getValue"
         },                {
             "fqsen": "\\App\\Card\\Card\u003A\u003AgetSuit\u0028\u0029",
@@ -23,13 +23,13 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Card\\Card\u003A\u003A__toString\u0028\u0029",
             "name": "__toString",
-            "summary": "Returns\u0020the\u0020card\u0020as\u0020a\u0020string\u0020using\u0020graphical\u0020representation.",
+            "summary": "Returns\u0020the\u0020card\u0020as\u0020a\u0020string.",
             "url": "classes/App-Card-Card.html#method___toString"
         },                {
-            "fqsen": "\\App\\Card\\Card\u003A\u003A\u0024rank",
-            "name": "rank",
+            "fqsen": "\\App\\Card\\Card\u003A\u003A\u0024value",
+            "name": "value",
             "summary": "",
-            "url": "classes/App-Card-Card.html#property_rank"
+            "url": "classes/App-Card-Card.html#property_value"
         },                {
             "fqsen": "\\App\\Card\\Card\u003A\u003A\u0024suit",
             "name": "suit",
@@ -171,11 +171,6 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/App-Card-Game.html#property_session"
         },                {
-            "fqsen": "\\App\\Card\\Game\u003A\u003A\u0024sessionGameMethods",
-            "name": "sessionGameMethods",
-            "summary": "",
-            "url": "classes/App-Card-Game.html#property_sessionGameMethods"
-        },                {
             "fqsen": "\\App\\Card\\JsonCardFormat",
             "name": "JsonCardFormat",
             "summary": "",
@@ -210,11 +205,6 @@ Search.appendIndex(
             "name": "jsonGame",
             "summary": "",
             "url": "classes/App-Card-JsonGameFormat.html#method_jsonGame"
-        },                {
-            "fqsen": "\\App\\Card\\JsonGameFormat\u003A\u003A\u0024session",
-            "name": "session",
-            "summary": "",
-            "url": "classes/App-Card-JsonGameFormat.html#property_session"
         },                {
             "fqsen": "\\App\\Card\\SessionGameMethods",
             "name": "SessionGameMethods",
@@ -451,10 +441,10 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/App-Controller-LuckyController.html#method_number"
         },                {
-            "fqsen": "\\App\\Controller\\LuckyController\u003A\u003Ahi\u0028\u0029",
-            "name": "hi",
+            "fqsen": "\\App\\Controller\\LuckyController\u003A\u003AhiLucky\u0028\u0029",
+            "name": "hiLucky",
             "summary": "",
-            "url": "classes/App-Controller-LuckyController.html#method_hi"
+            "url": "classes/App-Controller-LuckyController.html#method_hiLucky"
         },                {
             "fqsen": "\\App\\Controller\\LuckyControllerJson",
             "name": "LuckyControllerJson",

@@ -34,12 +34,16 @@
             
             <p>I objektorientering finns objekt, kopplade till sig finns atribut och metoder. Attributen sparar värden för objektet i ett visst läge. 
             Vill man att objektet ska utföra något/ändras så används metoder för. Det objektets API. Ett objekt skapas utifrån en klass och en klass fungerar som en mall. 
-            Ett objekt är en instans av en klass och definiera neras genom att skriva ut class framför klassnamnet.</p>
+            Ett objekt är en instans av en klass och definiera neras genom att skriva ut class framför klassnamnet.
+            </p>
 
             <p>Mycket är likt det som jag gjort i tidigare kurser, så som mappindelningar och vilka filer som ska vara vilken mapp. Hur metoderna, klaser och router fungerar men det finns fortfarande delar som jag inte förstår hur de funkar, deras syfte och så vidare. 
-            Många gånger vet jag vilka delar som behövs och vart de ska vara för att funka men inte mer än så och det kan vara frustrerande att sakna den typen av kunskap.</p>
+            Många gånger vet jag vilka delar som behövs och vart de ska vara för att funka men inte mer än så och det kan vara frustrerande att sakna den typen av kunskap.
+            </p>
 
-            <p>I “PHP The Right Way” är templating och Errors and Exceptions intressesanta då det är sådan som är värdefullt för det som vi håller på med just nu och kan bidra till lärandet och kodandet i kommande uppgifter.</p>
+            <p>
+            I “PHP The Right Way” är templating och Errors and Exceptions intressesanta då det är sådan som är värdefullt för det som vi håller på med just nu och kan bidra till lärandet och kodandet i kommande uppgifter.
+            </p>
             
             <p>TIL för detta kmom är objekt och klasser och hur dessa fungerar.</p>
         </section>
@@ -59,18 +63,21 @@
             Komposition innebär en stark has-a relation mellan två objekt, där det ena objektet är helt beroende av det andra för att existera.
             Trait är lik arv men är en annan typ av konstruktion.
             Trait består av metoder och medlemsvariabler som används för att utöka funktionaliteten av en klass.
-            Ett interface är ett kontrakt som definierar vilka metoder en klass måste erbjuda, utan att innehålla någon konkret implementation.</p>
+            Ett interface är ett kontrakt som definierar vilka metoder en klass måste erbjuda, utan att innehålla någon konkret implementation.
+            </p>
 
             <p>Jag valde att ha fyra klasser, Card, Cardhand, DeckOfCards och CardGraphic.
             Jag använder mig av både kompision och arv. CardGraphic utökar Card-klassen. CardHand har en instans av DeckOfCards.
             Card hanterar ett kort, DeckOfCards haterar hela kortleken, CardGraphic hanterar det visuella och CardHand är spelarens hand.
             Jag tycker att denna uppdelning gör koden tydlig och strukturerad, varje klass har sin särskilda uppgift.
             Genom att separera ansvar i olika klasser blir det lättare att följa och underhålla varje del för sig.
-            Det är också möjligt att utöka funktionaliteten i framtiden, till exempel genom att lägga/återanvända till kortspelsregler och funktionaliteter.</p>
+            Det är också möjligt att utöka funktionaliteten i framtiden, till exempel genom att lägga/återanvända till kortspelsregler och funktionaliteter.
+            </p>
 
             <p>Symfony är kul än så länge, struktureringen MVC är något vi hållit på med i andra kurser så det är något man känner igen.
             Det gör att det blir enklare att jobba med det eftersom det är bekant. 
-            Strukturen gör det dessutom enkelt att förstå och orientera sig i bland alla mappar och filer.</p>
+            Strukturen gör det dessutom enkelt att förstå och orientera sig i bland alla mappar och filer.
+            </p>
 
             <p>TIL för detta kmom är kompisition och arv, hur dessa fungerar.</p>
         </section>
@@ -88,7 +95,8 @@
             Dels för att jag såg den lite senare då den låg efter kraven och jag hann börja direkt med de samt för att jag brukar vilja börja koda för att bygga ett skelett och förstå vilka klasser och dylikt jag ska använda.
             Börjar jag med diagram blir jag även lätt färst vid den och fyrkantig så om jag behöver tänka om eller ändra mig kan jag lätt låsa mig vid att diagramet ska följas till vilket pris som helst.
             Psuedokoden gick ändå bra och dte var inte för svårt tack vare exmepel och tidigare erfarenhet men flödesdiagramet var däremot svårt, trots att jag gjort dte tidigare.
-            Det var svårt att få till hur jag skulle illustrera den, i mitt huvud var det självklart för jag visste hur jag byggt mitt spel och varför jag gjort som jag gjort men det blev mcyket svårare att visualisera flödet.</p>
+            Det var svårt att få till hur jag skulle illustrera den, i mitt huvud var det självklart för jag visste hur jag byggt mitt spel och varför jag gjort som jag gjort men det blev mcyket svårare att visualisera flödet.
+            </p>
 
             <p>Jag började med att skapa laddningssidan och därefter kom varje steg naturligt.
             Skapa startknappen dra kort, stoppa spelet, om det var över 21 så avslutas spelet annars kan spelaren välja att avsluta närsom och då drar banken sin och resultatet presenteras.
@@ -98,14 +106,16 @@
             Tanken med klasserna var egentligen först att skapa en klass för spelaren och en för banken och en för att starta spelet.
             Ju mer jag kodade desto mer flytande blev det och jag valde att göra om och gjorde en för att välja vems tur, när man ska dra kort och en för olika metoder som berör spelet generellt.
             Vart det bra uppdelat? Nej det kan jag inte påstå, det är virritg och otydligt och inga tydliga gränser och uppgifter för varje enskild klass.
-            Spelet funkar och jag är trött i både kropp och själ så då får det duga!</p>
+            Spelet funkar och jag är trött i både kropp och själ så då får det duga!
+            </p>
 
             <p>Jo det är väl som innan skulle jag säga. inte mycket har förändrats i mina känslor för Symfony.</p>
             
             <p>TIL för detta kmom är väl flödesdiagram. 
             Dels att får göra det igen och öva men också hur vikitigt det är att få ner det i ett diagram det som finns i huvudet.
             Vidare att när jag har det i huvudet känner jag att det är bra att få ner det så jag kan följa den och på så sätt öva på att programera på ett annat sätt som jag tror är värdefullt för mig.
-            Jag kodar fritt och löser problem allteftersom men jag tror jag behöver tänka och sen koda lite mer.</p>
+            Jag kodar fritt och löser problem allteftersom men jag tror jag behöver tänka och sen koda lite mer.
+            </p>
         </section>
 
         <section id="kmom04">
@@ -119,12 +129,40 @@
                 <li>Vilken är din TIL för detta kmom?</li>
             </ul>
 
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
+            <p>Det var helt okej. Att testa kod har man fått göra i python kurserna och det är därför inte helt obekant.
+            Det är bra att få lär sig testa i fler programmeringsspråk.
+            Det som däremot är olikt python-kurserna är att jag upplever att man inte fick en ordentlig intro till testning.
+            Det hade behövts, att få öva lite mer och få lite fler exempel innan man kastas in i det.
+            </p>
+            
+            <p>Det gick helt okej jag fick till 100% kodtäckning men det var väldigt svårt och krångligt.</p>
+            
+            <p>Jag upplever att alla kod som skapades tidigt i kursen som enklare att testa men långt ifrån allt var testbart.
+            Eftersom att det inte skulle vara så mycket kod i controllers (i kmom03) så flyttade jag in det mesta i metoder vilket gjorde de nästan omöjliga att testa, i alla fall på min kunskapsnivå.
+            Jag gjorde många och långa försök innan jag gav upp och flyttade ut kod/metoder som inte till gick att testat till controllers.
+            Det var främst session kod som var svår att testa och som jag fick hantera i controllers.
+            Det finns dock kvar session kod kvar i metoder som var testbara och de blev kvar.
+            Jag fick göra om koden rätt mycket för att få till det med testerna.
+            Mycket styrdes av rädslan att få kompletering på grund av för mycket kod i controllers men jag kan inte mer än så här så det fick duga tillsut.
+            </p>
+
+            <p>Det som kan förbättras är att inte besgränsa controllers så värst utan att ha en mer jämn balans med inte för stora metoder eller controllers.
+            Att ha mindre metoder som fokuserar på en uppgift och dela upp dessa bland flera klasser.
+            </p>
+
+            <p>Jag vet inte om testbar kod är något som kan identifiera “snygg och ren kod”.
+            Det är inget jag har reflekterat över.
+            Så kan det absolut vara. Det är enklare att testa mindre metoder, metoder som är i mindre klasser och som gör en sak och inte flera.
+            Så på det viset kan det absolut stämma. 
+            Kod jag fick göra om var främst långa och spretiga metoder.
+            </p>
+            
+            <p>TIL för detta kmom är att planera sina metoder lite mer och fokusera på struktur.
+            Det kanske tar lite längre tid men i längden vinner man mycket på det när man slipper behöva göra om det mesta av koden.
+            Oftast bygger jag bara och fortsätter på det viset tills det funkar. 
+            Jag har inte tid för att fokusera på struktur om det inte är ett krav i uppgiften.
+            Men den här gång slog det tillbak när jag fick hålla på i veckor med att få till allt.
+            </p>
         </section>
 
         <section id="kmom05">

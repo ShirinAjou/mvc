@@ -91,7 +91,7 @@ class GameController extends AbstractController
         $session->set('bankHand', $result['hand']);
         $session->set('bankScore', $bankScore + $result['score']);
 
-        $sessionMethods = new SessionGameMethods($session);
+        $sessionMethods = new SessionGameMethods();
         $data = $sessionMethods->gameData($session);
 
         return $this->render('card/result.html.twig', $data);

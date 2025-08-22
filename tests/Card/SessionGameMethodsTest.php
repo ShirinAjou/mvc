@@ -5,7 +5,6 @@ namespace App\Tests\Card;
 use PHPUnit\Framework\TestCase;
 use App\Card\Game;
 use App\Card\SessionGameMethods;
-
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 
 /**
@@ -53,10 +52,6 @@ class SessionGameMethodsTest extends TestCase
         $sessionMethodMock = $this->getMockBuilder(SessionGameMethods::class)
             ->onlyMethods(['sessionGame'])
             ->getMock();
-        $gameMock = $this->getMockBuilder(Game::class)
-            ->setConstructorArgs([$sessionMock, $sessionMethodMock])
-            ->onlyMethods(['winner'])
-            ->getMock();
 
         $sessionMethodMock->method('sessionGame')->willReturn([
             'playerScore' => 21,
@@ -65,8 +60,7 @@ class SessionGameMethodsTest extends TestCase
             'bankHand' => ['BankCard']
         ]);
 
-        $gameMock->method('winner')->with(21, 8)->willReturn('Player wins');
-        $result = $sessionMethodMock->gameData($sessionMock, $gameMock);
+        $result = $sessionMethodMock->gameData($sessionMock);
 
         $this->assertEquals(21, $result['playerScore']);
         $this->assertEquals(8, $result['bankScore']);
