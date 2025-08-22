@@ -11,13 +11,13 @@ class SessionGameMethods
     {
     }
 
-    public function resetGame(SessionInterface $session): void
-    {
-        $session->set('playerHand', []);
-        $session->set('playerScore', 0);
-        $session->set('bankHand', []);
-        $session->set('bankScore', 0);
-    }
+    // public function resetGame(SessionInterface $session): void
+    // {
+    //     $session->set('playerHand', []);
+    //     $session->set('playerScore', 0);
+    //     $session->set('bankHand', []);
+    //     $session->set('bankScore', 0);
+    // }
 
     public function sessionGame(SessionInterface $session): array
     {

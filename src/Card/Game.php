@@ -27,7 +27,10 @@ class Game
             $turn->bankTurn($deck);
         }
 
-        $this->sessionGameMethods->resetGame($session);
+        $session->set('playerHand', []);
+        $session->set('playerScore', 0);
+        $session->set('bankHand', []);
+        $session->set('bankScore', 0);
 
         return true;
     }

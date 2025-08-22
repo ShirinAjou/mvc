@@ -9,7 +9,6 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use App\Card\DeckOfCards;
-use App\Card\Game;
 use App\Card\Draw;
 use App\Card\SessionGameMethods;
 
@@ -37,14 +36,14 @@ class GameController extends AbstractController
     public function play(SessionInterface $session, Request $request): Response
     {
         if ($request->request->get('restartCard')) {
-            $sessionMethods = new SessionGameMethods();
-            // $game = new Game($session);
-            $sessionMethods->resetGame($session);
+            $session->set('playerHand', []);
+            $session->set('playerScore', 0);
+            $session->set('bankHand', []);
+            $session->set('bankScore', 0);
             return $this->redirectToRoute('play');
         }
 
         $sessionMethods = new SessionGameMethods();
-        // $game = new Game($session);
         $sessionMethods->sessionGame($session);
         $returnGame = $sessionMethods->returnGame($session);
 

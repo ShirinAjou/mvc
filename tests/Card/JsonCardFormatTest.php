@@ -25,7 +25,7 @@ class JsonCardFormatTest extends TestCase
         ];
 
         $jsonFormatter = new JsonCardFormat($cards);
-        $result = $jsonFormatter->getCardsForJson($cards);
+        $result = $jsonFormatter->getCardsForJson();
 
         $this->assertEquals($expectedArray, $result);
     }
