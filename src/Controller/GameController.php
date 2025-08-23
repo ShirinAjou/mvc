@@ -12,26 +12,51 @@ use App\Card\DeckOfCards;
 use App\Card\Draw;
 use App\Card\SessionGameMethods;
 
+/**
+ * Controller for handling game-related routes and rendering game templates.
+ */
 class GameController extends AbstractController
 {
+    /**
+     * Renders the main game page.
+     *
+     * @return Response The rendered game page.
+     */
     #[Route("/game", name: "game")]
     public function game(): Response
     {
         return $this->render('card/game.html.twig');
     }
 
+    /**
+     * Renders the documentation page for the game.
+     *
+     * @return Response The rendered documentation page.
+     */
     #[Route("/game/doc", name: "doc")]
     public function doc(): Response
     {
         return $this->render('card/doc.html.twig');
     }
 
+    /**
+     * Starts the game and renders the game page.
+     *
+     * @return Response The rendered game page.
+     */
     #[Route("/game", name: "start_game")]
     public function start(): Response
     {
         return $this->render('card/game.html.twig');
     }
 
+    /**
+     * Handles the game play logic, including restarting the game and rendering the play page.
+     *
+     * @param SessionInterface $session The session interface for storing game data.
+     * @param Request $request The HTTP request object.
+     * @return Response The rendered play page.
+     */
     #[Route("/game/play", name: "play", methods: ["GET", "POST"])]
     public function play(SessionInterface $session, Request $request): Response
     {
@@ -50,6 +75,12 @@ class GameController extends AbstractController
         return $this->render('card/play.html.twig', $returnGame);
     }
 
+    /**
+     * Handles the drawing of cards for the player and updates the session with the new game state.
+     *
+     * @param SessionInterface $session The session interface for storing game data.
+     * @return Response A redirect to the play route.
+     */
     #[Route("/game/draw", name: "draw_game", methods: ["POST"])]
     public function drawGame(SessionInterface $session): Response
     {
@@ -72,6 +103,12 @@ class GameController extends AbstractController
         return $this->redirectToRoute('play');
     }
 
+    /**
+     * Handles the bank's turn in the game, updates the session with the new game state, and renders the result page.
+     *
+     * @param SessionInterface $session The session interface for storing game data.
+     * @return Response The rendered result page.
+     */
     #[Route("/game/stop", name: "stop_game", methods: ["POST"])]
     public function stopGame(SessionInterface $session): Response
     {

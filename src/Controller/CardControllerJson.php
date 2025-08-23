@@ -17,7 +17,7 @@ class CardControllerJson
     /**
      * Returns sorted deck of cards as a JSON response.
      *
-     * @return Response A JSON response WITH the sorted deck of cards.
+     * @return Response A JSON response with the sorted deck of cards.
      */
     #[Route("/api/deck", name: "card_json")]
     public function deckJson(): Response
