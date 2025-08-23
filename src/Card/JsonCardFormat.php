@@ -5,7 +5,7 @@ namespace App\Card;
 use App\Card\CardGraphic;
 
 /**
- *
+ * Class that formats a set of cards for JSON output.
  */
 class JsonCardFormat
 {
@@ -17,9 +17,9 @@ class JsonCardFormat
     }
 
     /**
-     * Converts the cards in the deck to JSON format.
+     * Formats the cards in the deck to JSON format.
      *
-     * @return array An array of cards with their values and suits as strings.
+     * @return array An array of cards with values and suits as strings.
      */
     public function getCardsForJson(): array
     {

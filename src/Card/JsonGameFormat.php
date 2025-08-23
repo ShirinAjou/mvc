@@ -5,6 +5,9 @@ namespace App\Card;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use App\Card\SessionGameMethods;
 
+/**
+ * 
+ */
 class JsonGameFormat
 {
     public function __construct()

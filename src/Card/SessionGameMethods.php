@@ -5,12 +5,21 @@ namespace App\Card;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use App\Card\Game;
 
+/**
+ * Class for handling game sessions.
+ */
 class SessionGameMethods
 {
     public function __construct()
     {
     }
 
+    /**
+     * Retrieves game data from the session.
+     *
+     * @param SessionInterface $session for storing game data.
+     * @return array An array containing the bank's hand, player's hand, player's score, and bank's score.
+     */
     public function sessionGame(SessionInterface $session): array
     {
         $bankHand = $session->get('bankHand', []);
@@ -26,6 +35,12 @@ class SessionGameMethods
         ];
     }
 
+    /**
+     * Retrieves and handles game data from the session.
+     *
+     * @param SessionInterface $session for storing game data.
+     * @return array An array containing the player's score, bank's score, player's hand, bank's hand, and game result.
+     */
     public function gameData(SessionInterface $session): array
     {
         $sessionData = $this->sessionGame($session);
@@ -47,6 +62,12 @@ class SessionGameMethods
         ];
     }
 
+    /**
+     * Retrieves and handles game data from the session.
+     *
+     * @param SessionInterface $session for storing game data.
+     * @return array An array containing the player's hand, score, status, bank's hand, bank's score, and game over status.
+     */
     public function returnGame(SessionInterface $session): array
     {
         $result = $this->sessionGame($session);
