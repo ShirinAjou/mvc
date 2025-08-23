@@ -15,7 +15,7 @@ use App\Card\JsonCardFormat;
 class CardControllerJson
 {
     /**
-     * Returns a JSON response with a sorted deck of cards.
+     * Returns sorted deck of cards as a JSON response.
      *
      * @return Response A JSON response WITH the sorted deck of cards.
      */
@@ -37,7 +37,7 @@ class CardControllerJson
     }
 
     /**
-     * Returns a JSON response with shuffled deck of cards.
+     * Returns shuffled deck of cards as a JSON response.
      *
      * @param SessionInterface $session for storing the deck.
      * @return JsonResponse A JSON response with the shuffled deck of cards.
@@ -61,7 +61,7 @@ class CardControllerJson
     }
 
     /**
-     * Returns a JSON response with a drawn card.
+     * Returns the drawn card as a JSON response.
      *
      * @param SessionInterface $session for storing the deck.
      * @return JsonResponse A JSON response with the drawn card details.
@@ -99,6 +99,13 @@ class CardControllerJson
         return $response;
     }
 
+    /**
+     * Draws a specified number of cards from the deck and returns card(s) in JSON format.
+     *
+     * @param SessionInterface $session for storing the deck.
+     * @param int $number of cards to draw.
+     * @return JsonResponse A JSON response with the drawn card details and the number of cards left in the deck.
+     */
     #[Route("/api/deck/draw/{number}", name: "draw_cards", methods: ["POST", "GET"])]
     public function drawNumber(SessionInterface $session, int $number): JsonResponse
     {
