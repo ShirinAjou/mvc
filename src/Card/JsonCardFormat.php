@@ -5,7 +5,7 @@ namespace App\Card;
 use App\Card\CardGraphic;
 
 /**
- * 
+ *
  */
 class JsonCardFormat
 {

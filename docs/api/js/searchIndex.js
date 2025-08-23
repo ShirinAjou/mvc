@@ -43,7 +43,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Card\\CardGraphic\u003A\u003AgetCard\u0028\u0029",
             "name": "getCard",
-            "summary": "Returns\u0020the\u0020card\u0020as\u0020a\u0020string\u0020with\u0020rank\u0020and\u0020suit\u0020symbols.",
+            "summary": "Returns\u0020the\u0020card\u0020as\u0020a\u0020string\u0020with\u0020value\u0020and\u0020suit\u0020symbols.",
             "url": "classes/App-Card-CardGraphic.html#method_getCard"
         },                {
             "fqsen": "\\App\\Card\\CardGraphic\u003A\u003A__toString\u0028\u0029",
@@ -83,7 +83,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Card\\DeckOfCards\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
-            "summary": "Constructs\u0020a\u0020new\u0020deck\u0020of\u0020cards.\u0020The\u0020deck\u0020is\u0020initialized\u0020with\u002052\u0020cards,\u0020each\u0020represented\u0020by\u0020a\u0020CardGraphic\u0020object.",
+            "summary": "Creates\u0020a\u0020new\u0020deck\u0020of\u0020cards.\u0020The\u0020deck\u0020is\u0020initialized\u0020with\u002052\u0020cards,\u0020each\u0020represented\u0020by\u0020a\u0020CardGraphic\u0020object.",
             "url": "classes/App-Card-DeckOfCards.html#method___construct"
         },                {
             "fqsen": "\\App\\Card\\DeckOfCards\u003A\u003AgetCards\u0028\u0029",

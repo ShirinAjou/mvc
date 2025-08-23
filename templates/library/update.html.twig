@@ -13,10 +13,19 @@
 
         <form method="post" action="{{ path('book_update', {'id': book.id}) }}">
             <input type="hidden" name="id" value="{{ book.id }}">
+
+            <label for="title">Title</label>
             <input type="text" name="title" placeholder="Title" value="{{ book.title }}">
+
+            <label for="isbn">ISBN</label>
             <input type="text" name="isbn" placeholder="Isbn" value="{{ book.isbn }}">
+
+            <label for="author">Author</label>
             <input type="text" name="author" placeholder="Author" value="{{ book.author }}">
+
+            <label for="image">Image</label>
             <input type="text" name="image" placeholder="Image" value="{{ book.image }}">
+
             <button type="submit">Update Book</button>
         </form>
     </div>
