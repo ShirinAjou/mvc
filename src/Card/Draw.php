@@ -17,8 +17,8 @@ class Draw
     /**
      * Simulates a player drawing cards from the deck.
      *
-     * @param array $playerHand An array representing the player’s current hand.
-     * @param DeckOfCards $deck An object representing the deck of cards.
+     * @param array $playerHand representing player’s current hand.
+     * @param DeckOfCards $deck representing deck of cards.
      *
      * @return array An array with the player’s updated hand, score, and deck.
      */
@@ -36,8 +36,8 @@ class Draw
     /**
      * Simulates the bank drawing cards from the deck.
      *
-     * @param array $bankHand An array representing the bank’s current hand.
-     * @param DeckOfCards $deck An object representing the deck of cards.
+     * @param array $bankHand representing bank’s current hand.
+     * @param DeckOfCards $deck representing deck of cards.
      *
      * @return array An array with the bank’s updated hand, score, and deck.
      */

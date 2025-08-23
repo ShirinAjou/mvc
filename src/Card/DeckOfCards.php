@@ -13,7 +13,7 @@ class DeckOfCards
     protected int $value;
 
     /**
-     * Creates a new deck of cards. The deck is initialized with 52 cards, each represented by a CardGraphic object.
+     * Creates a new deck of cards. Each card is a CardGraphic object.
      */
     public function __construct()
     {
@@ -28,7 +28,7 @@ class DeckOfCards
     }
 
     /**
-     * Returns the array of cards in the deck.
+     * Returns an array of cards.
      *
      * @return array The array of cards.
      */
@@ -69,7 +69,7 @@ class DeckOfCards
     }
 
     /**
-     * Counts the number of cards in the deck.
+     * Counts the number of cards.
      *
      * @return int The number of cards in the deck.
      */
