@@ -9,8 +9,16 @@ use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use App\Card\DeckOfCards;
 use App\Card\JsonCardFormat;
 
+/**
+ * Controller for handling JSON card decks.
+ */
 class CardControllerJson
 {
+    /**
+     * Returns a JSON response with a sorted deck of cards.
+     *
+     * @return Response A JSON response WITH the sorted deck of cards.
+     */
     #[Route("/api/deck", name: "card_json")]
     public function deckJson(): Response
     {
@@ -28,6 +36,12 @@ class CardControllerJson
         return $response;
     }
 
+    /**
+     * Returns a JSON response with shuffled deck of cards.
+     *
+     * @param SessionInterface $session for storing the deck.
+     * @return JsonResponse A JSON response with the shuffled deck of cards.
+     */
     #[Route("/api/deck/shuffle", name: "card_shuffle", methods: ["POST", "GET"])]
     public function shuffleDeck(SessionInterface $session): JsonResponse
     {
@@ -46,6 +60,12 @@ class CardControllerJson
         return $response;
     }
 
+    /**
+     * Returns a JSON response with a drawn card.
+     *
+     * @param SessionInterface $session for storing the deck.
+     * @return JsonResponse A JSON response with the drawn card details.
+     */
     #[Route("/api/deck/draw", name: "card_draw", methods: ["POST", "GET"])]
     public function cardDraw(SessionInterface $session): JsonResponse
     {
