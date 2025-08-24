@@ -18,7 +18,7 @@ class SessionGameMethods
      * Retrieves game data from the session.
      *
      * @param SessionInterface $session for storing game data.
-     * @return array An array containing the bank's hand, player's hand, player's score, and bank's score.
+     * @return array An array with game data.
      */
     public function sessionGame(SessionInterface $session): array
     {
@@ -39,7 +39,7 @@ class SessionGameMethods
      * Retrieves and handles game data from the session.
      *
      * @param SessionInterface $session for storing game data.
-     * @return array An array containing the player's score, bank's score, player's hand, bank's hand, and game result.
+     * @return array An array with game data.
      */
     public function gameData(SessionInterface $session): array
     {
@@ -66,7 +66,7 @@ class SessionGameMethods
      * Retrieves and handles game data from the session.
      *
      * @param SessionInterface $session for storing game data.
-     * @return array An array containing the player's hand, score, status, bank's hand, bank's score, and game over status.
+     * @return array An array with game data.
      */
     public function returnGame(SessionInterface $session): array
     {

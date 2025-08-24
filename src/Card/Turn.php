@@ -15,11 +15,11 @@ class Turn
     }
 
     /**
-     * Simulates a player's turn in the card game. The player draws a card from the deck and updates their score.
+     * Simulates a player's turn in the card game.
      * If the player's score exceeds 21, they lose the game.
      *
-     * @param DeckOfCards $deck The deck of cards from which the player draws.
-     * @return array An array containing the player's hand, score, and status after their turn.
+     * @param DeckOfCards $deck The deck of cards to draw from.
+     * @return array An array containing the player's hand, score, and status.
      */
     public function playerTurn(DeckOfCards $deck): array
     {

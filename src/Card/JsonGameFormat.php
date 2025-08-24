@@ -6,7 +6,7 @@ use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use App\Card\SessionGameMethods;
 
 /**
- * 
+ * Class that formats game data for JSON output.
  */
 class JsonGameFormat
 {
@@ -14,6 +14,12 @@ class JsonGameFormat
     {
     }
 
+    /**
+     * Formats game data from a session to a JSON format.
+     *
+     * @param SessionInterface $session The session containing game data.
+     * @return array The game data in an array.
+     */
     public function jsonGame(SessionInterface $session): array
     {
         $game = new SessionGameMethods();
