@@ -3,7 +3,7 @@
 namespace App\Card;
 
 /**
- * Represents a card with a graphical representation.
+ * Class representing a graphical card.
  */
 class CardGraphic extends Card
 {

@@ -5,7 +5,7 @@ namespace App\Card;
 use App\Card\CardGraphic;
 
 /**
- * Represents a playing card with a value and suit.
+ * Class representing a playing card with a value and suit.
  */
 class Card
 {

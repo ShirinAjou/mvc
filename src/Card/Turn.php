@@ -6,7 +6,7 @@ use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use App\Card\DeckOfCards;
 
 /**
- * Represents a turn in the card game.
+ * Class representing a turn in the card game.
  */
 class Turn
 {

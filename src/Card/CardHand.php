@@ -6,7 +6,7 @@ use App\Card\CardGraphic;
 use App\Card\DeckOfCards;
 
 /**
- * Represents a hand of cards in a card game.
+ * Class representing a hand of cards in a card game.
  */
 class CardHand
 {
