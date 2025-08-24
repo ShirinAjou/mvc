@@ -6,8 +6,16 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
+/**
+ * Controller for handling JSON responses related to lucky numbers and greeting routes.
+ */
 class LuckyControllerJson
 {
+    /**
+     * Returns a JSON response with all available api.
+     *
+     * @return Response A JSON response listing api.
+     */
     #[Route("/api")]
     public function jsonNumber(): Response
     {
@@ -29,6 +37,11 @@ class LuckyControllerJson
         return $response;
     }
 
+    /**
+     * Returns a JSON response with a random quote and the current date and time.
+     *
+     * @return Response A JSON response with a random quote, the current date and time.
+     */
     #[Route("/api/quote")]
     public function jsonQuote(): Response
     {
