@@ -10,8 +10,16 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Attribute\Route;
 
+/**
+ * Controller for handling library-related routes.
+ */
 final class LibraryController extends AbstractController
 {
+    /**
+     * Renders the library index page.
+     *
+     * @return Response The rendered index page.
+     */
     #[Route('/library', name: 'app_book')]
     public function index(): Response
     {
@@ -20,6 +28,13 @@ final class LibraryController extends AbstractController
         ]);
     }
 
+    /**
+     * Handles the creation of a new book.
+     *
+     * @param Request $request The HTTP request.
+     * @param ManagerRegistry $doctrine The doctrine manager registry.
+     * @return Response The rendered create book page.
+     */
     #[Route('/library/create', name: 'book_create', methods: ["GET", "POST"])]
     public function createBook(Request $request, ManagerRegistry $doctrine): Response
     {
@@ -44,6 +59,12 @@ final class LibraryController extends AbstractController
         return $this->render('library/create.html.twig');
     }
 
+    /**
+     * Displays all books in the library.
+     *
+     * @param BookRepository $bookRepository The repository for accessing book data.
+     * @return Response The rendered book page.
+     */
     #[Route('/library/show', name: 'book_show_all')]
     public function showAllBook(
         BookRepository $bookRepository
@@ -59,6 +80,13 @@ final class LibraryController extends AbstractController
         ]);
     }
 
+    /**
+     * Displays a book by its id.
+     *
+     * @param BookRepository $bookRepository The repository for accessing book data.
+     * @param int $id The id of the book to display.
+     * @return Response The rendered book id page.
+     */
     #[Route('/library/show/{id}', name: 'book_by_id')]
     public function showBookById(
         BookRepository $bookRepository,
@@ -72,6 +100,13 @@ final class LibraryController extends AbstractController
         ]);
     }
 
+    /**
+     * Deletes a book by its id.
+     *
+     * @param ManagerRegistry $doctrine The doctrine manager registry.
+     * @param int $id The id of the book to delete.
+     * @return Response The rendered delete book id page.
+     */
     #[Route('/library/delete/{id}', name: 'book_delete_by_id')]
     public function deleteBookById(ManagerRegistry $doctrine, int $id): Response
     {
@@ -89,6 +124,14 @@ final class LibraryController extends AbstractController
         return $this->redirectToRoute('book_show_all');
     }
 
+    /**
+     * Updates a book by its id.
+     *
+     * @param ManagerRegistry $doctrine The doctrine manager registry.
+     * @param int $id The id of the book to update.
+     * @param Request $request The HTTP request.
+     * @return Response The rendered updated book id page.
+     */
     #[Route('/library/update/{id}', name: 'book_update')]
     public function updateBook(ManagerRegistry $doctrine, int $id, Request $request): Response
     {

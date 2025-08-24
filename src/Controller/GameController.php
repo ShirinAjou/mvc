@@ -13,7 +13,7 @@ use App\Card\Draw;
 use App\Card\SessionGameMethods;
 
 /**
- * Controller for handling game-related routes and rendering game templates.
+ * Controller for handling game-related routes.
  */
 class GameController extends AbstractController
 {
@@ -29,7 +29,7 @@ class GameController extends AbstractController
     }
 
     /**
-     * Renders the documentation page for the game.
+     * Renders documentation page for the game.
      *
      * @return Response The rendered documentation page.
      */
@@ -51,10 +51,10 @@ class GameController extends AbstractController
     }
 
     /**
-     * Handles the game play logic, including restarting the game and rendering the play page.
+     * Handles the game play logic.
      *
-     * @param SessionInterface $session The session interface for storing game data.
-     * @param Request $request The HTTP request object.
+     * @param SessionInterface $session for storing game data.
+     * @param Request $request The HTTP request.
      * @return Response The rendered play page.
      */
     #[Route("/game/play", name: "play", methods: ["GET", "POST"])]
@@ -76,9 +76,9 @@ class GameController extends AbstractController
     }
 
     /**
-     * Handles the drawing of cards for the player and updates the session with the new game state.
+     * Handles the drawing of cards for the player.
      *
-     * @param SessionInterface $session The session interface for storing game data.
+     * @param SessionInterface $session for storing game data.
      * @return Response A redirect to the play route.
      */
     #[Route("/game/draw", name: "draw_game", methods: ["POST"])]
@@ -106,7 +106,7 @@ class GameController extends AbstractController
     /**
      * Handles the bank's turn in the game, updates the session with the new game state, and renders the result page.
      *
-     * @param SessionInterface $session The session interface for storing game data.
+     * @param SessionInterface $session for storing game data.
      * @return Response The rendered result page.
      */
     #[Route("/game/stop", name: "stop_game", methods: ["POST"])]

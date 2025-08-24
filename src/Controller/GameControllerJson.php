@@ -8,8 +8,17 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use App\Card\JsonGameFormat;
 
+/**
+ * Controller for handling JSON routes related to the game.
+ */
 class GameControllerJson
 {
+    /**
+     * Returns a JSON response with the current game state.
+     *
+     * @param SessionInterface $session for storing game data.
+     * @return Response A JSON response with the current game state.
+     */
     #[Route("/api/game")]
     public function apiGame(SessionInterface $session): Response
     {
