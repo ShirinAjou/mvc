@@ -22,7 +22,7 @@ class GameController extends AbstractController
      *
      * @return Response The rendered game page.
      */
-    #[Route("/game", name: "game")]
+    #[Route('/game', name: 'game')]
     public function game(): Response
     {
         return $this->render('card/game.html.twig');
@@ -33,21 +33,10 @@ class GameController extends AbstractController
      *
      * @return Response The rendered documentation page.
      */
-    #[Route("/game/doc", name: "doc")]
+    #[Route('/game/doc', name: 'doc')]
     public function doc(): Response
     {
         return $this->render('card/doc.html.twig');
-    }
-
-    /**
-     * Starts the game and renders the game page.
-     *
-     * @return Response The rendered game page.
-     */
-    #[Route("/game", name: "start_game")]
-    public function start(): Response
-    {
-        return $this->render('card/game.html.twig');
     }
 
     /**
@@ -57,10 +46,16 @@ class GameController extends AbstractController
      * @param Request $request The HTTP request.
      * @return Response The rendered play page.
      */
-    #[Route("/game/play", name: "play", methods: ["GET", "POST"])]
+    #[Route('/game/play', name: 'play', methods: ['GET', 'POST'])]
     public function play(SessionInterface $session, Request $request): Response
     {
         if ($request->request->get('restartCard')) {
+            $deck = $session->get('deck');
+            if (!$deck instanceof DeckOfCards || $deck->countCards() <= 0) {
+                $deck = new DeckOfCards();
+                $deck->shuffleCards();
+                $session->set('deck', $deck);
+            }
             $session->set('playerHand', []);
             $session->set('playerScore', 0);
             $session->set('bankHand', []);
@@ -81,13 +76,13 @@ class GameController extends AbstractController
      * @param SessionInterface $session for storing game data.
      * @return Response A redirect to the play route.
      */
-    #[Route("/game/draw", name: "draw_game", methods: ["POST"])]
+    #[Route('/game/draw', name: 'draw_game', methods: ['POST'])]
     public function drawGame(SessionInterface $session): Response
     {
         $deck = $session->get('deck');
         if (!$deck instanceof DeckOfCards || $deck->countCards() <= 0) {
             $deck = new DeckOfCards();
-            $deck->shuffleCards();
+            $session->set('deck', $deck);
         }
 
         $playerHand = $session->get('playerHand', []);
@@ -109,13 +104,14 @@ class GameController extends AbstractController
      * @param SessionInterface $session for storing game data.
      * @return Response The rendered result page.
      */
-    #[Route("/game/stop", name: "stop_game", methods: ["POST"])]
+    #[Route('/game/stop', name: 'stop_game', methods: ['POST'])]
     public function stopGame(SessionInterface $session): Response
     {
         $deck = $session->get('deck');
         if (!$deck instanceof DeckOfCards || $deck->countCards() <= 0) {
             $deck = new DeckOfCards();
             $deck->shuffleCards();
+            $session->set('deck', $deck);
         }
 
         $bankHand = $session->get('bankHand', []);

@@ -18,7 +18,7 @@ class MetricsController extends AbstractController
      *
      * @return Response The rendered metrics page.
      */
-    #[Route("/metrics", name: "metrics")]
+    #[Route('/metrics', name: 'metrics')]
     public function metrics(): Response
     {
         return $this->render('metrics/index.html.twig');

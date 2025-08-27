@@ -19,7 +19,7 @@ class CardControllerJson
      *
      * @return Response A JSON response with the sorted deck of cards.
      */
-    #[Route("/api/deck", name: "card_json")]
+    #[Route('/api/deck', name: 'card_json')]
     public function deckJson(): Response
     {
         $deck = new DeckOfCards();
@@ -42,7 +42,7 @@ class CardControllerJson
      * @param SessionInterface $session for storing the deck.
      * @return JsonResponse A JSON response with the shuffled deck of cards.
      */
-    #[Route("/api/deck/shuffle", name: "card_shuffle", methods: ["POST", "GET"])]
+    #[Route('/api/deck/shuffle', name: 'card_shuffle', methods: ['POST', 'GET'])]
     public function shuffleDeck(SessionInterface $session): JsonResponse
     {
         $deck = new DeckOfCards();
@@ -66,7 +66,7 @@ class CardControllerJson
      * @param SessionInterface $session for storing the deck.
      * @return JsonResponse A JSON response with the drawn card details.
      */
-    #[Route("/api/deck/draw", name: "card_draw", methods: ["POST", "GET"])]
+    #[Route('/api/deck/draw', name: 'card_draw', methods: ['POST', 'GET'])]
     public function cardDraw(SessionInterface $session): JsonResponse
     {
         $deck = $session->get('deck');
@@ -106,7 +106,7 @@ class CardControllerJson
      * @param int $number of cards to draw.
      * @return JsonResponse A JSON response with the drawn card details and the number of cards left in the deck.
      */
-    #[Route("/api/deck/draw/{number}", name: "draw_cards", methods: ["POST", "GET"])]
+    #[Route('/api/deck/draw/{number}', name: 'draw_cards', methods: ['POST', 'GET'])]
     public function drawNumber(SessionInterface $session, int $number): JsonResponse
     {
         $deck = $session->get('deck');

@@ -35,7 +35,7 @@ final class LibraryController extends AbstractController
      * @param ManagerRegistry $doctrine The doctrine manager registry.
      * @return Response The rendered create book page.
      */
-    #[Route('/library/create', name: 'book_create', methods: ["GET", "POST"])]
+    #[Route('/library/create', name: 'book_create', methods: ['GET', 'POST'])]
     public function createBook(Request $request, ManagerRegistry $doctrine): Response
     {
         if ($request->isMethod('POST')) {

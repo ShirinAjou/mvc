@@ -12,37 +12,11 @@ use Symfony\Component\Routing\Annotation\Route;
 class LuckyControllerJson
 {
     /**
-     * Returns a JSON response with all available api.
-     *
-     * @return Response A JSON response listing api.
-     */
-    #[Route("/api")]
-    public function jsonNumber(): Response
-    {
-        $data = [
-            'quote' => '/api/quote',
-            'show deck' => '/api/deck',
-            'shuffle deck' => '/api/deck/shuffle',
-            'draw card' => '/api/deck/draw',
-            'draw card {number}' => '/api/deck/draw/{number}',
-            'show current score' => '/api/game',
-            'show books' => '/api/library/books',
-            'show book {isbn}' => '/api/library/book/{isbn}'
-        ];
-
-        $response = new JsonResponse($data);
-        $response->setEncodingOptions(
-            $response->getEncodingOptions() | JSON_PRETTY_PRINT
-        );
-        return $response;
-    }
-
-    /**
      * Returns a JSON response with a random quote and the current date and time.
      *
      * @return Response A JSON response with a random quote, the current date and time.
      */
-    #[Route("/api/quote")]
+    #[Route('/api/quote', name:'api_quote')]
     public function jsonQuote(): Response
     {
         $number = random_int(0, 4);

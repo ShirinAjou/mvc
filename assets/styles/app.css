@@ -143,3 +143,14 @@ h1 {
 .right-content {
     flex: 3;
 }
+
+.a-button {
+    display: inline-block;
+    text-decoration: none;
+    border: none;
+    padding: 1em;
+    margin: 1em;
+    border-radius: 10px;
+    background-color: #4B2E2B;
+    color: #FFFFFF;
+}

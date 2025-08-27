@@ -31,7 +31,7 @@ class LuckyController
      *
      * @return Response The rendered greeting message page.
      */
-    #[Route("/lucky/hi")]
+    #[Route('/lucky/hi')]
     public function hiLucky(): Response
     {
         return new Response(

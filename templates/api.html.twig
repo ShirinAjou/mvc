@@ -1,0 +1,18 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Om mig{% endblock %}
+
+{% block main %}
+    <div class="body-div">
+        <h1>API</h1>
+        <a class="a-button" href="{{ path('api_quote') }}">Quote</a>
+        <a class="a-button" href="{{ path('card_json') }}">Show deck</a>
+        <a class="a-button" href="{{ path('card_shuffle') }}">Shuffle deck</a>
+        <a class="a-button" href="{{ path('card_draw') }}">Draw card</a>
+        <a class="a-button" href="{{ path('draw_cards', { 'number': '1' }) }}">Draw card {number}</a>
+        <a class="a-button" href="{{ path('api_game') }}">Show current score</a>
+        <a class="a-button" href="{{ path('api_book') }}">Show books</a>
+        <a class="a-button" href="{{ path('api_book_isbn', { 'isbn': '9789113071299' }) }}">Show Book {ISBN}</a>
+        
+    </div>
+{% endblock %}

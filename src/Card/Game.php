@@ -7,7 +7,7 @@ use App\Card\DeckOfCards;
 use App\Card\Turn;
 
 /**
- * Class handling game logic. 
+ * Class handling game logic.
  */
 class Game
 {

@@ -19,7 +19,7 @@ class GameControllerJson
      * @param SessionInterface $session for storing game data.
      * @return Response A JSON response with the current game state.
      */
-    #[Route("/api/game")]
+    #[Route('/api/game', name:'api_game')]
     public function apiGame(SessionInterface $session): Response
     {
         $game = new JsonGameFormat();
