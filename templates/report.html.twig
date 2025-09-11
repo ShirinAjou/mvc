@@ -1,6 +1,6 @@
 {% extends "base.html.twig" %}
 
-{% block title %}About{% endblock %}
+{% block title %}Report{% endblock %}
 
 {% block main %}
 <div class="report-div">
@@ -12,7 +12,6 @@
             <li><a href="#kmom04">Kmom04</a></li>
             <li><a href="#kmom05">Kmom05</a></li>
             <li><a href="#kmom06">Kmom06</a></li>
-            <li><a href="#kmom07">Kmom07</a></li>
             <li><a href="#kmom10">Kmom10</a></li>
         </ul>
     </aside>
@@ -208,10 +207,52 @@
 
         <section id="kmom06">
             <h2>Kmom06</h2>
+            <ul>
+                <li>Hur uppfattade du verktyget PHPmetrics och fann du några särskilda bitar mer värdefulla än andra? Var det några särskilda metrics eller bilder du uppskattade?</li>
+                <li>Berätta hur det gick att integrera med Scrutinizer och vilken är din första känsla av verktyget och dess badges? Vilken kodtäckning och kodkvalitet fick du efter första bygget?</li>
+                <li>Hur är din egen syn på kodkvalitet, berätta lite om den? Tror du man kan påvisa kodkvalitet i någon viss mån med badges eller vad tror du?</li>
+                <li>Vilken är din TIL för detta kmom?</li>
+            </ul>
+            <p>Jag upplevde PHPmetrics som både svår och tydlig. 
+            Cirklarna var väldigt tydliga, där kunde man genom storlekarna och färgen på cirklarna se vilka klasser som inte var välstrukturerade.
+            Även om det visuella inte berättade allt om hur koden var så var det en bra första och snabb överblick.
+            Men den var även svår eftersom det var så många tabeller med massa förkortningar jag aldrig hört talas om.
+            Det tog en stund att komma in i det, kolla upp alla förkortningar och förstå navigeringen. 
+            Därefter var PHPmetrics till hjälp för att förstå svagheter i ens kod.
+            </p>
+
+            <p>Badges var ett tydligt och lättläst verktyg.
+            Jag kunde genom sifffor och färger se vad som vad godkänt och icke-godkänt.
+            Scrutinizer har en aningen mer lättorienterad sida, kanske för att det inte finns lika flikar och tabeller.
+            I issues stod det tydligt vilka fel den funnit så man enkelt kunde åtgärda dessa.
+            Det var inte heller lika månda förkortningar utan tydliga tabeller där man dessutom kunde klicka på klasserna för att få mer detaljerad info.
+            Scrutinizer var enklare och tydligare att arbeta med för mig.
+            Vid första bygget hade jag kodkvalite på 10 och kodtäckning på 31% och just nu har jag kvar kodkvaliten på 10 och en kodtäckning på 41% så det är framsteg.
+            </p>
+
+            <p>Jag upplever kodkvalite som metoder där man fokuserar på en uppgift, gärna mindre men många metoder.
+            DRY är bra att utgå ifrån när man kodar.
+            klasser som fokuserar på en sak.
+            Docstrings som förklarar koden, välgenomtänkt strukurering av filer och mappar.
+            Det här är det jag lärt mig/ fått uppfattning är kodkvalite.
+            Kodkvalite gör att man lättare hittar i sin kod, förstår sin kod och kan felsöka samt vidareutveckla kod.
+            När jag haft stora metoder har de varit krångliga och svåra att omarbeta när det behövts, något jag inte upplevt på samma sätt med mindre metoder och klasser.
+            Kodkvalite är nog nödvändigt vid samarbete med andra också, annars riskerar koden att bli för jobbig för kamraterna att förstå och arbeta med.
+            Jag tror absolut man i viss mån kan påvisa kodkvalitet med badges. 
+            Den visar lite viklen riktning koden tagit och det är på rätt spår eller inte.
+            Badges kan inte läsa av koden på djupare nivå och förstå hur den funkar och inte så därför finns det begränsningar.
+            </p>
+
+            <p>TIL för detta kmom har varit att jobba med PHPmetrics och Scrutinizer.
+            För mig är dessa helt nytt och det lärde mig att förstå kodkvalite på ett djupare och nytt sätt.
+            Förutom python kurserna är det inte lika strikt hur man ska bygga sin kod och det har oftast lett till fungernande men illastrukturerad kod.
+            Något jag stört mig på men nu känner jag att jag har lite mer kött på bennen för att koda bättre.
+            </p>
+
         </section>
 
-        <section id="kmom07">
-            <h2>Kmom07</h2>
+        <section id="kmom10">
+            <h2>Kmom10</h2>
         </section>
     </div>
 </div>

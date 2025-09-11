@@ -49,7 +49,7 @@
 <div class="page">
     <div class="content content-first">
         <div class="report-details">
-            Created at 2025-08-22 05:05:40        , with PHPMetrics v2.9.0 (<a href="https://twitter.com/Halleck45">Jean-François Lépine</a>).
+            Created at 2025-09-11 13:51:12        , with PHPMetrics v2.9.0 (<a href="https://twitter.com/Halleck45">Jean-François Lépine</a>).
         </div>
 
         
@@ -335,7 +335,6 @@
         "size": 3000,
         "relations": [
             "\\Symfony\\Component\\HttpFoundation\\Session\\SessionInterface",
-            "\\App\\Card\\SessionGameMethods",
             "\\App\\Card\\DeckOfCards",
             "\\App\\Card\\Turn"
         ]
@@ -364,15 +363,11 @@
         "relations": []
     },
     {
-        "name": "\\App\\Controller\\LibraryController",
+        "name": "\\App\\Controller\\ApiController",
         "size": 3000,
         "relations": [
             "\\Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController",
-            "\\Symfony\\Component\\HttpFoundation\\Response",
-            "\\Symfony\\Component\\HttpFoundation\\Request",
-            "\\Doctrine\\Persistence\\ManagerRegistry",
-            "\\App\\Entity\\Book",
-            "\\App\\Repository\\BookRepository"
+            "\\Symfony\\Component\\HttpFoundation\\Response"
         ]
     },
     {
@@ -384,6 +379,18 @@
         "name": "\\Symfony\\Component\\HttpFoundation\\Response",
         "size": 3000,
         "relations": []
+    },
+    {
+        "name": "\\App\\Controller\\LibraryController",
+        "size": 3000,
+        "relations": [
+            "\\Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController",
+            "\\Symfony\\Component\\HttpFoundation\\Response",
+            "\\Symfony\\Component\\HttpFoundation\\Request",
+            "\\Doctrine\\Persistence\\ManagerRegistry",
+            "\\App\\Entity\\Book",
+            "\\App\\Repository\\BookRepository"
+        ]
     },
     {
         "name": "\\Symfony\\Component\\HttpFoundation\\Request",
@@ -444,8 +451,8 @@
             "\\Symfony\\Component\\HttpFoundation\\Response",
             "\\Symfony\\Component\\HttpFoundation\\Session\\SessionInterface",
             "\\Symfony\\Component\\HttpFoundation\\Request",
-            "\\App\\Card\\SessionGameMethods",
             "\\App\\Card\\DeckOfCards",
+            "\\App\\Card\\SessionGameMethods",
             "\\App\\Card\\Draw"
         ]
     },
