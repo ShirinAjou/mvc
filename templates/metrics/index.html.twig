@@ -84,10 +84,35 @@
             Den tredje förbättringen jag kommer genomföra är issues i scrutinizer och det är för att det är tydliga beskrivningar på vad problemet är.
             Det kommer att leda till högre kodkvalitet.
             </p>
+            
+            <p>
+            Tydligast förändring som går att se är de färgade cirklarna. 
+            Den största cirkeln är inte kvar och det är fler gula och gröna cirklar.
+            Mina issuses i scrutinizer som jag skulle åtgärda är åtgärdade och finns ej kvar i issuses något mer.
+            Istället har det dykt upp två nya issues men det är i filer jag själv inte har skapat så dessa låter jag bli.
+            LCOM värdet var som högst 4 och det var i Game klassen och nu är den på 3.
+            Det som tynger ner koden är controllerna. Det är dessa som har hög mainaintainability/ complexity.
+            </p>
         </div>
+
+        <img src="{{ asset('img/metricsupdate.png') }}"  alt="metrics">
+
         <div class="metrics-div">
             <h2>Diskussion</h2>
-            <p></p>
+            <p>Jag upplever att det absolut går att arbeta på det här sättet för att förbättra kodkvalitet och clean code.
+            Den ger siffror som man inte kan ignorera. 
+            Dessa siffror indikerar på svagheter och styrkor.
+            Jag visste redan innan ungefär vilka svagheter min kod hade och dessa blev bekräftade.
+            Speciellt som nybörjare är det här ett bra verktyg för att lära sig strurturera upp koden på ett bättre sätt.
+            Det är välbehövlig kunskap. 
+            Å andra sidan så säger dessa verktyg inget om hur koden fungerar och det ploppar jämnt upp nya svagheter och fel.
+            Fokuset blir på att få bort varningar än på att skriva fungerande kod.
+            Kod som redan funkar kan sluta funka när man petar och gör om för mycket. 
+            Därför kan det vara klok att använda den parallelt som man kodar och inte efter at tman kodat klart.
+            Andra fördelar är om man jobbar tillsammans med andra vilket man nog oftast gör i arbetslivet så är det lättare för kollegor att förstå och arbeta med koden.
+            Är metoderna för långa, komplexa och klasserna för stora och spretiga så kan det bli svårare i samarbetet.
+            Målet är att ha lättläslig och välstruklturerad kod som man enkelt kan arbeta med både en och flera tillsammans.
+            </p>
         </div>
     </div>
 {% endblock %}
