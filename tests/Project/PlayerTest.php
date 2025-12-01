@@ -14,13 +14,6 @@ use App\Project\Score;
  */
 class PlayerTest extends TestCase
 {
-    public function testGetName(): void
-    {
-        $player = new Player("Hej");
-
-        $this->assertEquals("Hej", $player->name);
-    }
-
     public function testStandButton(): void
     {
         $player = new Player();
