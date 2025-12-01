@@ -76,7 +76,7 @@ class GameTest extends TestCase
         $this->assertEquals(["Dealer"], $result);
     }
 
-    public function testGetWinnerNoWinner(): void
+    public function testGetWinnerPlayer(): void
     {
         $score = new Score();
         $game = new Game();
