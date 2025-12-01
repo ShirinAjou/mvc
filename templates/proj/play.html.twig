@@ -1,0 +1,53 @@
+{% extends "head.html.twig" %}
+
+{% block title %}Blackjack{% endblock %}
+
+{% block main %}
+    <div class="body-div">
+        <h1>Blackjack</h1>
+        <div class="columns-div">
+        <p>{{ messages }}</p>
+            {% for player in players %}
+                <table>
+                    <tr>
+                        <th>{{ player.getName() }}</th>
+                    </tr>
+                    {% for card in player.hand.hand %}
+                        <tr>
+                            <td class="card">{{ card }}</td>
+                        </tr>
+                    {% endfor %}
+                    <tr>
+                        <td>Score: {{ player.points }}</td>
+                    </tr>
+                </table>
+            {% endfor %}
+
+            <table>
+                <tr>
+                    <th>Dealer</th>
+                </tr>
+                <tr>
+                    <td class="card">{{ dealerCard }}</td>
+                </tr>
+                <tr>
+                    <td>Score: {{ dealerScore }} </td>
+                </tr>
+            </table>
+
+        </div>
+
+        <p>{{ players[playerIndex].getName() }}s tur</p>
+
+        {% if currentPlayer.message %}
+            <p style="color:red;">{{ currentPlayer.message }}</p>
+        {% endif %}
+
+        <form action="{{ path('draw_proj') }}" method="post">
+            <button name="drawCard" value="1" type="submit">Hit</button>
+        </form>
+        <form action="{{ path('stand_proj') }}" method="post">
+            <button name="standCard" value="1" type="submit">Stand</button>
+        </form>
+    </div>
+{% endblock %}

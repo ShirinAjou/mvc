@@ -73,6 +73,10 @@
                 
             </li>
                     <li>
+                <a href="namespaces/app-project.html" class="">Project</a>
+                
+            </li>
+                    <li>
                 <a href="namespaces/app-repository.html" class="">Repository</a>
                 
             </li>
@@ -130,11 +134,12 @@
         <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Card/Game.php"><a href="files/src-card-game.html"><abbr title="src/Card/Game.php">Game.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">9</span>
+    <span class="phpdocumentor-element-found-in__line">12</span>
 
     </aside>
 
-        
+            <p class="phpdocumentor-summary">Class handling game logic.</p>
+
 
 
 
@@ -188,12 +193,14 @@
     <span>
                                 &nbsp;: bool    </span>
 </dt>
+<dd>Plays a round of the game.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/App-Card-Game.html#method_winner">winner()</a>
     <span>
                                 &nbsp;: string    </span>
 </dt>
+<dd>Determines the winner of the game based on scores.</dd>
 
     </dl>
 
@@ -225,7 +232,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Card/Game.php"><a href="files/src-card-game.html"><abbr title="src/Card/Game.php">Game.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">11</span>
+    <span class="phpdocumentor-element-found-in__line">14</span>
 
     </aside>
 
@@ -268,7 +275,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Card/Game.php"><a href="files/src-card-game.html"><abbr title="src/Card/Game.php">Game.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">13</span>
+    <span class="phpdocumentor-element-found-in__line">16</span>
 
     </aside>
 
@@ -312,11 +319,12 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Card/Game.php"><a href="files/src-card-game.html"><abbr title="src/Card/Game.php">Game.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">18</span>
+    <span class="phpdocumentor-element-found-in__line">30</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Plays a round of the game.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">playGame</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/App-Card-DeckOfCards.html"><abbr title="\App\Card\DeckOfCards">DeckOfCards</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$deck</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type"><a href="classes/App-Card-Turn.html"><abbr title="\App\Card\Turn">Turn</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$turn</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$drawCard</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$stop</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
@@ -332,28 +340,36 @@
                 : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/App-Card-DeckOfCards.html"><abbr title="\App\Card\DeckOfCards">DeckOfCards</abbr></a></span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>The deck of cards used in the game.</p>
+</section>
+
             </dd>
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$turn</span>
                 : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/App-Card-Turn.html"><abbr title="\App\Card\Turn">Turn</abbr></a></span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>The current turn in the game.</p>
+</section>
+
             </dd>
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$drawCard</span>
                 : <span class="phpdocumentor-signature__argument__return-type">bool</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>Whether the player draws a card.</p>
+</section>
+
             </dd>
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$stop</span>
                 : <span class="phpdocumentor-signature__argument__return-type">bool</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>Whether the player stops their turn.</p>
+</section>
+
             </dd>
             </dl>
 
@@ -364,6 +380,10 @@
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
         <span class="phpdocumentor-signature__response_type">bool</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>True if the game round is completed.</p>
+</section>
+
             </section>
 
 </article>
@@ -381,11 +401,12 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Card/Game.php"><a href="files/src-card-game.html"><abbr title="src/Card/Game.php">Game.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">36</span>
+    <span class="phpdocumentor-element-found-in__line">55</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Determines the winner of the game based on scores.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">winner</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$playerScore</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$bankScore</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
@@ -401,14 +422,18 @@
                 : <span class="phpdocumentor-signature__argument__return-type">int</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>The player's score.</p>
+</section>
+
             </dd>
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$bankScore</span>
                 : <span class="phpdocumentor-signature__argument__return-type">int</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>The bank's score.</p>
+</section>
+
             </dd>
             </dl>
 
@@ -419,6 +444,10 @@
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
         <span class="phpdocumentor-signature__response_type">string</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>The winner of the game with a string.</p>
+</section>
+
             </section>
 
 </article>

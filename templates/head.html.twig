@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <link rel="icon" href="{{ asset('img/glider.svg') }}">
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+            {% block importmap %}{{ importmap('app') }}{% endblock %}
+        {% endblock %}
+    </head>
+    <body class="proj-body">
+        <header class="proj-header">
+            <nav>
+                <ul>
+                    <li><a href="{{ path('proj') }}">Home</a></li>
+                    <li><a href="{{ path('proj_about') }}">About</a></li>
+                    <li><a href="{{ path('proj_api') }}">API</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main>{% block main %}{% endblock %}</main>
+
+        <footer>
+            <p>MVC <a href="https://github.com/ShirinAjou/mvc">GitHub</a></p>
+        </footer>
+    </body>
+</html>
+

@@ -49,7 +49,7 @@
 <div class="page">
     <div class="content content-first">
         <div class="report-details">
-            Created at 2025-09-11 13:51:12        , with PHPMetrics v2.9.0 (<a href="https://twitter.com/Halleck45">Jean-François Lépine</a>).
+            Created at 2025-12-01 18:18:59        , with PHPMetrics v2.9.0 (<a href="https://twitter.com/Halleck45">Jean-François Lépine</a>).
         </div>
 
         
@@ -262,6 +262,74 @@
 
     var relations = [
     {
+        "name": "\\App\\Project\\Score",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\App\\Project\\Player",
+        "size": 3000,
+        "relations": [
+            "\\App\\Card\\CardHand",
+            "\\App\\Card\\DeckOfCards",
+            "\\App\\Project\\Score"
+        ]
+    },
+    {
+        "name": "\\App\\Card\\CardHand",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\App\\Project\\Game",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\App\\Project\\Dealer",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\App\\Card\\DeckOfCards",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\App\\Project\\JsonCardGameFormat",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\HttpFoundation\\Session\\SessionInterface",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\App\\Entity\\GameBlackJack",
+        "size": 3000,
+        "relations": [
+            "\\Doctrine\\Common\\Collections\\ArrayCollection",
+            "\\Doctrine\\Common\\Collections\\Collection",
+            "\\App\\Entity\\PlayeBlackjack"
+        ]
+    },
+    {
+        "name": "\\Doctrine\\Common\\Collections\\ArrayCollection",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Doctrine\\Common\\Collections\\Collection",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\App\\Entity\\PlayeBlackjack",
+        "size": 3000,
+        "relations": []
+    },
+    {
         "name": "\\App\\Entity\\Book",
         "size": 3000,
         "relations": []
@@ -282,6 +350,22 @@
         "relations": []
     },
     {
+        "name": "\\App\\Repository\\PlayeBlackjackRepository",
+        "size": 3000,
+        "relations": [
+            "\\Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository",
+            "\\Doctrine\\Persistence\\ManagerRegistry"
+        ]
+    },
+    {
+        "name": "\\App\\Repository\\GameBlackJackRepository",
+        "size": 3000,
+        "relations": [
+            "\\Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository",
+            "\\Doctrine\\Persistence\\ManagerRegistry"
+        ]
+    },
+    {
         "name": "\\App\\Kernel",
         "size": 3000,
         "relations": [
@@ -290,11 +374,6 @@
     },
     {
         "name": "\\Symfony\\Component\\HttpKernel\\Kernel",
-        "size": 3000,
-        "relations": []
-    },
-    {
-        "name": "\\App\\Card\\DeckOfCards",
         "size": 3000,
         "relations": []
     },
@@ -311,17 +390,7 @@
         "relations": []
     },
     {
-        "name": "\\App\\Card\\CardHand",
-        "size": 3000,
-        "relations": []
-    },
-    {
         "name": "\\App\\Card\\JsonGameFormat",
-        "size": 3000,
-        "relations": []
-    },
-    {
-        "name": "\\Symfony\\Component\\HttpFoundation\\Session\\SessionInterface",
         "size": 3000,
         "relations": []
     },
@@ -381,6 +450,28 @@
         "relations": []
     },
     {
+        "name": "\\App\\Controller\\ProjectControllerJson",
+        "size": 3000,
+        "relations": [
+            "\\Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController",
+            "\\Symfony\\Component\\HttpFoundation\\Response",
+            "\\Symfony\\Component\\HttpFoundation\\Session\\SessionInterface",
+            "\\App\\Project\\JsonCardGameFormat",
+            "\\Symfony\\Component\\HttpFoundation\\JsonResponse",
+            "\\Symfony\\Component\\HttpFoundation\\Request"
+        ]
+    },
+    {
+        "name": "\\Symfony\\Component\\HttpFoundation\\JsonResponse",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\HttpFoundation\\Request",
+        "size": 3000,
+        "relations": []
+    },
+    {
         "name": "\\App\\Controller\\LibraryController",
         "size": 3000,
         "relations": [
@@ -391,11 +482,6 @@
             "\\App\\Entity\\Book",
             "\\App\\Repository\\BookRepository"
         ]
-    },
-    {
-        "name": "\\Symfony\\Component\\HttpFoundation\\Request",
-        "size": 3000,
-        "relations": []
     },
     {
         "name": "\\App\\Controller\\LuckyControllerTwig",
@@ -412,11 +498,6 @@
             "\\Symfony\\Component\\HttpFoundation\\Response",
             "\\Symfony\\Component\\HttpFoundation\\JsonResponse"
         ]
-    },
-    {
-        "name": "\\Symfony\\Component\\HttpFoundation\\JsonResponse",
-        "size": 3000,
-        "relations": []
     },
     {
         "name": "\\App\\Controller\\GameControllerJson",
@@ -481,6 +562,20 @@
             "\\Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController",
             "\\Symfony\\Component\\HttpFoundation\\Response",
             "\\App\\Repository\\BookRepository"
+        ]
+    },
+    {
+        "name": "\\App\\Controller\\ProjectController",
+        "size": 3000,
+        "relations": [
+            "\\Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController",
+            "\\Symfony\\Component\\HttpFoundation\\Response",
+            "\\Symfony\\Component\\HttpFoundation\\Session\\SessionInterface",
+            "\\Symfony\\Component\\HttpFoundation\\Request",
+            "\\App\\Project\\Game",
+            "\\App\\Card\\DeckOfCards",
+            "\\App\\Project\\Score",
+            "\\App\\Project\\Dealer"
         ]
     },
     {

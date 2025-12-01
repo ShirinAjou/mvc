@@ -73,6 +73,10 @@
                 
             </li>
                     <li>
+                <a href="namespaces/app-project.html" class="">Project</a>
+                
+            </li>
+                    <li>
                 <a href="namespaces/app-repository.html" class="">Repository</a>
                 
             </li>
@@ -130,11 +134,12 @@
         <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Controller/LuckyControllerJson.php"><a href="files/src-controller-luckycontrollerjson.html"><abbr title="src/Controller/LuckyControllerJson.php">LuckyControllerJson.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">9</span>
+    <span class="phpdocumentor-element-found-in__line">12</span>
 
     </aside>
 
-        
+            <p class="phpdocumentor-summary">Controller for handling JSON responses related to lucky numbers and greeting routes.</p>
+
 
 
 
@@ -165,16 +170,11 @@
 </h4>
 <dl class="phpdocumentor-table-of-contents">
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a class="" href="classes/App-Controller-LuckyControllerJson.html#method_jsonNumber">jsonNumber()</a>
-    <span>
-                                &nbsp;: <abbr title="\Symfony\Component\HttpFoundation\Response">Response</abbr>    </span>
-</dt>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/App-Controller-LuckyControllerJson.html#method_jsonQuote">jsonQuote()</a>
     <span>
                                 &nbsp;: <abbr title="\Symfony\Component\HttpFoundation\Response">Response</abbr>    </span>
 </dt>
+<dd>Returns a JSON response with a random quote and the current date and time.</dd>
 
     </dl>
 
@@ -196,58 +196,6 @@
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_jsonNumber">
-        jsonNumber()
-        <a href="classes/App-Controller-LuckyControllerJson.html#method_jsonNumber" class="headerlink"><i class="fas fa-link"></i></a>
-
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Controller/LuckyControllerJson.php"><a href="files/src-controller-luckycontrollerjson.html"><abbr title="src/Controller/LuckyControllerJson.php">LuckyControllerJson.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">11</span>
-
-    </aside>
-
-    
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">jsonNumber</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Symfony\Component\HttpFoundation\Response">Response</abbr></span></code>
-
-    <div class="phpdocumentor-label-line">
-        </div>
-    
-    
-    
-    
-
-    
-    <section class="phpdocumentor-attributes">
-        <h5 class="phpdocumentor-elements__header" id="attributes">
-            Attributes <a href="classes/App-Controller-LuckyControllerJson.html#method_jsonNumber#attributes" class="headerlink"><i class="fas fa-link"></i></a>
-
-        </h5>
-                    <dl class="phpdocumentor-argument-list">
-    <dt class="phpdocumentor-argument-list__entry">
-        #[<abbr title="\Symfony\Component\Routing\Annotation\Route">Route</abbr>]
-    </dt>
-        <dd class="phpdocumentor-argument-list__entry">
-        &quot;/api&quot;
-    </dd>
-    </dl>
-            </section>
-
-            <section>
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type"><abbr title="\Symfony\Component\HttpFoundation\Response">Response</abbr></span>
-            </section>
-
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
     <h4 class="phpdocumentor-element__name" id="method_jsonQuote">
         jsonQuote()
         <a href="classes/App-Controller-LuckyControllerJson.html#method_jsonQuote" class="headerlink"><i class="fas fa-link"></i></a>
@@ -256,11 +204,12 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Controller/LuckyControllerJson.php"><a href="files/src-controller-luckycontrollerjson.html"><abbr title="src/Controller/LuckyControllerJson.php">LuckyControllerJson.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">32</span>
+    <span class="phpdocumentor-element-found-in__line">19</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Returns a JSON response with a random quote and the current date and time.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">jsonQuote</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Symfony\Component\HttpFoundation\Response">Response</abbr></span></code>
@@ -283,7 +232,10 @@
         #[<abbr title="\Symfony\Component\Routing\Annotation\Route">Route</abbr>]
     </dt>
         <dd class="phpdocumentor-argument-list__entry">
-        &quot;/api/quote&quot;
+        &#039;/api/quote&#039;
+    </dd>
+        <dd class="phpdocumentor-argument-list__entry">
+        $name: &#039;api_quote&#039;
     </dd>
     </dl>
             </section>
@@ -291,6 +243,10 @@
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
         <span class="phpdocumentor-signature__response_type"><abbr title="\Symfony\Component\HttpFoundation\Response">Response</abbr></span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>A JSON response with a random quote, the current date and time.</p>
+</section>
+
             </section>
 
 </article>
@@ -407,7 +363,6 @@
                         <li class="phpdocumentor-on-this-page-section__title">Methods</li>
             <li>
                 <ul class="phpdocumentor-list -clean">
-                                            <li class=""><a href="classes/App-Controller-LuckyControllerJson.html#method_jsonNumber">jsonNumber()</a></li>
                                             <li class=""><a href="classes/App-Controller-LuckyControllerJson.html#method_jsonQuote">jsonQuote()</a></li>
                                     </ul>
             </li>

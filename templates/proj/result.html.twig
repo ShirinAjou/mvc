@@ -1,0 +1,46 @@
+{% extends "head.html.twig" %}
+
+{% block title %}Home{% endblock %}
+
+{% block main %}
+    <div class="body-div">
+        <h1>Kmom10</h1>
+        <div class="index-container">
+            <h2>Result</h2>
+            
+            <table>
+                <tr>
+                {% for player in players %}
+                    <th>{{ player.getName() }}</th>
+                {% endfor %}
+                    <th>Dealer</th>
+                </tr>
+                
+                <tr>
+                    {% for player in players %}
+                        <td>
+                            {% for card in player.hand.hand %}
+                                <div class="card">{{ card }}</div>
+                            {% endfor %}
+                            <div>Score: {{ player.points }}</div>
+                        </td>
+                    {% endfor %}
+
+                    <td>
+                        {% for card in dealer.dealerHand.hand %}
+                            <div class="card">{{ card }}</div>
+                        {% endfor %}
+                        <div>Score: {{ dealerScore }}</div>
+                    </td>
+                </tr>
+            </table>
+
+        <h2>Winner:</h2>
+
+        {% for w in winner %}
+            <p>{{ w }}</p>
+        {% endfor %}
+
+        </div>
+    </div>
+{% endblock %}

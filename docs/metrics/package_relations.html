@@ -49,7 +49,7 @@
 <div class="page">
     <div class="content content-first">
         <div class="report-details">
-            Created at 2025-09-11 13:51:12        , with PHPMetrics v2.9.0 (<a href="https://twitter.com/Halleck45">Jean-François Lépine</a>).
+            Created at 2025-12-01 18:18:59        , with PHPMetrics v2.9.0 (<a href="https://twitter.com/Halleck45">Jean-François Lépine</a>).
         </div>
 
         
@@ -262,7 +262,35 @@
 
     var relations = [
     {
+        "name": "App\\Project",
+        "size": 3000,
+        "relations": [
+            "App\\Card",
+            "Symfony\\Component\\HttpFoundation\\Session"
+        ]
+    },
+    {
+        "name": "App\\Card",
+        "size": 3000,
+        "relations": [
+            "global",
+            "Symfony\\Component\\HttpFoundation\\Session"
+        ]
+    },
+    {
+        "name": "Symfony\\Component\\HttpFoundation\\Session",
+        "size": 3000,
+        "relations": []
+    },
+    {
         "name": "App\\Entity",
+        "size": 3000,
+        "relations": [
+            "Doctrine\\Common\\Collections"
+        ]
+    },
+    {
+        "name": "Doctrine\\Common\\Collections",
         "size": 3000,
         "relations": []
     },
@@ -297,20 +325,7 @@
         "relations": []
     },
     {
-        "name": "App\\Card",
-        "size": 3000,
-        "relations": [
-            "global",
-            "Symfony\\Component\\HttpFoundation\\Session"
-        ]
-    },
-    {
         "name": "global",
-        "size": 3000,
-        "relations": []
-    },
-    {
-        "name": "Symfony\\Component\\HttpFoundation\\Session",
         "size": 3000,
         "relations": []
     },
@@ -320,10 +335,11 @@
         "relations": [
             "Symfony\\Bundle\\FrameworkBundle\\Controller",
             "Symfony\\Component\\HttpFoundation",
+            "Symfony\\Component\\HttpFoundation\\Session",
+            "App\\Project",
             "Doctrine\\Persistence",
             "App\\Entity",
             "App\\Repository",
-            "Symfony\\Component\\HttpFoundation\\Session",
             "App\\Card"
         ]
     },

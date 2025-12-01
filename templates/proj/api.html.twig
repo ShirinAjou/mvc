@@ -1,0 +1,33 @@
+{% extends "head.html.twig" %}
+
+{% block title %}API{% endblock %}
+
+{% block main %}
+    <div class="body-div">
+        <h1>API</h1>
+        <div class="proj-button">
+            <a class="proj-button" href="{{ path('api_score') }}">Show current score</a>
+        </div>
+        <div class="proj-button">
+            <a class="proj-button" href="{{ path('api_players') }}">Show players</a>
+        </div>
+        <div class="proj-button">
+            <a class="proj-button" href="{{ path('api_dealer') }}">Show dealer</a>
+        </div>
+        <div class="proj-button">
+            <a class="proj-button" href="{{ path('api_status') }}">Show player status</a>
+        </div>
+
+        <div class="proj-button">
+            <form  method="POST" action="{{ path('api_details') }}">
+                <select name="playerName">
+                    {% for key, player in players %}
+                        <option value="{{ player.name }}">{{ player.name }}</option>
+                    {% endfor %}
+                </select>
+                <button type="submit">Show details</button>
+            </form>
+        </div>
+
+    </div>
+{% endblock %}

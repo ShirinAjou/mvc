@@ -253,6 +253,73 @@
 
         <section id="kmom10">
             <h2>Kmom10</h2>
+                <h3>Krav 1, 2, 3: Webbplats</h3>
+                    <p>Jag valde att skapa blackjack för upp till 3 spelare och dealer. 
+                    Valet grundade sig i att det kändes som en naturlig utveckling från tidigare projekt under kursen med blackjack med en spelare. 
+                    Jag återanvände klasserna för kortleken som jag skapat tidigare för att inte behövs skapa liknande kod igen. 
+                    Den här gången hade jag lärdomen från kmom06 i bakhuvudet, att skapa små funktioner, 
+                    klasser som hanterar en sak och dylikt. Det kändes dock lättare sagt än gjort. 
+                    Ju mer komplext det blev desto svårare blev det att skapa noggrant strukturerade funktioner och klasser.
+                    </p>
+                    
+                    <p>
+                    Jag skapade de relevanta sidorna och därefter började jag tänka hur jag ville att spelt skulle börja och utformas. 
+                    Jag kom snabbt fram till att jag vil ha liknande den i tidigare kursmoment. 
+                    </p>
+
+                    <p>
+                    Det rullade på i början men när jag väl kom till delen att skapa tur och ordning för kortdragning för spelarna så tog det lite stop. 
+                    Jag vet fortfarande inte riktigt varför något som egentligen inte skulle behöva vara så svårt helt plötsligt kändes omöjligt. 
+                    Jag fick göra om funktioner om och om igen för att landa i hur jag vill hantera det. 
+                    En funktion för räkna poäng, en för att hantera vems tur det är och en för att hantera att dra kort. 
+                    Jag löste det med index, kontroll av status för varje spelare och poängräkning. 
+                    </p>
+
+                    <p>
+                    Det var lätt hänt att jag glömde att kolla upp reglerna för riktigt blackjack och fick i efterhand gå och justera för att hålla mig till reglerna vilket innebar att jag strulade till kod som redan var fungerande. 
+                    Det var inte heller lätt att veta vilka regler jag ville implementera eftersom att vissa regler var mer komplexa än andra och jag ville inte investera för mycket tid i det. 
+                    Spelet är därför en kompromiss, exempelvis ska dealern ha två dragna kort en som är synlig och en som är dold. 
+                    I mitt spel har jag valt att banken ska ha ett synligt kort som spelarna kan se. 
+
+                    Gällande docs/ fick jag gå tillbaka för tat minnas hur jag skulle göra men efter det gick det snabbt att lösa de kraven. 
+                    </p>
+
+                <h3>Krav 4: JSON API</h3>
+                    <p>Att implementera krav 4 var inte så svårt. 
+                    Jag gick tillbaka för att kika på hur jag gjort tidigare för att väcka lite minnen. 
+                    Jag fick klura på vilka json api router jag ville skapa. 
+                    När jag väl bestämt mig för vilka jag ville ha fick jag börja bygga koden. 
+                    När jag väl skapat funktionen till förta routen så tyckte jag att det rullade på rätt smidigt eftersom koden är snarlik men mindre justeringar.
+                    </p>
+
+                    <p>Första routen ska visa poängställningen för spelare och dealer. 
+                    Finns inget spel sparad i session ska api visa tomma arrays och inte krascha. 
+                    Nästa json api ska visa vilka spelare som är med och spelar. 
+                    Tredje visar dealerns kort och poäng. 
+                    Fjärde visar status för varje enskild spelare i spelet, förutom för dealen som inte har status då behovet för det inte finns. 
+                    Femte och sista så ska användaren kunna välja vilken spelare som den vill se mer detaljerad info om. 
+                    Data som visas är från senast spelade runda och finns inget så visas en tom array.
+                    </p>
+
+                <h3>Allmänt</h3>
+                    <p>Jag har svarat lite på detta ovan. 
+                    Projektet rullade på men har haft vissa moment som varit extra struliga och svåra att lösa. 
+                    Dessa har tagit lång tid. Jag kom lång på krav 5 men fick ge upp den då tiden inte räckte. 
+                    Jag behövde ändra väldigt mycket kod för att implementera och hantera data via databas. 
+                    </p>
+
+                    <p>Projektet var inte lika kul som jag trodde att det skulle vara och jag tror att mycket berodde på tidspress. 
+                    Jag kände mest stress och tappade motivation. Jag hade velat ge mer men hinner inte. 
+                    Jag tror inte att projektet egentligen är så svårt men att det blev det för mig på grund av nämnda omständigheter. 
+                    Det som var lätt var nog de moment som jag kunde återanvända från tidigare kursmoment. 
+                    Projektet var rimligt, det var kul med valmöjligheter.</p>
+
+                    <p>Kursen har varit helt okej, lärorik men tuff. 
+                    Vissa moment har dykt upp lite som gubben i lådan. 
+                    Det inte alltid hänger med i svängarna men jag gillar alltid att lära mig mer och något nytt. 
+                    Exempelvis tyckte jag att kursmoment 6 var ett moment som jag tycker bara plötsligt dök upp och som jag inte hängde med i alls från början men sedan när jag väl kom in i det var väldigt lärorik och givande. 
+                    Jag kan tänka mig rekommendera och ger den 7 av 10 i betyg. 
+                    </p>
         </section>
     </div>
 </div>

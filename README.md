@@ -6,7 +6,7 @@
 
 # Introduktion
 
-Detta projekt är en del av MVC-kursen inom Webbprogrammering på Blekinge Tekniska Högskola.
+Detta projekt är en del av MVC-kursen inom Webbprogrammering på Blekinge Tekniska Högskola. Kursen berör objektorienterade programmeringstekniker i programmeringsspråket PHP. Syftet är lära sig objektorienterad programmering och databaser i webbmiljö. Kursen består av 6 stycken kursmoment och slutprojekt. Slutprojektet är ett blackjack-spel byggt med hjälp av Symfony där spelare kan spela mot en dealer. 
 
 # Klona repository
 
@@ -20,7 +20,7 @@ git clone https://github.com/ShirinAjou/mvc
 Därefter behöver du PHP, Symfony och Composer.
 
 1.  Skapa ett Symfony-projekt:
-```+
+```
 composer create-project symfony/skeleton:"7.2.*" app
 cd app
 ```

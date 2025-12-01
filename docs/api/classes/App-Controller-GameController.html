@@ -73,6 +73,10 @@
                 
             </li>
                     <li>
+                <a href="namespaces/app-project.html" class="">Project</a>
+                
+            </li>
+                    <li>
                 <a href="namespaces/app-repository.html" class="">Repository</a>
                 
             </li>
@@ -133,11 +137,12 @@
         <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Controller/GameController.php"><a href="files/src-controller-gamecontroller.html"><abbr title="src/Controller/GameController.php">GameController.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">15</span>
+    <span class="phpdocumentor-element-found-in__line">18</span>
 
     </aside>
 
-        
+            <p class="phpdocumentor-summary">Controller for handling game-related routes.</p>
+
 
 
 
@@ -172,36 +177,35 @@
     <span>
                                 &nbsp;: <abbr title="\Symfony\Component\HttpFoundation\Response">Response</abbr>    </span>
 </dt>
+<dd>Renders documentation page for the game.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/App-Controller-GameController.html#method_drawGame">drawGame()</a>
     <span>
                                 &nbsp;: <abbr title="\Symfony\Component\HttpFoundation\Response">Response</abbr>    </span>
 </dt>
+<dd>Handles the drawing of cards for the player.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/App-Controller-GameController.html#method_game">game()</a>
     <span>
                                 &nbsp;: <abbr title="\Symfony\Component\HttpFoundation\Response">Response</abbr>    </span>
 </dt>
+<dd>Renders the main game page.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/App-Controller-GameController.html#method_play">play()</a>
     <span>
                                 &nbsp;: <abbr title="\Symfony\Component\HttpFoundation\Response">Response</abbr>    </span>
 </dt>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a class="" href="classes/App-Controller-GameController.html#method_start">start()</a>
-    <span>
-                                &nbsp;: <abbr title="\Symfony\Component\HttpFoundation\Response">Response</abbr>    </span>
-</dt>
+<dd>Handles the game play logic.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/App-Controller-GameController.html#method_stopGame">stopGame()</a>
     <span>
                                 &nbsp;: <abbr title="\Symfony\Component\HttpFoundation\Response">Response</abbr>    </span>
 </dt>
+<dd>Handles the bank&#039;s turn in the game, updates the session with the new game state, and renders the result page.</dd>
 
     </dl>
 
@@ -231,11 +235,12 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Controller/GameController.php"><a href="files/src-controller-gamecontroller.html"><abbr title="src/Controller/GameController.php">GameController.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">23</span>
+    <span class="phpdocumentor-element-found-in__line">36</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Renders documentation page for the game.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">doc</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Symfony\Component\HttpFoundation\Response">Response</abbr></span></code>
@@ -258,10 +263,10 @@
         #[<abbr title="\Symfony\Component\Routing\Annotation\Route">Route</abbr>]
     </dt>
         <dd class="phpdocumentor-argument-list__entry">
-        &quot;/game/doc&quot;
+        &#039;/game/doc&#039;
     </dd>
         <dd class="phpdocumentor-argument-list__entry">
-        $name: &quot;doc&quot;
+        $name: &#039;doc&#039;
     </dd>
     </dl>
             </section>
@@ -269,6 +274,10 @@
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
         <span class="phpdocumentor-signature__response_type"><abbr title="\Symfony\Component\HttpFoundation\Response">Response</abbr></span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>The rendered documentation page.</p>
+</section>
+
             </section>
 
 </article>
@@ -286,11 +295,12 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Controller/GameController.php"><a href="files/src-controller-gamecontroller.html"><abbr title="src/Controller/GameController.php">GameController.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">53</span>
+    <span class="phpdocumentor-element-found-in__line">79</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Handles the drawing of cards for the player.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">drawGame</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Symfony\Component\HttpFoundation\Session\SessionInterface">SessionInterface</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$session</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Symfony\Component\HttpFoundation\Response">Response</abbr></span></code>
@@ -306,7 +316,9 @@
                 : <span class="phpdocumentor-signature__argument__return-type"><abbr title="\Symfony\Component\HttpFoundation\Session\SessionInterface">SessionInterface</abbr></span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>for storing game data.</p>
+</section>
+
             </dd>
             </dl>
 
@@ -323,13 +335,13 @@
         #[<abbr title="\Symfony\Component\Routing\Annotation\Route">Route</abbr>]
     </dt>
         <dd class="phpdocumentor-argument-list__entry">
-        &quot;/game/draw&quot;
+        &#039;/game/draw&#039;
     </dd>
         <dd class="phpdocumentor-argument-list__entry">
-        $name: &quot;draw_game&quot;
+        $name: &#039;draw_game&#039;
     </dd>
         <dd class="phpdocumentor-argument-list__entry">
-        $methods: [&quot;POST&quot;]
+        $methods: [&#039;POST&#039;]
     </dd>
     </dl>
             </section>
@@ -337,6 +349,10 @@
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
         <span class="phpdocumentor-signature__response_type"><abbr title="\Symfony\Component\HttpFoundation\Response">Response</abbr></span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>A redirect to the play route.</p>
+</section>
+
             </section>
 
 </article>
@@ -354,11 +370,12 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Controller/GameController.php"><a href="files/src-controller-gamecontroller.html"><abbr title="src/Controller/GameController.php">GameController.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">17</span>
+    <span class="phpdocumentor-element-found-in__line">25</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Renders the main game page.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">game</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Symfony\Component\HttpFoundation\Response">Response</abbr></span></code>
@@ -381,10 +398,10 @@
         #[<abbr title="\Symfony\Component\Routing\Annotation\Route">Route</abbr>]
     </dt>
         <dd class="phpdocumentor-argument-list__entry">
-        &quot;/game&quot;
+        &#039;/game&#039;
     </dd>
         <dd class="phpdocumentor-argument-list__entry">
-        $name: &quot;game&quot;
+        $name: &#039;game&#039;
     </dd>
     </dl>
             </section>
@@ -392,6 +409,10 @@
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
         <span class="phpdocumentor-signature__response_type"><abbr title="\Symfony\Component\HttpFoundation\Response">Response</abbr></span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>The rendered game page.</p>
+</section>
+
             </section>
 
 </article>
@@ -409,11 +430,12 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Controller/GameController.php"><a href="files/src-controller-gamecontroller.html"><abbr title="src/Controller/GameController.php">GameController.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">35</span>
+    <span class="phpdocumentor-element-found-in__line">49</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Handles the game play logic.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">play</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Symfony\Component\HttpFoundation\Session\SessionInterface">SessionInterface</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$session</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Symfony\Component\HttpFoundation\Request">Request</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$request</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Symfony\Component\HttpFoundation\Response">Response</abbr></span></code>
@@ -429,14 +451,18 @@
                 : <span class="phpdocumentor-signature__argument__return-type"><abbr title="\Symfony\Component\HttpFoundation\Session\SessionInterface">SessionInterface</abbr></span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>for storing game data.</p>
+</section>
+
             </dd>
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$request</span>
                 : <span class="phpdocumentor-signature__argument__return-type"><abbr title="\Symfony\Component\HttpFoundation\Request">Request</abbr></span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>The HTTP request.</p>
+</section>
+
             </dd>
             </dl>
 
@@ -453,13 +479,13 @@
         #[<abbr title="\Symfony\Component\Routing\Annotation\Route">Route</abbr>]
     </dt>
         <dd class="phpdocumentor-argument-list__entry">
-        &quot;/game/play&quot;
+        &#039;/game/play&#039;
     </dd>
         <dd class="phpdocumentor-argument-list__entry">
-        $name: &quot;play&quot;
+        $name: &#039;play&#039;
     </dd>
         <dd class="phpdocumentor-argument-list__entry">
-        $methods: [&quot;GET&quot;, &quot;POST&quot;]
+        $methods: [&#039;GET&#039;, &#039;POST&#039;]
     </dd>
     </dl>
             </section>
@@ -467,61 +493,10 @@
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
         <span class="phpdocumentor-signature__response_type"><abbr title="\Symfony\Component\HttpFoundation\Response">Response</abbr></span>
-            </section>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>The rendered play page.</p>
+</section>
 
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_start">
-        start()
-        <a href="classes/App-Controller-GameController.html#method_start" class="headerlink"><i class="fas fa-link"></i></a>
-
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Controller/GameController.php"><a href="files/src-controller-gamecontroller.html"><abbr title="src/Controller/GameController.php">GameController.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">29</span>
-
-    </aside>
-
-    
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">start</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Symfony\Component\HttpFoundation\Response">Response</abbr></span></code>
-
-    <div class="phpdocumentor-label-line">
-        </div>
-    
-    
-    
-    
-
-    
-    <section class="phpdocumentor-attributes">
-        <h5 class="phpdocumentor-elements__header" id="attributes">
-            Attributes <a href="classes/App-Controller-GameController.html#method_start#attributes" class="headerlink"><i class="fas fa-link"></i></a>
-
-        </h5>
-                    <dl class="phpdocumentor-argument-list">
-    <dt class="phpdocumentor-argument-list__entry">
-        #[<abbr title="\Symfony\Component\Routing\Annotation\Route">Route</abbr>]
-    </dt>
-        <dd class="phpdocumentor-argument-list__entry">
-        &quot;/game&quot;
-    </dd>
-        <dd class="phpdocumentor-argument-list__entry">
-        $name: &quot;start_game&quot;
-    </dd>
-    </dl>
-            </section>
-
-            <section>
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type"><abbr title="\Symfony\Component\HttpFoundation\Response">Response</abbr></span>
             </section>
 
 </article>
@@ -539,11 +514,12 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Controller/GameController.php"><a href="files/src-controller-gamecontroller.html"><abbr title="src/Controller/GameController.php">GameController.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">75</span>
+    <span class="phpdocumentor-element-found-in__line">107</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Handles the bank&#039;s turn in the game, updates the session with the new game state, and renders the result page.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">stopGame</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Symfony\Component\HttpFoundation\Session\SessionInterface">SessionInterface</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$session</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Symfony\Component\HttpFoundation\Response">Response</abbr></span></code>
@@ -559,7 +535,9 @@
                 : <span class="phpdocumentor-signature__argument__return-type"><abbr title="\Symfony\Component\HttpFoundation\Session\SessionInterface">SessionInterface</abbr></span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>for storing game data.</p>
+</section>
+
             </dd>
             </dl>
 
@@ -576,13 +554,13 @@
         #[<abbr title="\Symfony\Component\Routing\Annotation\Route">Route</abbr>]
     </dt>
         <dd class="phpdocumentor-argument-list__entry">
-        &quot;/game/stop&quot;
+        &#039;/game/stop&#039;
     </dd>
         <dd class="phpdocumentor-argument-list__entry">
-        $name: &quot;stop_game&quot;
+        $name: &#039;stop_game&#039;
     </dd>
         <dd class="phpdocumentor-argument-list__entry">
-        $methods: [&quot;POST&quot;]
+        $methods: [&#039;POST&#039;]
     </dd>
     </dl>
             </section>
@@ -590,6 +568,10 @@
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
         <span class="phpdocumentor-signature__response_type"><abbr title="\Symfony\Component\HttpFoundation\Response">Response</abbr></span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>The rendered result page.</p>
+</section>
+
             </section>
 
 </article>
@@ -710,7 +692,6 @@
                                             <li class=""><a href="classes/App-Controller-GameController.html#method_drawGame">drawGame()</a></li>
                                             <li class=""><a href="classes/App-Controller-GameController.html#method_game">game()</a></li>
                                             <li class=""><a href="classes/App-Controller-GameController.html#method_play">play()</a></li>
-                                            <li class=""><a href="classes/App-Controller-GameController.html#method_start">start()</a></li>
                                             <li class=""><a href="classes/App-Controller-GameController.html#method_stopGame">stopGame()</a></li>
                                     </ul>
             </li>

@@ -73,6 +73,10 @@
                 
             </li>
                     <li>
+                <a href="namespaces/app-project.html" class="">Project</a>
+                
+            </li>
+                    <li>
                 <a href="namespaces/app-repository.html" class="">Repository</a>
                 
             </li>
@@ -130,11 +134,12 @@
         <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Controller/LuckyController.php"><a href="files/src-controller-luckycontroller.html"><abbr title="src/Controller/LuckyController.php">LuckyController.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">9</span>
+    <span class="phpdocumentor-element-found-in__line">12</span>
 
     </aside>
 
-        
+            <p class="phpdocumentor-summary">Controller for handling lucky number and greeting routes.</p>
+
 
 
 
@@ -169,12 +174,14 @@
     <span>
                                 &nbsp;: <abbr title="\Symfony\Component\HttpFoundation\Response">Response</abbr>    </span>
 </dt>
+<dd>Returns a response with a greeting message.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/App-Controller-LuckyController.html#method_number">number()</a>
     <span>
                                 &nbsp;: <abbr title="\Symfony\Component\HttpFoundation\Response">Response</abbr>    </span>
 </dt>
+<dd>Returns a response with a random lucky number.</dd>
 
     </dl>
 
@@ -204,11 +211,12 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Controller/LuckyController.php"><a href="files/src-controller-luckycontroller.html"><abbr title="src/Controller/LuckyController.php">LuckyController.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">21</span>
+    <span class="phpdocumentor-element-found-in__line">34</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Returns a response with a greeting message.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">hiLucky</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Symfony\Component\HttpFoundation\Response">Response</abbr></span></code>
@@ -231,7 +239,7 @@
         #[<abbr title="\Symfony\Component\Routing\Annotation\Route">Route</abbr>]
     </dt>
         <dd class="phpdocumentor-argument-list__entry">
-        &quot;/lucky/hi&quot;
+        &#039;/lucky/hi&#039;
     </dd>
     </dl>
             </section>
@@ -239,6 +247,10 @@
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
         <span class="phpdocumentor-signature__response_type"><abbr title="\Symfony\Component\HttpFoundation\Response">Response</abbr></span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>The rendered greeting message page.</p>
+</section>
+
             </section>
 
 </article>
@@ -256,11 +268,12 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Controller/LuckyController.php"><a href="files/src-controller-luckycontroller.html"><abbr title="src/Controller/LuckyController.php">LuckyController.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">11</span>
+    <span class="phpdocumentor-element-found-in__line">19</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Returns a response with a random lucky number.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">number</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Symfony\Component\HttpFoundation\Response">Response</abbr></span></code>
@@ -291,6 +304,10 @@
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
         <span class="phpdocumentor-signature__response_type"><abbr title="\Symfony\Component\HttpFoundation\Response">Response</abbr></span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>The rendered random lucky number page.</p>
+</section>
+
             </section>
 
 </article>
