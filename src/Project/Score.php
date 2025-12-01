@@ -28,7 +28,7 @@ class Score
     }
 
     /**
-     * Calulates the score of a players hand.
+     * Calculates the score of a players hand.
      *
      * @param CardHand $hand The player hand.
      * @return int The total points of the player.
