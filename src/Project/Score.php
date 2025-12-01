@@ -59,7 +59,7 @@ class Score
     }
 
     /**
-     * Updtaes the score of a players hand.
+     * Updates the score of a players hand.
      *
      * @param Player $player The player object.
      */
