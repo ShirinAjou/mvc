@@ -176,6 +176,7 @@ final class ProjectController extends AbstractController
         if ($nextIndex === null) {
             return $this->redirectToRoute('result_proj');
         }
+        
         $session->set('playerIndex', $nextIndex);
         $session->set('namePlayers', $namePlayers);
         $session->set('gamePlayers', $game);
