@@ -10,6 +10,9 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use App\Project\JsonCardGameFormat;
 
+/**
+ * Controller for handling JSON responses related to the project.
+ */
 class ProjectControllerJson extends AbstractController
 {
     /**
