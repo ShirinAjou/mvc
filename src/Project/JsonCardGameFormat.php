@@ -23,7 +23,7 @@ class JsonCardGameFormat
      */
     public function jsonGame(SessionInterface $session): array
     {
-        $players = $session->get('namePlayers', []);
+         $players = $session->get('namePlayers', []);
         $dealer = $session->get('dealer', new Dealer());
 
         $playerData = [];
@@ -110,26 +110,27 @@ class JsonCardGameFormat
      * @param SessionInterface $session The session containing player data.
      * @return array The player details data in an array.
      */
-    public function jsonDetails(SessionInterface $session, string $playerName): array
-    {
-        $players = $session->get('namePlayers', []);
+public function jsonDetails(SessionInterface $session, string $playerName): array
+{
+    $players = $session->get('namePlayers', []);
 
-        foreach ($players as $player) {
-            if ($player->name === $playerName) {
+    foreach ($players as $player) {
+        if ($player->name === $playerName) {
 
-                return [
-                    "player" => [
-                        "name" => $player->name,
-                        "status" => $player->status, 
-                        "hand" => $player->hand->getCardsForJson(),
-                        "score" => $player->points
-                    ]
-                ];
-            }
+            return [
+                "player" => [
+                    "name" => $player->name,
+                    "status" => $player->status,
+                    "hand" => $player->hand->getCardsForJson(),
+                    "score" => $player->points
+                ]
+            ];
         }
-
-        return [
-            "message" => "No player found"
-        ];
     }
+
+    return [
+        "message" => "No player found"
+    ];
+}
+
 }

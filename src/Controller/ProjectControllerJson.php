@@ -99,7 +99,7 @@ class ProjectControllerJson extends AbstractController
     #[Route('/proj/api/player/details', name:'api_details', methods: ['POST', 'GET'])]
     public function apiDetails(SessionInterface $session, Request $request): Response
     {
-        $playerName = $request->query->get('player', '');
+        $playerName = $request->get('playerName', '');
         
         $jsonFormat = new JsonCardGameFormat();
         $data = $jsonFormat->jsonDetails($session, $playerName);
