@@ -55,7 +55,7 @@ class Player
     }
 
     /**
-     * Handles player  draws card from the deck.
+     * Handles player draws card from the deck.
      * 
      * @param DeckOfCards $deck The deck to draw a card from.
      * @param Score $scoreManage Calculating points.
