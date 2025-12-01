@@ -99,7 +99,6 @@ class Game
 
         if ($dealerScore <= 21) {
             if ($dealerScore > $highestScore) {
-                $highestScore = $dealerScore;
                 $winner = ["Dealer"];
             } elseif ($dealerScore == $highestScore) {
                 $winner[] = "Dealer";
