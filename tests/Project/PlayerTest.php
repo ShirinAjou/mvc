@@ -30,15 +30,6 @@ class PlayerTest extends TestCase
         $this->assertEquals("stand", $player->status);
     }
 
-    // public function testStandButtonFalse(): void
-    // {
-    //     $player = new Player();
-
-    //     $result = $player->standButton();
-    //     $this->assertFalse($result);
-    //     $this->assertEquals("Dra ett kort först", $player->message);
-    // }
-
     public function testPlayerDrawLose(): void
     {
         $score = new Score();
